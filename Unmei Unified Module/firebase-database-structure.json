@@ -1,0 +1,6669 @@
+{
+ "admins": {
+  "admin_main": {
+   "displayName": "Administrator",
+   "email": "admin@unmei-ph.com",
+   "role": "admin",
+   "permissions": {
+    "manageStudents": true,
+    "manageInstructors": true,
+    "manageCourses": true,
+    "managePayments": true,
+    "manageAnnouncements": true
+   },
+   "isRevoked": false,
+   "createdAt": 1766242800000
+  },
+  "admin_academic": {
+   "displayName": "Academic Head",
+   "email": "academic@unmei-ph.com",
+   "role": "admin",
+   "permissions": {
+    "manageStudents": true,
+    "manageInstructors": true,
+    "manageCourses": true,
+    "managePayments": false,
+    "manageAnnouncements": true
+   },
+   "isRevoked": false,
+   "createdAt": 1766415600000
+  },
+  "admin_registrar": {
+   "displayName": "Registrar Officer",
+   "email": "registrar@unmei-ph.com",
+   "role": "admin",
+   "permissions": {
+    "manageStudents": true,
+    "manageInstructors": false,
+    "manageCourses": false,
+    "managePayments": true,
+    "manageAnnouncements": false
+   },
+   "isRevoked": false,
+   "createdAt": 1766588400000
+  }
+ },
+ "announcements": {
+  "ann_001": {
+   "title": "First Quarter 2026 Batch Orientation",
+   "message": "Orientation for all new JLPT N5 and N4 students begins this Saturday at the main hall. Check your schedule in the portal for your assigned time.",
+   "category": "academic",
+   "priority": "high",
+   "active": true,
+   "pinned": true,
+   "postedBy": "Academic Head",
+   "postedByUid": "admin_academic",
+   "targetAudience": "all",
+   "createdAt": 1785942000000,
+   "updatedAt": 1785942000000
+  },
+  "ann_002": {
+   "title": "Payment Portal Reminder",
+   "message": "Please upload your tuition receipts at least three days before the due date. Installment plans are available at the registrar office.",
+   "category": "finance",
+   "priority": "normal",
+   "active": true,
+   "pinned": false,
+   "postedBy": "Registrar Officer",
+   "postedByUid": "admin_registrar",
+   "targetAudience": "all",
+   "createdAt": 1786201200000,
+   "updatedAt": 1786201200000
+  },
+  "ann_003": {
+   "title": "Japan Culture Day Workshop",
+   "message": "Join the culture day workshop featuring calligraphy, tea ceremony basics, and Nihongo conversation games. Slots are limited to 40 students.",
+   "category": "event",
+   "priority": "normal",
+   "active": true,
+   "pinned": false,
+   "postedBy": "Administrator",
+   "postedByUid": "admin_main",
+   "targetAudience": "all",
+   "createdAt": 1786460400000,
+   "updatedAt": 1786460400000
+  },
+  "ann_004": {
+   "title": "Mock JLPT Examination Schedule",
+   "message": "Monthly mock examinations for N4 and above will be held on the last Friday of each month. Register through your instructor.",
+   "category": "academic",
+   "priority": "high",
+   "active": true,
+   "pinned": false,
+   "postedBy": "Academic Head",
+   "postedByUid": "admin_academic",
+   "targetAudience": "students",
+   "createdAt": 1786719600000,
+   "updatedAt": 1786719600000
+  }
+ },
+ "app_download": {
+  "android": {
+   "enabled": true,
+   "versionName": "1.2.0",
+   "fileName": "unmei-learning-app-1.2.0.apk",
+   "fileSizeMb": 28,
+   "downloadUrl": "",
+   "releaseNotes": "Kanji stroke practice with guided pattern arrows, reading drills, and progress reports.",
+   "updatedAt": 1785769200000
+  }
+ },
+ "config": {
+  "enrollmentOpen": true,
+  "maintenanceMode": false
+ },
+ "contact_leads": {
+  "student_003": {
+   "fullName": "Ethan Cruz",
+   "email": "ethan.cruz3@unmei-ph.com",
+   "mobileNumber": "+63 913 103 1003",
+   "countryCode": "+63",
+   "course": "JLPT N3 (Advanced)",
+   "preferredTime": "8am - 12nn",
+   "status": "pending",
+   "createdAt": 1778252400000
+  },
+  "student_006": {
+   "fullName": "Sophia Mendoza",
+   "email": "sophia.mendoza6@unmei-ph.com",
+   "mobileNumber": "+63 916 106 1006",
+   "countryCode": "+63",
+   "course": "JLPT N2 (Expert)",
+   "preferredTime": "1pm - 5pm",
+   "status": "pending",
+   "createdAt": 1779030000000
+  },
+  "student_009": {
+   "fullName": "Benjamin Torres",
+   "email": "benjamin.torres9@unmei-ph.com",
+   "mobileNumber": "+63 919 109 1009",
+   "countryCode": "+63",
+   "course": "JLPT N5 (Beginner)",
+   "preferredTime": "8am - 12nn",
+   "status": "called",
+   "createdAt": 1779807600000
+  },
+  "student_012": {
+   "fullName": "Charlotte De Leon",
+   "email": "charlotte.leon12@unmei-ph.com",
+   "mobileNumber": "+63 912 112 1012",
+   "countryCode": "+63",
+   "course": "JLPT N3 (Advanced)",
+   "preferredTime": "8am - 12nn",
+   "status": "called",
+   "createdAt": 1780585200000
+  }
+ },
+ "courses": {
+  "jlpt_n5": {
+   "name": "JLPT N5 (Beginner)",
+   "description": "Foundation Japanese covering hiragana, katakana, basic kanji, essential grammar, and everyday vocabulary for absolute beginners.",
+   "duration": "3 months",
+   "price": 12000,
+   "requiresAssessment": false,
+   "active": true,
+   "instructorId": "prof_001",
+   "instructorIds": [
+    "prof_001",
+    "prof_005",
+    "prof_006"
+   ],
+   "totalModules": 12
+  },
+  "jlpt_n4": {
+   "name": "JLPT N4 (Intermediate)",
+   "description": "Intermediate Japanese with te-form conjugation, plain form grammar, 300 additional kanji, and comprehension of everyday conversations.",
+   "duration": "3 months",
+   "price": 14000,
+   "requiresAssessment": true,
+   "active": true,
+   "instructorId": "prof_002",
+   "instructorIds": [
+    "prof_002",
+    "prof_007"
+   ],
+   "totalModules": 12
+  },
+  "jlpt_n3": {
+   "name": "JLPT N3 (Advanced)",
+   "description": "Advanced Japanese bridging intermediate to upper level: complex grammar patterns, newspaper reading, and natural-speed listening.",
+   "duration": "4 months",
+   "price": 16000,
+   "requiresAssessment": true,
+   "active": true,
+   "instructorId": "prof_003",
+   "instructorIds": [
+    "prof_003",
+    "prof_008"
+   ],
+   "totalModules": 14
+  },
+  "jlpt_n2": {
+   "name": "JLPT N2 (Expert)",
+   "description": "Expert-level Japanese for work and study in Japan: formal keigo, abstract reading passages, and nuanced listening comprehension.",
+   "duration": "5 months",
+   "price": 18000,
+   "requiresAssessment": true,
+   "active": true,
+   "instructorId": "prof_004",
+   "instructorIds": [
+    "prof_004",
+    "prof_009"
+   ],
+   "totalModules": 16
+  },
+  "bundle_n5_n4": {
+   "name": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "description": "Continuous six-month track from complete beginner to JLPT N4 level with a single enrollment and unified schedule.",
+   "duration": "6 months",
+   "price": 24000,
+   "requiresAssessment": false,
+   "active": true,
+   "instructorId": "prof_001",
+   "instructorIds": [
+    "prof_001",
+    "prof_007"
+   ],
+   "totalModules": 24
+  },
+  "bundle_n5_n3": {
+   "name": "Bundle N5-N3 (Beginner to Advanced)",
+   "description": "Fast-track ten-month program carrying dedicated learners from zero foundation to conversational, JLPT N3-level Japanese.",
+   "duration": "10 months",
+   "price": 30000,
+   "requiresAssessment": false,
+   "active": true,
+   "instructorId": "prof_010",
+   "instructorIds": [
+    "prof_010",
+    "prof_001"
+   ],
+   "totalModules": 26
+  }
+ },
+ "enrollments": {
+  "student_001": {
+   "fullName": "Liam Reyes",
+   "email": "liam.reyes1@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 911 101 1001",
+   "wantCall": "No",
+   "address": "4 Sakura Street, Makati City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1777734000000,
+   "updatedAt": 1786892400000
+  },
+  "student_002": {
+   "fullName": "Noah Santos",
+   "email": "noah.santos2@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 912 102 1002",
+   "wantCall": "No",
+   "address": "7 Sakura Street, Quezon City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1777993200000,
+   "updatedAt": 1786806000000
+  },
+  "student_003": {
+   "fullName": "Ethan Cruz",
+   "email": "ethan.cruz3@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 913 103 1003",
+   "wantCall": "Yes",
+   "address": "10 Sakura Street, Pasig City",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "sectionId": "section_03",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1778252400000,
+   "updatedAt": 1786719600000
+  },
+  "student_004": {
+   "fullName": "Chloe Bautista",
+   "email": "chloe.bautista4@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 914 104 1004",
+   "wantCall": "No",
+   "address": "13 Sakura Street, Taguig City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1778511600000,
+   "updatedAt": 1786633200000
+  },
+  "student_005": {
+   "fullName": "Lucas Garcia",
+   "email": "lucas.garcia5@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 915 105 1005",
+   "wantCall": "No",
+   "address": "16 Sakura Street, Mandaluyong City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1778770800000,
+   "updatedAt": 1786546800000
+  },
+  "student_006": {
+   "fullName": "Sophia Mendoza",
+   "email": "sophia.mendoza6@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 916 106 1006",
+   "wantCall": "Yes",
+   "address": "19 Sakura Street, Manila City",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "sectionId": "section_04",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1779030000000,
+   "updatedAt": 1786460400000
+  },
+  "student_007": {
+   "fullName": "James Villanueva",
+   "email": "james.villanueva7@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 917 107 1007",
+   "wantCall": "No",
+   "address": "22 Sakura Street, Cebu City",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "sectionId": "section_05",
+   "classSetup": "Private",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1779289200000,
+   "updatedAt": 1786978800000
+  },
+  "student_008": {
+   "fullName": "Isabella Ramos",
+   "email": "isabella.ramos8@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 918 108 1008",
+   "wantCall": "No",
+   "address": "25 Sakura Street, Davao City",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "sectionId": "section_06",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+   "scheduleDays": "Saturday Only",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1779548400000,
+   "updatedAt": 1786892400000
+  },
+  "student_009": {
+   "fullName": "Benjamin Torres",
+   "email": "benjamin.torres9@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 919 109 1009",
+   "wantCall": "Yes",
+   "address": "28 Sakura Street, Caloocan City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1779807600000,
+   "updatedAt": 1786806000000
+  },
+  "student_010": {
+   "fullName": "Mia Fernandez",
+   "email": "mia.fernandez10@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 910 110 1010",
+   "wantCall": "No",
+   "address": "31 Sakura Street, Pasay City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1780066800000,
+   "updatedAt": 1786719600000
+  },
+  "student_011": {
+   "fullName": "Alexander Aquino",
+   "email": "alexander.aquino11@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 911 111 1011",
+   "wantCall": "No",
+   "address": "34 Sakura Street, Antipolo City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "2",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1780326000000,
+   "updatedAt": 1786633200000
+  },
+  "student_012": {
+   "fullName": "Charlotte De Leon",
+   "email": "charlotte.leon12@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 912 112 1012",
+   "wantCall": "Yes",
+   "address": "37 Sakura Street, Bacolod City",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "sectionId": "section_03",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "2",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1780585200000,
+   "updatedAt": 1786546800000
+  },
+  "student_013": {
+   "fullName": "Daniel Castro",
+   "email": "daniel.castro13@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 913 113 1013",
+   "wantCall": "No",
+   "address": "40 Sakura Street, Iloilo City",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "sectionId": "section_04",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "2",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1780844400000,
+   "updatedAt": 1786460400000
+  },
+  "student_014": {
+   "fullName": "Amelia Soriano",
+   "email": "amelia.soriano14@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 914 114 1014",
+   "wantCall": "No",
+   "address": "43 Sakura Street, Cagayan de Oro",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "2",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1781103600000,
+   "updatedAt": 1786978800000
+  },
+  "student_015": {
+   "fullName": "Henry Navarro",
+   "email": "henry.navarro15@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 915 115 1015",
+   "wantCall": "Yes",
+   "address": "46 Sakura Street, Angeles City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "2",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1781362800000,
+   "updatedAt": 1786892400000
+  },
+  "student_016": {
+   "fullName": "Evelyn Corpuz",
+   "email": "evelyn.corpuz16@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 916 116 1016",
+   "wantCall": "No",
+   "address": "49 Sakura Street, Baguio City",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "sectionId": "section_05",
+   "classSetup": "Private",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Friday",
+   "japaneseKnowledge": "2",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1781622000000,
+   "updatedAt": 1786806000000
+  },
+  "student_017": {
+   "fullName": "Matthew Valenzuela",
+   "email": "matthew.valenzuela17@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 917 117 1017",
+   "wantCall": "No",
+   "address": "52 Sakura Street, San Fernando, Pampanga",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "sectionId": "section_06",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+   "scheduleDays": "Saturday Only",
+   "japaneseKnowledge": "2",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1781881200000,
+   "updatedAt": 1786719600000
+  },
+  "student_018": {
+   "fullName": "Harper Del Rosario",
+   "email": "harper.rosario18@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 918 118 1018",
+   "wantCall": "Yes",
+   "address": "55 Sakura Street, General Santos City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "2",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1782140400000,
+   "updatedAt": 1786633200000
+  },
+  "student_019": {
+   "fullName": "Sebastian Ocampo",
+   "email": "sebastian.ocampo19@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 919 119 1019",
+   "wantCall": "No",
+   "address": "58 Sakura Street, Zamboanga City",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "sectionId": "section_03",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "2",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1782399600000,
+   "updatedAt": 1786546800000
+  },
+  "student_020": {
+   "fullName": "Victoria Pineda",
+   "email": "victoria.pineda20@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 910 120 1020",
+   "wantCall": "No",
+   "address": "61 Sakura Street, Las Pinas City",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "sectionId": "section_04",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "2",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "approved",
+   "createdAt": 1782658800000,
+   "updatedAt": 1786460400000
+  },
+  "student_021": {
+   "fullName": "David Alcantara",
+   "email": "david.alcantara21@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 911 121 1021",
+   "wantCall": "Yes",
+   "address": "64 Sakura Street, Paranaque City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "pending_review",
+   "createdAt": 1782918000000,
+   "updatedAt": 1786978800000
+  },
+  "student_022": {
+   "fullName": "Aria Imperial",
+   "email": "aria.imperial22@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 912 122 1022",
+   "wantCall": "No",
+   "address": "67 Sakura Street, Muntinlupa City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "pending",
+   "validationStatus": "pending_review",
+   "createdAt": 1783177200000,
+   "updatedAt": 1786892400000
+  },
+  "student_023": {
+   "fullName": "Josephine Salazar",
+   "email": "josephine.salazar23@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 913 123 1023",
+   "wantCall": "No",
+   "address": "70 Sakura Street, Marikina City",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "sectionId": "section_03",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "pending_review",
+   "createdAt": 1783436400000,
+   "updatedAt": 1786806000000
+  },
+  "student_024": {
+   "fullName": "Samuel Mercado",
+   "email": "samuel.mercado24@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 914 124 1024",
+   "wantCall": "Yes",
+   "address": "73 Sakura Street, San Juan City",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "sectionId": "section_05",
+   "classSetup": "Private",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "pending",
+   "validationStatus": "pending_review",
+   "createdAt": 1783695600000,
+   "updatedAt": 1786719600000
+  },
+  "student_025": {
+   "fullName": "Scarlett Tolentino",
+   "email": "scarlett.tolentino25@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 915 125 1025",
+   "wantCall": "No",
+   "address": "76 Sakura Street, Valenzuela City",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "sectionId": "section_06",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+   "scheduleDays": "Saturday Only",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "active",
+   "validationStatus": "pending_review",
+   "createdAt": 1783954800000,
+   "updatedAt": 1786633200000
+  },
+  "student_026": {
+   "fullName": "Gabriel Sison",
+   "email": "gabriel.sison26@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 916 126 1026",
+   "wantCall": "No",
+   "address": "79 Sakura Street, Malabon City",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "pending",
+   "validationStatus": "pending_review",
+   "createdAt": 1784214000000,
+   "updatedAt": 1786546800000
+  },
+  "student_027": {
+   "fullName": "Hannah Beltran",
+   "email": "hannah.beltran27@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 917 127 1027",
+   "wantCall": "Yes",
+   "address": "82 Sakura Street, Navotas City",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "sectionId": "section_02",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "active",
+   "validationStatus": "pending_review",
+   "createdAt": 1784473200000,
+   "updatedAt": 1786460400000
+  },
+  "student_028": {
+   "fullName": "Julian Palma",
+   "email": "julian.palma28@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 918 128 1028",
+   "wantCall": "No",
+   "address": "85 Sakura Street, Imus, Cavite",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "sectionId": "section_03",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "1",
+   "purpose": "Study abroad in Japan",
+   "status": "pending",
+   "validationStatus": "pending_review",
+   "createdAt": 1784732400000,
+   "updatedAt": 1786978800000
+  },
+  "student_029": {
+   "fullName": "Zoey Manalo",
+   "email": "zoey.manalo29@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 919 129 1029",
+   "wantCall": "No",
+   "address": "88 Sakura Street, Bacoor, Cavite",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "sectionId": "section_04",
+   "classSetup": "Online",
+   "scheduleTimeSlot": "1pm - 5pm",
+   "scheduleDays": "Tuesday & Thursday",
+   "japaneseKnowledge": "1",
+   "purpose": "Career growth",
+   "status": "active",
+   "validationStatus": "pending_review",
+   "createdAt": 1784991600000,
+   "updatedAt": 1786892400000
+  },
+  "student_030": {
+   "fullName": "Christian Guinto",
+   "email": "christian.guinto30@unmei-ph.com",
+   "country": "Philippines",
+   "countryCode": "+63",
+   "mobileNumber": "+63 910 130 1030",
+   "wantCall": "Yes",
+   "address": "91 Sakura Street, Dasmarias, Cavite",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "sectionId": "section_01",
+   "classSetup": "Face-to-face",
+   "scheduleTimeSlot": "8am - 12nn",
+   "scheduleDays": "Monday - Wednesday - Friday",
+   "japaneseKnowledge": "1",
+   "purpose": "Work in Japan",
+   "status": "pending",
+   "validationStatus": "pending_review",
+   "createdAt": 1785250800000,
+   "updatedAt": 1786806000000
+  }
+ },
+ "instructors": {
+  "prof_001": {
+   "fullName": "Aiko Tanaka",
+   "email": "aiko.tanaka@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N5-N4 Foundation",
+   "bio": "Aiko Tanaka handles JLPT N5-N4 Foundation at UNMEI Nihongo Center with 8 years of teaching experience.",
+   "credentials": {
+    "education": "B.A. in Japanese Language Education, University of the Philippines",
+    "certifications": [
+     "JLPT N1 Certified",
+     "TESOL Certificate",
+     "Japanese Language Teaching License (Japan Foundation)"
+    ],
+    "yearsExperience": 8,
+    "languagesSpoken": [
+     "Japanese",
+     "English",
+     "Filipino"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n5",
+    "bundle_n5_n4",
+    "bundle_n5_n3"
+   ],
+   "averageRating": 4.5,
+   "totalRatings": 4,
+   "loginPassword": "d1352c96f0719abdb2d5478de996043287237c00f7f7fcd72f882d5d6ea41053",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_002": {
+   "fullName": "Kenji Watanabe",
+   "email": "kenji.watanabe@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N4-N3 Grammar and Reading",
+   "bio": "Kenji Watanabe handles JLPT N4-N3 Grammar and Reading at UNMEI Nihongo Center with 11 years of teaching experience.",
+   "credentials": {
+    "education": "M.A. in Applied Linguistics, Ateneo de Manila University",
+    "certifications": [
+     "JLPT N1 Certified",
+     "Japanese Language Teaching Competency Test",
+     "CELTA Certificate"
+    ],
+    "yearsExperience": 11,
+    "languagesSpoken": [
+     "Japanese",
+     "English"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n4"
+   ],
+   "averageRating": 3.67,
+   "totalRatings": 3,
+   "loginPassword": "59b2684986bbbd26451e900ef9d7c63a43f1d26d8a1a2c692bd7337815e90336",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_003": {
+   "fullName": "Maria Santos-Nakamura",
+   "email": "maria.nakamura@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N3 Advanced Reading and Conversation",
+   "bio": "Maria Santos-Nakamura handles JLPT N3 Advanced Reading and Conversation at UNMEI Nihongo Center with 9 years of teaching experience.",
+   "credentials": {
+    "education": "B.A. in Japanese Studies, De La Salle University",
+    "certifications": [
+     "JLPT N1 Certified",
+     "Japanese Language Teaching License (Japan Foundation)",
+     "BJT Business Japanese Proficiency Test J1"
+    ],
+    "yearsExperience": 9,
+    "languagesSpoken": [
+     "Japanese",
+     "English",
+     "Filipino"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n3"
+   ],
+   "averageRating": 4,
+   "totalRatings": 2,
+   "loginPassword": "ada534eedc248deea7e9a8eb12df12c156e0c393a637aad4877d91155ac509f4",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_004": {
+   "fullName": "Hiroshi Yamamoto",
+   "email": "hiroshi.yamamoto@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N2 Expert Preparation",
+   "bio": "Hiroshi Yamamoto handles JLPT N2 Expert Preparation at UNMEI Nihongo Center with 12 years of teaching experience.",
+   "credentials": {
+    "education": "B.A. in Japanese Language Education, Osaka University of Foreign Studies",
+    "certifications": [
+     "Registered Japanese Language Teacher (Japan)",
+     "JLPT N1 Examiner Training Certificate"
+    ],
+    "yearsExperience": 12,
+    "languagesSpoken": [
+     "Japanese",
+     "English"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n2"
+   ],
+   "averageRating": 4.5,
+   "totalRatings": 2,
+   "loginPassword": "07b1882f0191f5e02c4da7db0d9f56f2794ebb27402ce2d2e2d898cd8cf94f10",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_005": {
+   "fullName": "Rico Dela Cruz",
+   "email": "rico.cruz@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N5 Beginner Classes",
+   "bio": "Rico Dela Cruz handles JLPT N5 Beginner Classes at UNMEI Nihongo Center with 5 years of teaching experience.",
+   "credentials": {
+    "education": "B.A. in Linguistics, University of Santo Tomas",
+    "certifications": [
+     "JLPT N2 Certified",
+     "Japanese Language Teaching Competency Test"
+    ],
+    "yearsExperience": 5,
+    "languagesSpoken": [
+     "Japanese",
+     "English",
+     "Filipino"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n5"
+   ],
+   "averageRating": 4.5,
+   "totalRatings": 2,
+   "loginPassword": "f229278a54cdcc0dc1cfbb2681a5d1e93ee847bf8a63854e59be2e4ec9ffe1d3",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_006": {
+   "fullName": "Yuka Takahashi",
+   "email": "yuka.takahashi@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N5 Practical Japanese",
+   "bio": "Yuka Takahashi handles JLPT N5 Practical Japanese at UNMEI Nihongo Center with 7 years of teaching experience.",
+   "credentials": {
+    "education": "B.A. in International Studies, Sophia University Tokyo",
+    "certifications": [
+     "Certified Japanese Language Teacher (420-hour Advanced Course)"
+    ],
+    "yearsExperience": 7,
+    "languagesSpoken": [
+     "Japanese",
+     "English"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n5"
+   ],
+   "averageRating": 4.5,
+   "totalRatings": 2,
+   "loginPassword": "330748bf54d157248adc640bab58858275ab64a3bc10a728718a8fb0f2679b00",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_007": {
+   "fullName": "Gabriel Mendoza",
+   "email": "gabriel.mendoza@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N4 and Bundle Tracks",
+   "bio": "Gabriel Mendoza handles JLPT N4 and Bundle Tracks at UNMEI Nihongo Center with 6 years of teaching experience.",
+   "credentials": {
+    "education": "B.S. in Education, Philippine Normal University",
+    "certifications": [
+     "JLPT N1 Certified",
+     "Japan Foundation Teaching Fellowship"
+    ],
+    "yearsExperience": 6,
+    "languagesSpoken": [
+     "Japanese",
+     "English",
+     "Filipino"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n4",
+    "bundle_n5_n4"
+   ],
+   "averageRating": 3,
+   "totalRatings": 1,
+   "loginPassword": "e60615b5d35dac709efcfbbbf427a88306b33b616280c386bb64f550b831833c",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_008": {
+   "fullName": "Naomi Ogawa",
+   "email": "naomi.ogawa@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N3 Grammar and Listening",
+   "bio": "Naomi Ogawa handles JLPT N3 Grammar and Listening at UNMEI Nihongo Center with 10 years of teaching experience.",
+   "credentials": {
+    "education": "M.Ed. in Language Education, Waseda University",
+    "certifications": [
+     "Japanese Teaching Competency Certificate",
+     "JLPT Test Design Specialist"
+    ],
+    "yearsExperience": 10,
+    "languagesSpoken": [
+     "Japanese",
+     "English"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n3"
+   ],
+   "averageRating": 5,
+   "totalRatings": 1,
+   "loginPassword": "6a1c75cee6f72ab0c3cc7972e78a5859799bfffe8c9b7550c7256179b08ba3e6",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_009": {
+   "fullName": "Kazuo Suzuki",
+   "email": "kazuo.suzuki@unmei-ph.com",
+   "active": true,
+   "specialization": "JLPT N2 Advanced Reading",
+   "bio": "Kazuo Suzuki handles JLPT N2 Advanced Reading at UNMEI Nihongo Center with 18 years of teaching experience.",
+   "credentials": {
+    "education": "Ph.D. in Japanese Linguistics, Kyoto University",
+    "certifications": [
+     "Senior Japanese Language Instructor License"
+    ],
+    "yearsExperience": 18,
+    "languagesSpoken": [
+     "Japanese",
+     "English"
+    ]
+   },
+   "coursesAssigned": [
+    "jlpt_n2"
+   ],
+   "averageRating": 4,
+   "totalRatings": 1,
+   "loginPassword": "1226b5404f514a0c0ce00366e647533c1d32c5378631f5f5e8db45735a0f9390",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  },
+  "prof_010": {
+   "fullName": "Elena Gomez-Sato",
+   "email": "elena.sato@unmei-ph.com",
+   "active": true,
+   "specialization": "Bundle N5-N3 Fast-Track",
+   "bio": "Elena Gomez-Sato handles Bundle N5-N3 Fast-Track at UNMEI Nihongo Center with 14 years of teaching experience.",
+   "credentials": {
+    "education": "M.A. in Foreign Language Teaching, University of the Philippines",
+    "certifications": [
+     "JLPT N1 Certified",
+     "BJT J1+",
+     "Japan Foundation Master Educator"
+    ],
+    "yearsExperience": 14,
+    "languagesSpoken": [
+     "Japanese",
+     "English",
+     "Filipino",
+     "Spanish"
+    ]
+   },
+   "coursesAssigned": [
+    "bundle_n5_n3"
+   ],
+   "averageRating": 3.5,
+   "totalRatings": 2,
+   "loginPassword": "5f4ba53fe497d331607ac01e021d1d3397eb29f90aa525ffe909e4cf841b2439",
+   "authUid": "",
+   "createdAt": 1767106800000,
+   "updatedAt": 1784386800000
+  }
+ },
+ "instructorRatings": {
+  "rating_001": {
+   "instructorId": "prof_001",
+   "studentUid": "student_001",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 4,
+    "subjectMastery": 3,
+    "classroomManagement": 4,
+    "professionalism": 4,
+    "supportiveness": 3,
+    "punctuality": 4,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1785164400000
+  },
+  "rating_002": {
+   "instructorId": "prof_002",
+   "studentUid": "student_002",
+   "courseId": "jlpt_n4",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 4,
+    "subjectMastery": 5,
+    "classroomManagement": 5,
+    "professionalism": 4,
+    "supportiveness": 5,
+    "punctuality": 5,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1785078000000
+  },
+  "rating_003": {
+   "instructorId": "prof_003",
+   "studentUid": "student_003",
+   "courseId": "jlpt_n3",
+   "ratings": {
+    "teachingEffectiveness": 3,
+    "communicationSkills": 4,
+    "subjectMastery": 4,
+    "classroomManagement": 3,
+    "professionalism": 4,
+    "supportiveness": 4,
+    "punctuality": 3,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784991600000
+  },
+  "rating_004": {
+   "instructorId": "prof_005",
+   "studentUid": "student_004",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 5,
+    "subjectMastery": 4,
+    "classroomManagement": 5,
+    "professionalism": 5,
+    "supportiveness": 4,
+    "punctuality": 5,
+    "overallSatisfaction": 5
+   },
+   "comment": "Clear explanations and very patient during drills.",
+   "isAnonymous": false,
+   "createdAt": 1784905200000
+  },
+  "rating_005": {
+   "instructorId": "prof_007",
+   "studentUid": "student_005",
+   "courseId": "jlpt_n4",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 3,
+    "subjectMastery": 4,
+    "classroomManagement": 4,
+    "professionalism": 3,
+    "supportiveness": 4,
+    "punctuality": 4,
+    "overallSatisfaction": 3
+   },
+   "comment": "",
+   "isAnonymous": true,
+   "createdAt": 1784818800000
+  },
+  "rating_006": {
+   "instructorId": "prof_004",
+   "studentUid": "student_006",
+   "courseId": "jlpt_n2",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 5,
+    "subjectMastery": 5,
+    "classroomManagement": 4,
+    "professionalism": 5,
+    "supportiveness": 5,
+    "punctuality": 4,
+    "overallSatisfaction": 5
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784732400000
+  },
+  "rating_007": {
+   "instructorId": "prof_001",
+   "studentUid": "student_007",
+   "courseId": "bundle_n5_n4",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 4,
+    "subjectMastery": 3,
+    "classroomManagement": 4,
+    "professionalism": 4,
+    "supportiveness": 3,
+    "punctuality": 4,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784646000000
+  },
+  "rating_008": {
+   "instructorId": "prof_010",
+   "studentUid": "student_008",
+   "courseId": "bundle_n5_n3",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 4,
+    "subjectMastery": 5,
+    "classroomManagement": 5,
+    "professionalism": 4,
+    "supportiveness": 5,
+    "punctuality": 5,
+    "overallSatisfaction": 4
+   },
+   "comment": "Clear explanations and very patient during drills.",
+   "isAnonymous": false,
+   "createdAt": 1784559600000
+  },
+  "rating_009": {
+   "instructorId": "prof_006",
+   "studentUid": "student_009",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 3,
+    "communicationSkills": 4,
+    "subjectMastery": 4,
+    "classroomManagement": 3,
+    "professionalism": 4,
+    "supportiveness": 4,
+    "punctuality": 3,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784473200000
+  },
+  "rating_010": {
+   "instructorId": "prof_001",
+   "studentUid": "student_010",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 5,
+    "subjectMastery": 4,
+    "classroomManagement": 5,
+    "professionalism": 5,
+    "supportiveness": 4,
+    "punctuality": 5,
+    "overallSatisfaction": 5
+   },
+   "comment": "",
+   "isAnonymous": true,
+   "createdAt": 1784386800000
+  },
+  "rating_011": {
+   "instructorId": "prof_002",
+   "studentUid": "student_011",
+   "courseId": "jlpt_n4",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 3,
+    "subjectMastery": 4,
+    "classroomManagement": 4,
+    "professionalism": 3,
+    "supportiveness": 4,
+    "punctuality": 4,
+    "overallSatisfaction": 3
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784300400000
+  },
+  "rating_012": {
+   "instructorId": "prof_008",
+   "studentUid": "student_012",
+   "courseId": "jlpt_n3",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 5,
+    "subjectMastery": 5,
+    "classroomManagement": 4,
+    "professionalism": 5,
+    "supportiveness": 5,
+    "punctuality": 4,
+    "overallSatisfaction": 5
+   },
+   "comment": "Clear explanations and very patient during drills.",
+   "isAnonymous": false,
+   "createdAt": 1784214000000
+  },
+  "rating_013": {
+   "instructorId": "prof_009",
+   "studentUid": "student_013",
+   "courseId": "jlpt_n2",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 4,
+    "subjectMastery": 3,
+    "classroomManagement": 4,
+    "professionalism": 4,
+    "supportiveness": 3,
+    "punctuality": 4,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784127600000
+  },
+  "rating_014": {
+   "instructorId": "prof_005",
+   "studentUid": "student_014",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 4,
+    "subjectMastery": 5,
+    "classroomManagement": 5,
+    "professionalism": 4,
+    "supportiveness": 5,
+    "punctuality": 5,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1784041200000
+  },
+  "rating_015": {
+   "instructorId": "prof_002",
+   "studentUid": "student_015",
+   "courseId": "jlpt_n4",
+   "ratings": {
+    "teachingEffectiveness": 3,
+    "communicationSkills": 4,
+    "subjectMastery": 4,
+    "classroomManagement": 3,
+    "professionalism": 4,
+    "supportiveness": 4,
+    "punctuality": 3,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": true,
+   "createdAt": 1783954800000
+  },
+  "rating_016": {
+   "instructorId": "prof_001",
+   "studentUid": "student_016",
+   "courseId": "bundle_n5_n4",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 5,
+    "subjectMastery": 4,
+    "classroomManagement": 5,
+    "professionalism": 5,
+    "supportiveness": 4,
+    "punctuality": 5,
+    "overallSatisfaction": 5
+   },
+   "comment": "Clear explanations and very patient during drills.",
+   "isAnonymous": false,
+   "createdAt": 1783868400000
+  },
+  "rating_017": {
+   "instructorId": "prof_010",
+   "studentUid": "student_017",
+   "courseId": "bundle_n5_n3",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 3,
+    "subjectMastery": 4,
+    "classroomManagement": 4,
+    "professionalism": 3,
+    "supportiveness": 4,
+    "punctuality": 4,
+    "overallSatisfaction": 3
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1783782000000
+  },
+  "rating_018": {
+   "instructorId": "prof_006",
+   "studentUid": "student_018",
+   "courseId": "jlpt_n5",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 5,
+    "subjectMastery": 5,
+    "classroomManagement": 4,
+    "professionalism": 5,
+    "supportiveness": 5,
+    "punctuality": 4,
+    "overallSatisfaction": 5
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1783695600000
+  },
+  "rating_019": {
+   "instructorId": "prof_003",
+   "studentUid": "student_019",
+   "courseId": "jlpt_n3",
+   "ratings": {
+    "teachingEffectiveness": 4,
+    "communicationSkills": 4,
+    "subjectMastery": 3,
+    "classroomManagement": 4,
+    "professionalism": 4,
+    "supportiveness": 3,
+    "punctuality": 4,
+    "overallSatisfaction": 4
+   },
+   "comment": "",
+   "isAnonymous": false,
+   "createdAt": 1783609200000
+  },
+  "rating_020": {
+   "instructorId": "prof_004",
+   "studentUid": "student_020",
+   "courseId": "jlpt_n2",
+   "ratings": {
+    "teachingEffectiveness": 5,
+    "communicationSkills": 4,
+    "subjectMastery": 5,
+    "classroomManagement": 5,
+    "professionalism": 4,
+    "supportiveness": 5,
+    "punctuality": 5,
+    "overallSatisfaction": 4
+   },
+   "comment": "Clear explanations and very patient during drills.",
+   "isAnonymous": true,
+   "createdAt": 1783522800000
+  }
+ },
+ "logs": {
+  "log_enroll_001": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_001",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "full"
+   },
+   "createdAt": 1777734000000
+  },
+  "log_enroll_002": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_002",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "full"
+   },
+   "createdAt": 1777993200000
+  },
+  "log_enroll_003": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_003",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n3",
+    "sectionId": "section_03",
+    "tier": "full"
+   },
+   "createdAt": 1778252400000
+  },
+  "log_enroll_004": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_004",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "full"
+   },
+   "createdAt": 1778511600000
+  },
+  "log_enroll_005": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_005",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "full"
+   },
+   "createdAt": 1778770800000
+  },
+  "log_enroll_006": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_006",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n2",
+    "sectionId": "section_04",
+    "tier": "full"
+   },
+   "createdAt": 1779030000000
+  },
+  "log_enroll_007": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_007",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n4",
+    "sectionId": "section_05",
+    "tier": "full"
+   },
+   "createdAt": 1779289200000
+  },
+  "log_enroll_008": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_008",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n3",
+    "sectionId": "section_06",
+    "tier": "full"
+   },
+   "createdAt": 1779548400000
+  },
+  "log_enroll_009": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_009",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "full"
+   },
+   "createdAt": 1779807600000
+  },
+  "log_enroll_010": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_010",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "full"
+   },
+   "createdAt": 1780066800000
+  },
+  "log_enroll_011": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_011",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "partial"
+   },
+   "createdAt": 1780326000000
+  },
+  "log_enroll_012": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_012",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n3",
+    "sectionId": "section_03",
+    "tier": "partial"
+   },
+   "createdAt": 1780585200000
+  },
+  "log_enroll_013": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_013",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n2",
+    "sectionId": "section_04",
+    "tier": "partial"
+   },
+   "createdAt": 1780844400000
+  },
+  "log_enroll_014": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_014",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "partial"
+   },
+   "createdAt": 1781103600000
+  },
+  "log_enroll_015": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_015",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "partial"
+   },
+   "createdAt": 1781362800000
+  },
+  "log_enroll_016": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_016",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n4",
+    "sectionId": "section_05",
+    "tier": "partial"
+   },
+   "createdAt": 1781622000000
+  },
+  "log_enroll_017": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_017",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n3",
+    "sectionId": "section_06",
+    "tier": "partial"
+   },
+   "createdAt": 1781881200000
+  },
+  "log_enroll_018": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_018",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "partial"
+   },
+   "createdAt": 1782140400000
+  },
+  "log_enroll_019": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_019",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n3",
+    "sectionId": "section_03",
+    "tier": "partial"
+   },
+   "createdAt": 1782399600000
+  },
+  "log_enroll_020": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_020",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n2",
+    "sectionId": "section_04",
+    "tier": "partial"
+   },
+   "createdAt": 1782658800000
+  },
+  "log_enroll_021": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_021",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "minimal"
+   },
+   "createdAt": 1782918000000
+  },
+  "log_enroll_022": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_022",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "minimal"
+   },
+   "createdAt": 1783177200000
+  },
+  "log_enroll_023": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_023",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n3",
+    "sectionId": "section_03",
+    "tier": "minimal"
+   },
+   "createdAt": 1783436400000
+  },
+  "log_enroll_024": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_024",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n4",
+    "sectionId": "section_05",
+    "tier": "minimal"
+   },
+   "createdAt": 1783695600000
+  },
+  "log_enroll_025": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_025",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "bundle_n5_n3",
+    "sectionId": "section_06",
+    "tier": "minimal"
+   },
+   "createdAt": 1783954800000
+  },
+  "log_enroll_026": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_026",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "minimal"
+   },
+   "createdAt": 1784214000000
+  },
+  "log_enroll_027": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_027",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n4",
+    "sectionId": "section_02",
+    "tier": "minimal"
+   },
+   "createdAt": 1784473200000
+  },
+  "log_enroll_028": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_028",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n3",
+    "sectionId": "section_03",
+    "tier": "minimal"
+   },
+   "createdAt": 1784732400000
+  },
+  "log_enroll_029": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_029",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n2",
+    "sectionId": "section_04",
+    "tier": "minimal"
+   },
+   "createdAt": 1784991600000
+  },
+  "log_enroll_030": {
+   "action": "student_enrolled",
+   "actorUid": "admin_main",
+   "actorEmail": "admin@unmei-ph.com",
+   "targetId": "student_030",
+   "targetType": "student",
+   "metadata": {
+    "courseId": "jlpt_n5",
+    "sectionId": "section_01",
+    "tier": "minimal"
+   },
+   "createdAt": 1785250800000
+  }
+ },
+ "messages": {
+  "msg_001": {
+   "senderEmail": "registrar@unmei-ph.com",
+   "senderName": "UNMEI Registrar",
+   "subject": "Enrollment Confirmation",
+   "message": "Thank you for enrolling in JLPT N5 (Beginner). Your orientation is this coming Monday at the main hall.",
+   "read": false,
+   "createdAt": 1786284000000
+  },
+  "msg_002": {
+   "senderEmail": "registrar@unmei-ph.com",
+   "senderName": "UNMEI Registrar",
+   "subject": "Receipt Under Review",
+   "message": "We received your proof of payment. The finance office verifies receipts within three working days.",
+   "read": false,
+   "createdAt": 1786543200000
+  },
+  "msg_003": {
+   "senderEmail": "registrar@unmei-ph.com",
+   "senderName": "UNMEI Registrar",
+   "subject": "Make-up Class Schedule",
+   "message": "Students who missed last week have a make-up session on Saturday, 8am - 5pm.",
+   "read": true,
+   "createdAt": 1786716000000
+  },
+  "msg_004": {
+   "senderEmail": "registrar@unmei-ph.com",
+   "senderName": "UNMEI Registrar",
+   "subject": "JLPT Mock Exam Registration",
+   "message": "N4 and above students may now register for the monthly mock exam at the front desk.",
+   "read": true,
+   "createdAt": 1786888800000
+  }
+ },
+ "notifications": {
+  "notif_001": {
+   "recipientUid": "student_001",
+   "title": "Payment Verified",
+   "message": "Your tuition payment receipt has been approved by the finance office.",
+   "type": "payment",
+   "read": false,
+   "createdAt": 1786896000000
+  },
+  "notif_002": {
+   "recipientUid": "student_002",
+   "title": "Schedule Update",
+   "message": "Your JLPT N4 class moves to Room 203 starting next week.",
+   "type": "schedule",
+   "read": false,
+   "createdAt": 1786809600000
+  },
+  "notif_003": {
+   "recipientUid": "student_003",
+   "title": "New Announcement",
+   "message": "UNMEI will hold a culture day workshop at the end of the month.",
+   "type": "announcement",
+   "read": true,
+   "createdAt": 1786636800000
+  },
+  "notif_004": {
+   "recipientUid": "student_004",
+   "title": "Quiz Results Posted",
+   "message": "Your Vocabulary Quiz 3 score is now available in Courses.",
+   "type": "info",
+   "read": false,
+   "createdAt": 1786896000000
+  },
+  "notif_005": {
+   "recipientUid": "student_005",
+   "title": "Payment Due Soon",
+   "message": "Your installment balance is due in five days.",
+   "type": "payment",
+   "read": false,
+   "createdAt": 1786723200000
+  },
+  "notif_006": {
+   "recipientUid": "student_006",
+   "title": "Instructor Feedback",
+   "message": "Your sensei left feedback on your latest kanji stroke practice.",
+   "type": "info",
+   "read": true,
+   "createdAt": 1786550400000
+  },
+  "notif_007": {
+   "recipientUid": "student_007",
+   "title": "Class Moved Online",
+   "message": "Saturday session will be held via Google Meet this week.",
+   "type": "schedule",
+   "read": false,
+   "createdAt": 1786809600000
+  },
+  "notif_008": {
+   "recipientUid": "student_008",
+   "title": "Welcome to UNMEI",
+   "message": "Complete your Get Started guide to tour the student portal.",
+   "type": "info",
+   "read": false,
+   "createdAt": 1786464000000
+  }
+ },
+ "payments": {
+  "payment_001": {
+   "studentUid": "student_001",
+   "studentName": "Liam Reyes",
+   "studentEmail": "liam.reyes1@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1788793200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_001.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1777806000000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1777798800000,
+   "createdAt": 1777734000000,
+   "updatedAt": 1786892400000
+  },
+  "payment_002": {
+   "studentUid": "student_002",
+   "studentName": "Noah Santos",
+   "studentEmail": "noah.santos2@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1788879600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_002.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1778065200000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1778058000000,
+   "createdAt": 1777993200000,
+   "updatedAt": 1786806000000
+  },
+  "payment_003": {
+   "studentUid": "student_003",
+   "studentName": "Ethan Cruz",
+   "studentEmail": "ethan.cruz3@unmei-ph.com",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "type": "tuition",
+   "amount": 16000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1788966000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_003.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1778324400000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1778317200000,
+   "createdAt": 1778252400000,
+   "updatedAt": 1786719600000
+  },
+  "payment_004": {
+   "studentUid": "student_004",
+   "studentName": "Chloe Bautista",
+   "studentEmail": "chloe.bautista4@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789052400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1778511600000,
+   "updatedAt": 1786633200000
+  },
+  "payment_005": {
+   "studentUid": "student_005",
+   "studentName": "Lucas Garcia",
+   "studentEmail": "lucas.garcia5@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "approved",
+   "dueDate": 1789138800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_005.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1778842800000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1778835600000,
+   "createdAt": 1778770800000,
+   "updatedAt": 1786546800000
+  },
+  "payment_006": {
+   "studentUid": "student_006",
+   "studentName": "Sophia Mendoza",
+   "studentEmail": "sophia.mendoza6@unmei-ph.com",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "type": "tuition",
+   "amount": 18000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789225200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_006.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1779102000000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1779094800000,
+   "createdAt": 1779030000000,
+   "updatedAt": 1786978800000
+  },
+  "payment_007": {
+   "studentUid": "student_007",
+   "studentName": "James Villanueva",
+   "studentEmail": "james.villanueva7@unmei-ph.com",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "type": "tuition",
+   "amount": 24000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789311600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_007.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1779361200000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1779354000000,
+   "createdAt": 1779289200000,
+   "updatedAt": 1786892400000
+  },
+  "payment_008": {
+   "studentUid": "student_008",
+   "studentName": "Isabella Ramos",
+   "studentEmail": "isabella.ramos8@unmei-ph.com",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "type": "tuition",
+   "amount": 30000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789398000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1779548400000,
+   "updatedAt": 1786806000000
+  },
+  "payment_009": {
+   "studentUid": "student_009",
+   "studentName": "Benjamin Torres",
+   "studentEmail": "benjamin.torres9@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789484400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_009.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1779879600000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1779872400000,
+   "createdAt": 1779807600000,
+   "updatedAt": 1786719600000
+  },
+  "payment_010": {
+   "studentUid": "student_010",
+   "studentName": "Mia Fernandez",
+   "studentEmail": "mia.fernandez10@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "approved",
+   "dueDate": 1788706800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_010.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1780138800000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1780131600000,
+   "createdAt": 1780066800000,
+   "updatedAt": 1786633200000
+  },
+  "payment_011": {
+   "studentUid": "student_011",
+   "studentName": "Alexander Aquino",
+   "studentEmail": "alexander.aquino11@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1788793200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1780326000000,
+   "updatedAt": 1786546800000
+  },
+  "payment_012": {
+   "studentUid": "student_012",
+   "studentName": "Charlotte De Leon",
+   "studentEmail": "charlotte.leon12@unmei-ph.com",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "type": "tuition",
+   "amount": 16000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1788879600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_012.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1780657200000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1780650000000,
+   "createdAt": 1780585200000,
+   "updatedAt": 1786978800000
+  },
+  "payment_013": {
+   "studentUid": "student_013",
+   "studentName": "Daniel Castro",
+   "studentEmail": "daniel.castro13@unmei-ph.com",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "type": "tuition",
+   "amount": 18000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1788966000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "rejected",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1780844400000,
+   "updatedAt": 1786892400000
+  },
+  "payment_014": {
+   "studentUid": "student_014",
+   "studentName": "Amelia Soriano",
+   "studentEmail": "amelia.soriano14@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789052400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_014.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1781175600000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1781168400000,
+   "createdAt": 1781103600000,
+   "updatedAt": 1786806000000
+  },
+  "payment_015": {
+   "studentUid": "student_015",
+   "studentName": "Henry Navarro",
+   "studentEmail": "henry.navarro15@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "pending",
+   "dueDate": 1789138800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1781362800000,
+   "updatedAt": 1786719600000
+  },
+  "payment_016": {
+   "studentUid": "student_016",
+   "studentName": "Evelyn Corpuz",
+   "studentEmail": "evelyn.corpuz16@unmei-ph.com",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "type": "tuition",
+   "amount": 24000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789225200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_016.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1781694000000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1781686800000,
+   "createdAt": 1781622000000,
+   "updatedAt": 1786633200000
+  },
+  "payment_017": {
+   "studentUid": "student_017",
+   "studentName": "Matthew Valenzuela",
+   "studentEmail": "matthew.valenzuela17@unmei-ph.com",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "type": "tuition",
+   "amount": 30000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789311600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1781881200000,
+   "updatedAt": 1786546800000
+  },
+  "payment_018": {
+   "studentUid": "student_018",
+   "studentName": "Harper Del Rosario",
+   "studentEmail": "harper.rosario18@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "approved",
+   "dueDate": 1789398000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_018.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1782212400000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1782205200000,
+   "createdAt": 1782140400000,
+   "updatedAt": 1786978800000
+  },
+  "payment_019": {
+   "studentUid": "student_019",
+   "studentName": "Sebastian Ocampo",
+   "studentEmail": "sebastian.ocampo19@unmei-ph.com",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "type": "tuition",
+   "amount": 16000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789484400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1782399600000,
+   "updatedAt": 1786892400000
+  },
+  "payment_020": {
+   "studentUid": "student_020",
+   "studentName": "Victoria Pineda",
+   "studentEmail": "victoria.pineda20@unmei-ph.com",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "type": "tuition",
+   "amount": 18000,
+   "currency": "PHP",
+   "paymentMode": "full",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "approved",
+   "dueDate": 1788706800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "receipt_020.jpg",
+   "receiptFileType": "image/jpeg",
+   "receiptUploadedAt": 1782730800000,
+   "adminApprovalStatus": "approved",
+   "adminApprovalNote": "Verified by finance",
+   "adminApprovedBy": "admin_main",
+   "adminApprovedAt": 1782723600000,
+   "createdAt": 1782658800000,
+   "updatedAt": 1786806000000
+  },
+  "payment_021": {
+   "studentUid": "student_021",
+   "studentName": "David Alcantara",
+   "studentEmail": "david.alcantara21@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1788793200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1782918000000,
+   "updatedAt": 1786719600000
+  },
+  "payment_022": {
+   "studentUid": "student_022",
+   "studentName": "Aria Imperial",
+   "studentEmail": "aria.imperial22@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1788879600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1783177200000,
+   "updatedAt": 1786633200000
+  },
+  "payment_023": {
+   "studentUid": "student_023",
+   "studentName": "Josephine Salazar",
+   "studentEmail": "josephine.salazar23@unmei-ph.com",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "type": "tuition",
+   "amount": 16000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1788966000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1783436400000,
+   "updatedAt": 1786546800000
+  },
+  "payment_024": {
+   "studentUid": "student_024",
+   "studentName": "Samuel Mercado",
+   "studentEmail": "samuel.mercado24@unmei-ph.com",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "courseId": "bundle_n5_n4",
+   "type": "tuition",
+   "amount": 24000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789052400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1783695600000,
+   "updatedAt": 1786978800000
+  },
+  "payment_025": {
+   "studentUid": "student_025",
+   "studentName": "Scarlett Tolentino",
+   "studentEmail": "scarlett.tolentino25@unmei-ph.com",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "courseId": "bundle_n5_n3",
+   "type": "tuition",
+   "amount": 30000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "pending",
+   "dueDate": 1789138800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1783954800000,
+   "updatedAt": 1786892400000
+  },
+  "payment_026": {
+   "studentUid": "student_026",
+   "studentName": "Gabriel Sison",
+   "studentEmail": "gabriel.sison26@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789225200000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1784214000000,
+   "updatedAt": 1786806000000
+  },
+  "payment_027": {
+   "studentUid": "student_027",
+   "studentName": "Hannah Beltran",
+   "studentEmail": "hannah.beltran27@unmei-ph.com",
+   "course": "JLPT N4 (Intermediate)",
+   "courseId": "jlpt_n4",
+   "type": "tuition",
+   "amount": 14000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789311600000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "rejected",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1784473200000,
+   "updatedAt": 1786719600000
+  },
+  "payment_028": {
+   "studentUid": "student_028",
+   "studentName": "Julian Palma",
+   "studentEmail": "julian.palma28@unmei-ph.com",
+   "course": "JLPT N3 (Advanced)",
+   "courseId": "jlpt_n3",
+   "type": "tuition",
+   "amount": 16000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789398000000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1784732400000,
+   "updatedAt": 1786633200000
+  },
+  "payment_029": {
+   "studentUid": "student_029",
+   "studentName": "Zoey Manalo",
+   "studentEmail": "zoey.manalo29@unmei-ph.com",
+   "course": "JLPT N2 (Expert)",
+   "courseId": "jlpt_n2",
+   "type": "tuition",
+   "amount": 18000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Online Banking",
+   "paymentChannel": "gcash",
+   "status": "pending",
+   "dueDate": 1789484400000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1784991600000,
+   "updatedAt": 1786546800000
+  },
+  "payment_030": {
+   "studentUid": "student_030",
+   "studentName": "Christian Guinto",
+   "studentEmail": "christian.guinto30@unmei-ph.com",
+   "course": "JLPT N5 (Beginner)",
+   "courseId": "jlpt_n5",
+   "type": "tuition",
+   "amount": 12000,
+   "currency": "PHP",
+   "paymentMode": "installment",
+   "paymentMethod": "Cash",
+   "paymentChannel": "cash",
+   "status": "pending",
+   "dueDate": 1788706800000,
+   "receiptImageUrl": "",
+   "receiptFileName": "",
+   "receiptFileType": "",
+   "receiptUploadedAt": null,
+   "adminApprovalStatus": "pending",
+   "adminApprovalNote": "",
+   "adminApprovedBy": "",
+   "adminApprovedAt": null,
+   "createdAt": 1785250800000,
+   "updatedAt": 1786978800000
+  }
+ },
+ "portal_config": {
+  "portalName": "UNMEI Nihongo Center",
+  "supportEmail": "unmeinihongocenter@unmei-ph.com",
+  "supportPhone": "0965-155-1397",
+  "domain": "unmei-ph.com",
+  "updatedAt": 1786374000000
+ },
+ "schedules": {
+  "schedule_01": {
+   "sectionId": "section_01",
+   "courseId": "jlpt_n5",
+   "course": "JLPT N5 (Beginner)",
+   "instructor": "Aiko Tanaka",
+   "days": "Monday - Wednesday - Friday",
+   "timeSlot": "8am - 12nn",
+   "room": "Room 201",
+   "meetingLink": "",
+   "classSetup": "Face-to-face",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "schedule_02": {
+   "sectionId": "section_02",
+   "courseId": "jlpt_n4",
+   "course": "JLPT N4 (Intermediate)",
+   "instructor": "Kenji Watanabe",
+   "days": "Monday - Wednesday - Friday",
+   "timeSlot": "1pm - 5pm",
+   "room": "",
+   "meetingLink": "https://meet.google.com/unmei-mwf",
+   "classSetup": "Online",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "schedule_03": {
+   "sectionId": "section_03",
+   "courseId": "jlpt_n3",
+   "course": "JLPT N3 (Advanced)",
+   "instructor": "Maria Santos-Nakamura",
+   "days": "Tuesday & Thursday",
+   "timeSlot": "8am - 12nn",
+   "room": "Room 203",
+   "meetingLink": "",
+   "classSetup": "Face-to-face",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "schedule_04": {
+   "sectionId": "section_04",
+   "courseId": "jlpt_n2",
+   "course": "JLPT N2 (Expert)",
+   "instructor": "Hiroshi Yamamoto",
+   "days": "Tuesday & Thursday",
+   "timeSlot": "1pm - 5pm",
+   "room": "",
+   "meetingLink": "https://meet.google.com/unmei-tt",
+   "classSetup": "Online",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "schedule_05": {
+   "sectionId": "section_05",
+   "courseId": "bundle_n5_n4",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "instructor": "Aiko Tanaka",
+   "days": "Monday - Friday",
+   "timeSlot": "8am - 12nn",
+   "room": "Room 105",
+   "meetingLink": "",
+   "classSetup": "Private",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "schedule_06": {
+   "sectionId": "section_06",
+   "courseId": "bundle_n5_n3",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "instructor": "Elena Gomez-Sato",
+   "days": "Saturday Only",
+   "timeSlot": "8am - 5pm (Sat Only)",
+   "room": "Main Hall",
+   "meetingLink": "",
+   "classSetup": "Face-to-face",
+   "active": true,
+   "startDate": 1776610800000,
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  }
+ },
+ "sections": {
+  "section_01": {
+   "name": "JLPT N5 (Beginner) - Class 1",
+   "courseId": "jlpt_n5",
+   "course": "JLPT N5 (Beginner)",
+   "instructor": "Aiko Tanaka",
+   "instructorId": "prof_001",
+   "schedule": {
+    "days": "Monday - Wednesday - Friday",
+    "timeSlot": "8am - 12nn",
+    "time": "8am - 12nn",
+    "classSetup": "Face-to-face",
+    "room": "Room 201",
+    "meetingLink": null
+   },
+   "capacity": 25,
+   "enrolledCount": 9,
+   "studentUids": [
+    "student_001",
+    "student_004",
+    "student_009",
+    "student_010",
+    "student_014",
+    "student_018",
+    "student_021",
+    "student_026",
+    "student_030"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "section_02": {
+   "name": "JLPT N4 (Intermediate) - Class 2",
+   "courseId": "jlpt_n4",
+   "course": "JLPT N4 (Intermediate)",
+   "instructor": "Kenji Watanabe",
+   "instructorId": "prof_002",
+   "schedule": {
+    "days": "Monday - Wednesday - Friday",
+    "timeSlot": "1pm - 5pm",
+    "time": "1pm - 5pm",
+    "classSetup": "Online",
+    "room": null,
+    "meetingLink": "https://meet.google.com/unmei-mwf"
+   },
+   "capacity": 25,
+   "enrolledCount": 6,
+   "studentUids": [
+    "student_002",
+    "student_005",
+    "student_011",
+    "student_015",
+    "student_022",
+    "student_027"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "section_03": {
+   "name": "JLPT N3 (Advanced) - Class 3",
+   "courseId": "jlpt_n3",
+   "course": "JLPT N3 (Advanced)",
+   "instructor": "Maria Santos-Nakamura",
+   "instructorId": "prof_003",
+   "schedule": {
+    "days": "Tuesday & Thursday",
+    "timeSlot": "8am - 12nn",
+    "time": "8am - 12nn",
+    "classSetup": "Face-to-face",
+    "room": "Room 203",
+    "meetingLink": null
+   },
+   "capacity": 25,
+   "enrolledCount": 5,
+   "studentUids": [
+    "student_003",
+    "student_012",
+    "student_019",
+    "student_023",
+    "student_028"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "section_04": {
+   "name": "JLPT N2 (Expert) - Class 4",
+   "courseId": "jlpt_n2",
+   "course": "JLPT N2 (Expert)",
+   "instructor": "Hiroshi Yamamoto",
+   "instructorId": "prof_004",
+   "schedule": {
+    "days": "Tuesday & Thursday",
+    "timeSlot": "1pm - 5pm",
+    "time": "1pm - 5pm",
+    "classSetup": "Online",
+    "room": null,
+    "meetingLink": "https://meet.google.com/unmei-tt"
+   },
+   "capacity": 25,
+   "enrolledCount": 4,
+   "studentUids": [
+    "student_006",
+    "student_013",
+    "student_020",
+    "student_029"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "section_05": {
+   "name": "Bundle N5 and N4 (Beginner to Intermediate) - Class 5",
+   "courseId": "bundle_n5_n4",
+   "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+   "instructor": "Aiko Tanaka",
+   "instructorId": "prof_001",
+   "schedule": {
+    "days": "Monday - Friday",
+    "timeSlot": "8am - 12nn",
+    "time": "8am - 12nn",
+    "classSetup": "Private",
+    "room": "Room 105",
+    "meetingLink": null
+   },
+   "capacity": 25,
+   "enrolledCount": 3,
+   "studentUids": [
+    "student_007",
+    "student_016",
+    "student_024"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  },
+  "section_06": {
+   "name": "Bundle N5-N3 (Beginner to Advanced) - Class 6",
+   "courseId": "bundle_n5_n3",
+   "course": "Bundle N5-N3 (Beginner to Advanced)",
+   "instructor": "Elena Gomez-Sato",
+   "instructorId": "prof_010",
+   "schedule": {
+    "days": "Saturday Only",
+    "timeSlot": "8am - 5pm (Sat Only)",
+    "time": "8am - 5pm (Sat Only)",
+    "classSetup": "Face-to-face",
+    "room": "Main Hall",
+    "meetingLink": null
+   },
+   "capacity": 25,
+   "enrolledCount": 3,
+   "studentUids": [
+    "student_008",
+    "student_017",
+    "student_025"
+   ],
+   "startDate": 1776610800000,
+   "endDate": 1792162800000,
+   "status": "active",
+   "createdAt": 1775746800000,
+   "updatedAt": 1786806000000
+  }
+ },
+ "settings": {
+  "enrollment_open": true,
+  "max_students_per_class": 25
+ },
+ "students": {
+  "student_001": {
+   "profile": {
+    "fullName": "Liam Reyes",
+    "email": "liam.reyes1@unmei-ph.com",
+    "mobileNumber": "+63 911 101 1001",
+    "address": "4 Sakura Street, Makati City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "LR",
+    "avatarColor": "#2980B9",
+    "createdAt": 1777734000000,
+    "updatedAt": 1786892400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1777734000000,
+    "instructorId": "prof_001"
+   },
+   "performance": {
+    "courseProgress": 65,
+    "modulesCompleted": 8,
+    "totalModules": 12,
+    "quizScores": [
+     82,
+     85,
+     88,
+     84,
+     89,
+     87
+    ],
+    "averageScore": 86,
+    "attendanceRate": 87,
+    "lastActivityAt": 1786856400000,
+    "weeklyProgress": [
+     41,
+     48,
+     54,
+     59,
+     63,
+     65
+    ],
+    "skillBreakdown": {
+     "reading": 89,
+     "writing": 81,
+     "listening": 87,
+     "speaking": 82,
+     "grammar": 85,
+     "vocabulary": 90
+    },
+    "areasOfImprovement": [
+     "Te-form verb conjugation",
+     "Particle usage (wa vs ga)"
+    ],
+    "streakDays": 3,
+    "totalPracticeMinutes": 275
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 75,
+     "writing": 67,
+     "pronunciation": 68,
+     "grammar": 71,
+     "kanji": 72,
+     "vocabulary": 76
+    },
+    "week2": {
+     "reading": 76,
+     "writing": 68,
+     "pronunciation": 69,
+     "grammar": 72,
+     "kanji": 73,
+     "vocabulary": 77
+    },
+    "week3": {
+     "reading": 80,
+     "writing": 72,
+     "pronunciation": 73,
+     "grammar": 76,
+     "kanji": 77,
+     "vocabulary": 81
+    },
+    "week4": {
+     "reading": 84,
+     "writing": 76,
+     "pronunciation": 77,
+     "grammar": 80,
+     "kanji": 81,
+     "vocabulary": 85
+    },
+    "week5": {
+     "reading": 85,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 81,
+     "kanji": 82,
+     "vocabulary": 86
+    },
+    "week6": {
+     "reading": 89,
+     "writing": 81,
+     "pronunciation": 82,
+     "grammar": 85,
+     "kanji": 86,
+     "vocabulary": 90
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 43,
+     "kanji": 31
+    },
+    "streakDays": 3,
+    "totalPracticeMinutes": 275,
+    "totalSessionsCompleted": 17
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_002": {
+   "profile": {
+    "fullName": "Noah Santos",
+    "email": "noah.santos2@unmei-ph.com",
+    "mobileNumber": "+63 912 102 1002",
+    "address": "7 Sakura Street, Quezon City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "NS",
+    "avatarColor": "#27AE60",
+    "createdAt": 1777993200000,
+    "updatedAt": 1786806000000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1777993200000,
+    "instructorId": "prof_002"
+   },
+   "performance": {
+    "courseProgress": 45,
+    "modulesCompleted": 5,
+    "totalModules": 12,
+    "quizScores": [
+     75,
+     78,
+     81,
+     77,
+     82,
+     80
+    ],
+    "averageScore": 79,
+    "attendanceRate": 88,
+    "lastActivityAt": 1786770000000,
+    "weeklyProgress": [
+     21,
+     28,
+     34,
+     39,
+     43,
+     45
+    ],
+    "skillBreakdown": {
+     "reading": 82,
+     "writing": 74,
+     "listening": 80,
+     "speaking": 75,
+     "grammar": 78,
+     "vocabulary": 83
+    },
+    "areasOfImprovement": [
+     "Keigo honorific expressions",
+     "Kanji stroke order accuracy"
+    ],
+    "streakDays": 4,
+    "totalPracticeMinutes": 310
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 66,
+     "writing": 58,
+     "pronunciation": 59,
+     "grammar": 62,
+     "kanji": 63,
+     "vocabulary": 67
+    },
+    "week2": {
+     "reading": 70,
+     "writing": 62,
+     "pronunciation": 63,
+     "grammar": 66,
+     "kanji": 67,
+     "vocabulary": 71
+    },
+    "week3": {
+     "reading": 74,
+     "writing": 66,
+     "pronunciation": 67,
+     "grammar": 70,
+     "kanji": 71,
+     "vocabulary": 75
+    },
+    "week4": {
+     "reading": 75,
+     "writing": 67,
+     "pronunciation": 68,
+     "grammar": 71,
+     "kanji": 72,
+     "vocabulary": 76
+    },
+    "week5": {
+     "reading": 79,
+     "writing": 71,
+     "pronunciation": 72,
+     "grammar": 75,
+     "kanji": 76,
+     "vocabulary": 80
+    },
+    "week6": {
+     "reading": 83,
+     "writing": 75,
+     "pronunciation": 76,
+     "grammar": 79,
+     "kanji": 80,
+     "vocabulary": 84
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 33,
+     "katakana": 27,
+     "kanji": 22
+    },
+    "streakDays": 4,
+    "totalPracticeMinutes": 310,
+    "totalSessionsCompleted": 12
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_003": {
+   "profile": {
+    "fullName": "Ethan Cruz",
+    "email": "ethan.cruz3@unmei-ph.com",
+    "mobileNumber": "+63 913 103 1003",
+    "address": "10 Sakura Street, Pasig City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "EC",
+    "avatarColor": "#8E44AD",
+    "createdAt": 1778252400000,
+    "updatedAt": 1786719600000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n3",
+    "course": "JLPT N3 (Advanced)",
+    "sectionId": "section_03",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1778252400000,
+    "instructorId": "prof_003"
+   },
+   "performance": {
+    "courseProgress": 80,
+    "modulesCompleted": 11,
+    "totalModules": 14,
+    "quizScores": [
+     87,
+     90,
+     93,
+     89,
+     94,
+     92
+    ],
+    "averageScore": 91,
+    "attendanceRate": 89,
+    "lastActivityAt": 1786683600000,
+    "weeklyProgress": [
+     56,
+     63,
+     69,
+     74,
+     78,
+     80
+    ],
+    "skillBreakdown": {
+     "reading": 94,
+     "writing": 86,
+     "listening": 92,
+     "speaking": 87,
+     "grammar": 90,
+     "vocabulary": 95
+    },
+    "areasOfImprovement": [
+     "Transitive and intransitive verbs",
+     "Listening speed comprehension"
+    ],
+    "streakDays": 5,
+    "totalPracticeMinutes": 345
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 79,
+     "writing": 71,
+     "pronunciation": 72,
+     "grammar": 75,
+     "kanji": 80,
+     "vocabulary": 80
+    },
+    "week2": {
+     "reading": 83,
+     "writing": 75,
+     "pronunciation": 76,
+     "grammar": 79,
+     "kanji": 84,
+     "vocabulary": 84
+    },
+    "week3": {
+     "reading": 84,
+     "writing": 76,
+     "pronunciation": 77,
+     "grammar": 80,
+     "kanji": 85,
+     "vocabulary": 85
+    },
+    "week4": {
+     "reading": 88,
+     "writing": 80,
+     "pronunciation": 81,
+     "grammar": 84,
+     "kanji": 89,
+     "vocabulary": 89
+    },
+    "week5": {
+     "reading": 92,
+     "writing": 84,
+     "pronunciation": 85,
+     "grammar": 88,
+     "kanji": 93,
+     "vocabulary": 93
+    },
+    "week6": {
+     "reading": 93,
+     "writing": 85,
+     "pronunciation": 86,
+     "grammar": 89,
+     "kanji": 94,
+     "vocabulary": 94
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11"
+    ],
+    "totalModules": 14,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 49
+    },
+    "streakDays": 5,
+    "totalPracticeMinutes": 345,
+    "totalSessionsCompleted": 25
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_004": {
+   "profile": {
+    "fullName": "Chloe Bautista",
+    "email": "chloe.bautista4@unmei-ph.com",
+    "mobileNumber": "+63 914 104 1004",
+    "address": "13 Sakura Street, Taguig City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "CB",
+    "avatarColor": "#D35400",
+    "createdAt": 1778511600000,
+    "updatedAt": 1786633200000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1778511600000,
+    "instructorId": "prof_005"
+   },
+   "performance": {
+    "courseProgress": 70,
+    "modulesCompleted": 8,
+    "totalModules": 12,
+    "quizScores": [
+     84,
+     87,
+     90,
+     86,
+     91,
+     89
+    ],
+    "averageScore": 88,
+    "attendanceRate": 90,
+    "lastActivityAt": 1786597200000,
+    "weeklyProgress": [
+     46,
+     53,
+     59,
+     64,
+     68,
+     70
+    ],
+    "skillBreakdown": {
+     "reading": 91,
+     "writing": 83,
+     "listening": 89,
+     "speaking": 84,
+     "grammar": 87,
+     "vocabulary": 92
+    },
+    "areasOfImprovement": [
+     "Particle usage (wa vs ga)",
+     "Counters and numbers"
+    ],
+    "streakDays": 6,
+    "totalPracticeMinutes": 380
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 77,
+     "writing": 69,
+     "pronunciation": 70,
+     "grammar": 73,
+     "kanji": 74,
+     "vocabulary": 78
+    },
+    "week2": {
+     "reading": 78,
+     "writing": 70,
+     "pronunciation": 71,
+     "grammar": 74,
+     "kanji": 75,
+     "vocabulary": 79
+    },
+    "week3": {
+     "reading": 82,
+     "writing": 74,
+     "pronunciation": 75,
+     "grammar": 78,
+     "kanji": 79,
+     "vocabulary": 83
+    },
+    "week4": {
+     "reading": 86,
+     "writing": 78,
+     "pronunciation": 79,
+     "grammar": 82,
+     "kanji": 83,
+     "vocabulary": 87
+    },
+    "week5": {
+     "reading": 87,
+     "writing": 79,
+     "pronunciation": 80,
+     "grammar": 83,
+     "kanji": 84,
+     "vocabulary": 88
+    },
+    "week6": {
+     "reading": 91,
+     "writing": 83,
+     "pronunciation": 84,
+     "grammar": 87,
+     "kanji": 88,
+     "vocabulary": 92
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 34
+    },
+    "streakDays": 6,
+    "totalPracticeMinutes": 380,
+    "totalSessionsCompleted": 20
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_005": {
+   "profile": {
+    "fullName": "Lucas Garcia",
+    "email": "lucas.garcia5@unmei-ph.com",
+    "mobileNumber": "+63 915 105 1005",
+    "address": "16 Sakura Street, Mandaluyong City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "LG",
+    "avatarColor": "#16A085",
+    "createdAt": 1778770800000,
+    "updatedAt": 1786546800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1778770800000,
+    "instructorId": "prof_007"
+   },
+   "performance": {
+    "courseProgress": 55,
+    "modulesCompleted": 7,
+    "totalModules": 12,
+    "quizScores": [
+     77,
+     80,
+     83,
+     79,
+     84,
+     82
+    ],
+    "averageScore": 81,
+    "attendanceRate": 91,
+    "lastActivityAt": 1786942800000,
+    "weeklyProgress": [
+     31,
+     38,
+     44,
+     49,
+     53,
+     55
+    ],
+    "skillBreakdown": {
+     "reading": 84,
+     "writing": 76,
+     "listening": 82,
+     "speaking": 77,
+     "grammar": 80,
+     "vocabulary": 85
+    },
+    "areasOfImprovement": [
+     "Kanji stroke order accuracy",
+     "Katakana long-vowel drills"
+    ],
+    "streakDays": 7,
+    "totalPracticeMinutes": 415
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 68,
+     "writing": 60,
+     "pronunciation": 61,
+     "grammar": 64,
+     "kanji": 65,
+     "vocabulary": 69
+    },
+    "week2": {
+     "reading": 72,
+     "writing": 64,
+     "pronunciation": 65,
+     "grammar": 68,
+     "kanji": 69,
+     "vocabulary": 73
+    },
+    "week3": {
+     "reading": 76,
+     "writing": 68,
+     "pronunciation": 69,
+     "grammar": 72,
+     "kanji": 73,
+     "vocabulary": 77
+    },
+    "week4": {
+     "reading": 77,
+     "writing": 69,
+     "pronunciation": 70,
+     "grammar": 73,
+     "kanji": 74,
+     "vocabulary": 78
+    },
+    "week5": {
+     "reading": 81,
+     "writing": 73,
+     "pronunciation": 74,
+     "grammar": 77,
+     "kanji": 78,
+     "vocabulary": 82
+    },
+    "week6": {
+     "reading": 85,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 81,
+     "kanji": 82,
+     "vocabulary": 86
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 40,
+     "katakana": 35,
+     "kanji": 26
+    },
+    "streakDays": 7,
+    "totalPracticeMinutes": 415,
+    "totalSessionsCompleted": 14
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_006": {
+   "profile": {
+    "fullName": "Sophia Mendoza",
+    "email": "sophia.mendoza6@unmei-ph.com",
+    "mobileNumber": "+63 916 106 1006",
+    "address": "19 Sakura Street, Manila City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "SM",
+    "avatarColor": "#2C3E50",
+    "createdAt": 1779030000000,
+    "updatedAt": 1786460400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n2",
+    "course": "JLPT N2 (Expert)",
+    "sectionId": "section_04",
+    "classSetup": "Online",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1779030000000,
+    "instructorId": "prof_004"
+   },
+   "performance": {
+    "courseProgress": 90,
+    "modulesCompleted": 14,
+    "totalModules": 16,
+    "quizScores": [
+     89,
+     92,
+     95,
+     91,
+     96,
+     94
+    ],
+    "averageScore": 93,
+    "attendanceRate": 92,
+    "lastActivityAt": 1786856400000,
+    "weeklyProgress": [
+     66,
+     73,
+     79,
+     84,
+     88,
+     90
+    ],
+    "skillBreakdown": {
+     "reading": 96,
+     "writing": 88,
+     "listening": 94,
+     "speaking": 89,
+     "grammar": 92,
+     "vocabulary": 97
+    },
+    "areasOfImprovement": [
+     "Listening speed comprehension",
+     "Te-form verb conjugation"
+    ],
+    "streakDays": 8,
+    "totalPracticeMinutes": 450
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 81,
+     "writing": 73,
+     "pronunciation": 74,
+     "grammar": 77,
+     "kanji": 85,
+     "vocabulary": 82
+    },
+    "week2": {
+     "reading": 85,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 81,
+     "kanji": 89,
+     "vocabulary": 86
+    },
+    "week3": {
+     "reading": 86,
+     "writing": 78,
+     "pronunciation": 79,
+     "grammar": 82,
+     "kanji": 90,
+     "vocabulary": 87
+    },
+    "week4": {
+     "reading": 90,
+     "writing": 82,
+     "pronunciation": 83,
+     "grammar": 86,
+     "kanji": 94,
+     "vocabulary": 91
+    },
+    "week5": {
+     "reading": 94,
+     "writing": 86,
+     "pronunciation": 87,
+     "grammar": 90,
+     "kanji": 98,
+     "vocabulary": 95
+    },
+    "week6": {
+     "reading": 95,
+     "writing": 87,
+     "pronunciation": 88,
+     "grammar": 91,
+     "kanji": 99,
+     "vocabulary": 96
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14"
+    ],
+    "totalModules": 16,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 66
+    },
+    "streakDays": 8,
+    "totalPracticeMinutes": 450,
+    "totalSessionsCompleted": 29
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_007": {
+   "profile": {
+    "fullName": "James Villanueva",
+    "email": "james.villanueva7@unmei-ph.com",
+    "mobileNumber": "+63 917 107 1007",
+    "address": "22 Sakura Street, Cebu City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "JV",
+    "avatarColor": "#E67E22",
+    "createdAt": 1779289200000,
+    "updatedAt": 1786978800000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n4",
+    "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+    "sectionId": "section_05",
+    "classSetup": "Private",
+    "scheduleDays": "Monday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1779289200000,
+    "instructorId": "prof_001"
+   },
+   "performance": {
+    "courseProgress": 60,
+    "modulesCompleted": 14,
+    "totalModules": 24,
+    "quizScores": [
+     80,
+     83,
+     86,
+     82,
+     87,
+     85
+    ],
+    "averageScore": 84,
+    "attendanceRate": 93,
+    "lastActivityAt": 1786770000000,
+    "weeklyProgress": [
+     36,
+     43,
+     49,
+     54,
+     58,
+     60
+    ],
+    "skillBreakdown": {
+     "reading": 87,
+     "writing": 79,
+     "listening": 85,
+     "speaking": 80,
+     "grammar": 83,
+     "vocabulary": 88
+    },
+    "areasOfImprovement": [
+     "Counters and numbers",
+     "Keigo honorific expressions"
+    ],
+    "streakDays": 9,
+    "totalPracticeMinutes": 485
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 73,
+     "writing": 65,
+     "pronunciation": 66,
+     "grammar": 69,
+     "kanji": 70,
+     "vocabulary": 74
+    },
+    "week2": {
+     "reading": 74,
+     "writing": 66,
+     "pronunciation": 67,
+     "grammar": 70,
+     "kanji": 71,
+     "vocabulary": 75
+    },
+    "week3": {
+     "reading": 78,
+     "writing": 70,
+     "pronunciation": 71,
+     "grammar": 74,
+     "kanji": 75,
+     "vocabulary": 79
+    },
+    "week4": {
+     "reading": 82,
+     "writing": 74,
+     "pronunciation": 75,
+     "grammar": 78,
+     "kanji": 79,
+     "vocabulary": 83
+    },
+    "week5": {
+     "reading": 83,
+     "writing": 75,
+     "pronunciation": 76,
+     "grammar": 79,
+     "kanji": 80,
+     "vocabulary": 84
+    },
+    "week6": {
+     "reading": 87,
+     "writing": 79,
+     "pronunciation": 80,
+     "grammar": 83,
+     "kanji": 84,
+     "vocabulary": 88
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14"
+    ],
+    "totalModules": 24,
+    "charactersMastered": {
+     "hiragana": 44,
+     "katakana": 39,
+     "kanji": 29
+    },
+    "streakDays": 9,
+    "totalPracticeMinutes": 485,
+    "totalSessionsCompleted": 30
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_008": {
+   "profile": {
+    "fullName": "Isabella Ramos",
+    "email": "isabella.ramos8@unmei-ph.com",
+    "mobileNumber": "+63 918 108 1008",
+    "address": "25 Sakura Street, Davao City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "IR",
+    "avatarColor": "#C0392B",
+    "createdAt": 1779548400000,
+    "updatedAt": 1786892400000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n3",
+    "course": "Bundle N5-N3 (Beginner to Advanced)",
+    "sectionId": "section_06",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Saturday Only",
+    "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+    "status": "active",
+    "enrolledAt": 1779548400000,
+    "instructorId": "prof_010"
+   },
+   "performance": {
+    "courseProgress": 75,
+    "modulesCompleted": 20,
+    "totalModules": 26,
+    "quizScores": [
+     85,
+     88,
+     91,
+     87,
+     92,
+     90
+    ],
+    "averageScore": 89,
+    "attendanceRate": 94,
+    "lastActivityAt": 1786683600000,
+    "weeklyProgress": [
+     51,
+     58,
+     64,
+     69,
+     73,
+     75
+    ],
+    "skillBreakdown": {
+     "reading": 92,
+     "writing": 84,
+     "listening": 90,
+     "speaking": 85,
+     "grammar": 88,
+     "vocabulary": 93
+    },
+    "areasOfImprovement": [
+     "Katakana long-vowel drills",
+     "Transitive and intransitive verbs"
+    ],
+    "streakDays": 10,
+    "totalPracticeMinutes": 520
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 76,
+     "writing": 68,
+     "pronunciation": 69,
+     "grammar": 72,
+     "kanji": 77,
+     "vocabulary": 77
+    },
+    "week2": {
+     "reading": 80,
+     "writing": 72,
+     "pronunciation": 73,
+     "grammar": 76,
+     "kanji": 81,
+     "vocabulary": 81
+    },
+    "week3": {
+     "reading": 84,
+     "writing": 76,
+     "pronunciation": 77,
+     "grammar": 80,
+     "kanji": 85,
+     "vocabulary": 85
+    },
+    "week4": {
+     "reading": 85,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 81,
+     "kanji": 86,
+     "vocabulary": 86
+    },
+    "week5": {
+     "reading": 89,
+     "writing": 81,
+     "pronunciation": 82,
+     "grammar": 85,
+     "kanji": 90,
+     "vocabulary": 90
+    },
+    "week6": {
+     "reading": 93,
+     "writing": 85,
+     "pronunciation": 86,
+     "grammar": 89,
+     "kanji": 94,
+     "vocabulary": 94
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14",
+     "mod-15",
+     "mod-16",
+     "mod-17",
+     "mod-18",
+     "mod-19",
+     "mod-20"
+    ],
+    "totalModules": 26,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 46
+    },
+    "streakDays": 10,
+    "totalPracticeMinutes": 520,
+    "totalSessionsCompleted": 43
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_009": {
+   "profile": {
+    "fullName": "Benjamin Torres",
+    "email": "benjamin.torres9@unmei-ph.com",
+    "mobileNumber": "+63 919 109 1009",
+    "address": "28 Sakura Street, Caloocan City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "BT",
+    "avatarColor": "#2980B9",
+    "createdAt": 1779807600000,
+    "updatedAt": 1786806000000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1779807600000,
+    "instructorId": "prof_006"
+   },
+   "performance": {
+    "courseProgress": 40,
+    "modulesCompleted": 5,
+    "totalModules": 12,
+    "quizScores": [
+     72,
+     75,
+     78,
+     74,
+     79,
+     77
+    ],
+    "averageScore": 76,
+    "attendanceRate": 95,
+    "lastActivityAt": 1786597200000,
+    "weeklyProgress": [
+     16,
+     23,
+     29,
+     34,
+     38,
+     40
+    ],
+    "skillBreakdown": {
+     "reading": 79,
+     "writing": 71,
+     "listening": 77,
+     "speaking": 72,
+     "grammar": 75,
+     "vocabulary": 80
+    },
+    "areasOfImprovement": [
+     "Te-form verb conjugation",
+     "Particle usage (wa vs ga)"
+    ],
+    "streakDays": 11,
+    "totalPracticeMinutes": 555
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 64,
+     "writing": 56,
+     "pronunciation": 57,
+     "grammar": 60,
+     "kanji": 61,
+     "vocabulary": 65
+    },
+    "week2": {
+     "reading": 68,
+     "writing": 60,
+     "pronunciation": 61,
+     "grammar": 64,
+     "kanji": 65,
+     "vocabulary": 69
+    },
+    "week3": {
+     "reading": 69,
+     "writing": 61,
+     "pronunciation": 62,
+     "grammar": 65,
+     "kanji": 66,
+     "vocabulary": 70
+    },
+    "week4": {
+     "reading": 73,
+     "writing": 65,
+     "pronunciation": 66,
+     "grammar": 69,
+     "kanji": 70,
+     "vocabulary": 74
+    },
+    "week5": {
+     "reading": 77,
+     "writing": 69,
+     "pronunciation": 70,
+     "grammar": 73,
+     "kanji": 74,
+     "vocabulary": 78
+    },
+    "week6": {
+     "reading": 78,
+     "writing": 70,
+     "pronunciation": 71,
+     "grammar": 74,
+     "kanji": 75,
+     "vocabulary": 79
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 29,
+     "katakana": 23,
+     "kanji": 19
+    },
+    "streakDays": 11,
+    "totalPracticeMinutes": 555,
+    "totalSessionsCompleted": 14
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_010": {
+   "profile": {
+    "fullName": "Mia Fernandez",
+    "email": "mia.fernandez10@unmei-ph.com",
+    "mobileNumber": "+63 910 110 1010",
+    "address": "31 Sakura Street, Pasay City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "MF",
+    "avatarColor": "#27AE60",
+    "createdAt": 1780066800000,
+    "updatedAt": 1786719600000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1780066800000,
+    "instructorId": "prof_001"
+   },
+   "performance": {
+    "courseProgress": 85,
+    "modulesCompleted": 10,
+    "totalModules": 12,
+    "quizScores": [
+     87,
+     90,
+     93,
+     89,
+     94,
+     92
+    ],
+    "averageScore": 91,
+    "attendanceRate": 96,
+    "lastActivityAt": 1786942800000,
+    "weeklyProgress": [
+     61,
+     68,
+     74,
+     79,
+     83,
+     85
+    ],
+    "skillBreakdown": {
+     "reading": 94,
+     "writing": 86,
+     "listening": 92,
+     "speaking": 87,
+     "grammar": 90,
+     "vocabulary": 95
+    },
+    "areasOfImprovement": [
+     "Keigo honorific expressions",
+     "Kanji stroke order accuracy"
+    ],
+    "streakDays": 12,
+    "totalPracticeMinutes": 590
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 80,
+     "writing": 72,
+     "pronunciation": 73,
+     "grammar": 76,
+     "kanji": 77,
+     "vocabulary": 81
+    },
+    "week2": {
+     "reading": 81,
+     "writing": 73,
+     "pronunciation": 74,
+     "grammar": 77,
+     "kanji": 78,
+     "vocabulary": 82
+    },
+    "week3": {
+     "reading": 85,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 81,
+     "kanji": 82,
+     "vocabulary": 86
+    },
+    "week4": {
+     "reading": 89,
+     "writing": 81,
+     "pronunciation": 82,
+     "grammar": 85,
+     "kanji": 86,
+     "vocabulary": 90
+    },
+    "week5": {
+     "reading": 90,
+     "writing": 82,
+     "pronunciation": 83,
+     "grammar": 86,
+     "kanji": 87,
+     "vocabulary": 91
+    },
+    "week6": {
+     "reading": 94,
+     "writing": 86,
+     "pronunciation": 87,
+     "grammar": 90,
+     "kanji": 91,
+     "vocabulary": 95
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 41
+    },
+    "streakDays": 12,
+    "totalPracticeMinutes": 590,
+    "totalSessionsCompleted": 20
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": true,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_011": {
+   "profile": {
+    "fullName": "Alexander Aquino",
+    "email": "alexander.aquino11@unmei-ph.com",
+    "mobileNumber": "+63 911 111 1011",
+    "address": "34 Sakura Street, Antipolo City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "AA",
+    "avatarColor": "#8E44AD",
+    "createdAt": 1780326000000,
+    "updatedAt": 1786633200000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1780326000000,
+    "instructorId": "prof_002"
+   },
+   "performance": {
+    "courseProgress": 50,
+    "modulesCompleted": 6,
+    "totalModules": 12,
+    "quizScores": [
+     77,
+     80,
+     82
+    ],
+    "averageScore": 80,
+    "attendanceRate": 81,
+    "lastActivityAt": 1786356000000,
+    "weeklyProgress": [
+     41,
+     46,
+     50
+    ],
+    "skillBreakdown": {
+     "reading": 82,
+     "writing": 77,
+     "listening": 80,
+     "speaking": 78,
+     "grammar": 79,
+     "vocabulary": 82
+    },
+    "areasOfImprovement": [
+     "Particle usage (wa vs ga)"
+    ],
+    "streakDays": 2,
+    "totalPracticeMinutes": 200
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 69,
+     "writing": 64,
+     "pronunciation": 65,
+     "grammar": 66,
+     "kanji": 65,
+     "vocabulary": 69
+    },
+    "week2": {
+     "reading": 76,
+     "writing": 71,
+     "pronunciation": 72,
+     "grammar": 73,
+     "kanji": 72,
+     "vocabulary": 76
+    },
+    "week3": {
+     "reading": 83,
+     "writing": 78,
+     "pronunciation": 79,
+     "grammar": 80,
+     "kanji": 79,
+     "vocabulary": 83
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 37,
+     "katakana": 31,
+     "kanji": 24
+    },
+    "streakDays": 2,
+    "totalPracticeMinutes": 200,
+    "totalSessionsCompleted": 13
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_012": {
+   "profile": {
+    "fullName": "Charlotte De Leon",
+    "email": "charlotte.leon12@unmei-ph.com",
+    "mobileNumber": "+63 912 112 1012",
+    "address": "37 Sakura Street, Bacolod City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "CL",
+    "avatarColor": "#D35400",
+    "createdAt": 1780585200000,
+    "updatedAt": 1786546800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n3",
+    "course": "JLPT N3 (Advanced)",
+    "sectionId": "section_03",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1780585200000,
+    "instructorId": "prof_008"
+   },
+   "performance": {
+    "courseProgress": 68,
+    "modulesCompleted": 10,
+    "totalModules": 14,
+    "quizScores": [
+     84,
+     87,
+     89
+    ],
+    "averageScore": 87,
+    "attendanceRate": 82,
+    "lastActivityAt": 1786269600000,
+    "weeklyProgress": [
+     59,
+     64,
+     68
+    ],
+    "skillBreakdown": {
+     "reading": 89,
+     "writing": 84,
+     "listening": 87,
+     "speaking": 85,
+     "grammar": 86,
+     "vocabulary": 89
+    },
+    "areasOfImprovement": [
+     "Kanji stroke order accuracy"
+    ],
+    "streakDays": 3,
+    "totalPracticeMinutes": 210
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 77,
+     "writing": 72,
+     "pronunciation": 73,
+     "grammar": 74,
+     "kanji": 77,
+     "vocabulary": 77
+    },
+    "week2": {
+     "reading": 84,
+     "writing": 79,
+     "pronunciation": 80,
+     "grammar": 81,
+     "kanji": 84,
+     "vocabulary": 84
+    },
+    "week3": {
+     "reading": 88,
+     "writing": 83,
+     "pronunciation": 84,
+     "grammar": 85,
+     "kanji": 88,
+     "vocabulary": 88
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10"
+    ],
+    "totalModules": 14,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 45,
+     "kanji": 41
+    },
+    "streakDays": 3,
+    "totalPracticeMinutes": 210,
+    "totalSessionsCompleted": 22
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_013": {
+   "profile": {
+    "fullName": "Daniel Castro",
+    "email": "daniel.castro13@unmei-ph.com",
+    "mobileNumber": "+63 913 113 1013",
+    "address": "40 Sakura Street, Iloilo City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "DC",
+    "avatarColor": "#16A085",
+    "createdAt": 1780844400000,
+    "updatedAt": 1786460400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n2",
+    "course": "JLPT N2 (Expert)",
+    "sectionId": "section_04",
+    "classSetup": "Online",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1780844400000,
+    "instructorId": "prof_009"
+   },
+   "performance": {
+    "courseProgress": 92,
+    "modulesCompleted": 15,
+    "totalModules": 16,
+    "quizScores": [
+     91,
+     94,
+     96
+    ],
+    "averageScore": 94,
+    "attendanceRate": 83,
+    "lastActivityAt": 1786183200000,
+    "weeklyProgress": [
+     83,
+     88,
+     92
+    ],
+    "skillBreakdown": {
+     "reading": 96,
+     "writing": 91,
+     "listening": 94,
+     "speaking": 92,
+     "grammar": 93,
+     "vocabulary": 96
+    },
+    "areasOfImprovement": [
+     "Listening speed comprehension"
+    ],
+    "streakDays": 4,
+    "totalPracticeMinutes": 220
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 85,
+     "writing": 80,
+     "pronunciation": 81,
+     "grammar": 82,
+     "kanji": 89,
+     "vocabulary": 85
+    },
+    "week2": {
+     "reading": 89,
+     "writing": 84,
+     "pronunciation": 85,
+     "grammar": 86,
+     "kanji": 93,
+     "vocabulary": 89
+    },
+    "week3": {
+     "reading": 96,
+     "writing": 91,
+     "pronunciation": 92,
+     "grammar": 93,
+     "kanji": 100,
+     "vocabulary": 96
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14",
+     "mod-15"
+    ],
+    "totalModules": 16,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 68
+    },
+    "streakDays": 4,
+    "totalPracticeMinutes": 220,
+    "totalSessionsCompleted": 33
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_014": {
+   "profile": {
+    "fullName": "Amelia Soriano",
+    "email": "amelia.soriano14@unmei-ph.com",
+    "mobileNumber": "+63 914 114 1014",
+    "address": "43 Sakura Street, Cagayan de Oro",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "AS",
+    "avatarColor": "#2C3E50",
+    "createdAt": 1781103600000,
+    "updatedAt": 1786978800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1781103600000,
+    "instructorId": "prof_005"
+   },
+   "performance": {
+    "courseProgress": 35,
+    "modulesCompleted": 4,
+    "totalModules": 12,
+    "quizScores": [
+     75,
+     78,
+     80
+    ],
+    "averageScore": 78,
+    "attendanceRate": 84,
+    "lastActivityAt": 1786096800000,
+    "weeklyProgress": [
+     26,
+     31,
+     35
+    ],
+    "skillBreakdown": {
+     "reading": 80,
+     "writing": 75,
+     "listening": 78,
+     "speaking": 76,
+     "grammar": 77,
+     "vocabulary": 80
+    },
+    "areasOfImprovement": [
+     "Counters and numbers"
+    ],
+    "streakDays": 5,
+    "totalPracticeMinutes": 230
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 67,
+     "writing": 62,
+     "pronunciation": 63,
+     "grammar": 64,
+     "kanji": 63,
+     "vocabulary": 67
+    },
+    "week2": {
+     "reading": 74,
+     "writing": 69,
+     "pronunciation": 70,
+     "grammar": 71,
+     "kanji": 70,
+     "vocabulary": 74
+    },
+    "week3": {
+     "reading": 81,
+     "writing": 76,
+     "pronunciation": 77,
+     "grammar": 78,
+     "kanji": 77,
+     "vocabulary": 81
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 26,
+     "katakana": 20,
+     "kanji": 17
+    },
+    "streakDays": 5,
+    "totalPracticeMinutes": 230,
+    "totalSessionsCompleted": 12
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_015": {
+   "profile": {
+    "fullName": "Henry Navarro",
+    "email": "henry.navarro15@unmei-ph.com",
+    "mobileNumber": "+63 915 115 1015",
+    "address": "46 Sakura Street, Angeles City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "HN",
+    "avatarColor": "#E67E22",
+    "createdAt": 1781362800000,
+    "updatedAt": 1786892400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1781362800000,
+    "instructorId": "prof_002"
+   },
+   "performance": {
+    "courseProgress": 62,
+    "modulesCompleted": 7,
+    "totalModules": 12,
+    "quizScores": [
+     80,
+     83,
+     85
+    ],
+    "averageScore": 83,
+    "attendanceRate": 70,
+    "lastActivityAt": 1786010400000,
+    "weeklyProgress": [
+     53,
+     58,
+     62
+    ],
+    "skillBreakdown": {
+     "reading": 85,
+     "writing": 80,
+     "listening": 83,
+     "speaking": 81,
+     "grammar": 82,
+     "vocabulary": 85
+    },
+    "areasOfImprovement": [
+     "Katakana long-vowel drills"
+    ],
+    "streakDays": 1,
+    "totalPracticeMinutes": 240
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 73,
+     "writing": 68,
+     "pronunciation": 69,
+     "grammar": 70,
+     "kanji": 69,
+     "vocabulary": 73
+    },
+    "week2": {
+     "reading": 80,
+     "writing": 75,
+     "pronunciation": 76,
+     "grammar": 77,
+     "kanji": 76,
+     "vocabulary": 80
+    },
+    "week3": {
+     "reading": 84,
+     "writing": 79,
+     "pronunciation": 80,
+     "grammar": 81,
+     "kanji": 80,
+     "vocabulary": 84
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 41,
+     "kanji": 30
+    },
+    "streakDays": 1,
+    "totalPracticeMinutes": 240,
+    "totalSessionsCompleted": 14
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_016": {
+   "profile": {
+    "fullName": "Evelyn Corpuz",
+    "email": "evelyn.corpuz16@unmei-ph.com",
+    "mobileNumber": "+63 916 116 1016",
+    "address": "49 Sakura Street, Baguio City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "EC",
+    "avatarColor": "#C0392B",
+    "createdAt": 1781622000000,
+    "updatedAt": 1786806000000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n4",
+    "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+    "sectionId": "section_05",
+    "classSetup": "Private",
+    "scheduleDays": "Monday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1781622000000,
+    "instructorId": "prof_001"
+   },
+   "performance": {
+    "courseProgress": 48,
+    "modulesCompleted": 12,
+    "totalModules": 24,
+    "quizScores": [
+     79,
+     82,
+     84
+    ],
+    "averageScore": 82,
+    "attendanceRate": 71,
+    "lastActivityAt": 1785924000000,
+    "weeklyProgress": [
+     39,
+     44,
+     48
+    ],
+    "skillBreakdown": {
+     "reading": 84,
+     "writing": 79,
+     "listening": 82,
+     "speaking": 80,
+     "grammar": 81,
+     "vocabulary": 84
+    },
+    "areasOfImprovement": [
+     "Te-form verb conjugation"
+    ],
+    "streakDays": 2,
+    "totalPracticeMinutes": 250
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 73,
+     "writing": 68,
+     "pronunciation": 69,
+     "grammar": 70,
+     "kanji": 69,
+     "vocabulary": 73
+    },
+    "week2": {
+     "reading": 77,
+     "writing": 72,
+     "pronunciation": 73,
+     "grammar": 74,
+     "kanji": 73,
+     "vocabulary": 77
+    },
+    "week3": {
+     "reading": 84,
+     "writing": 79,
+     "pronunciation": 80,
+     "grammar": 81,
+     "kanji": 80,
+     "vocabulary": 84
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12"
+    ],
+    "totalModules": 24,
+    "charactersMastered": {
+     "hiragana": 35,
+     "katakana": 30,
+     "kanji": 23
+    },
+    "streakDays": 2,
+    "totalPracticeMinutes": 250,
+    "totalSessionsCompleted": 25
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_017": {
+   "profile": {
+    "fullName": "Matthew Valenzuela",
+    "email": "matthew.valenzuela17@unmei-ph.com",
+    "mobileNumber": "+63 917 117 1017",
+    "address": "52 Sakura Street, San Fernando, Pampanga",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "MV",
+    "avatarColor": "#2980B9",
+    "createdAt": 1781881200000,
+    "updatedAt": 1786719600000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n3",
+    "course": "Bundle N5-N3 (Beginner to Advanced)",
+    "sectionId": "section_06",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Saturday Only",
+    "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+    "status": "active",
+    "enrolledAt": 1781881200000,
+    "instructorId": "prof_010"
+   },
+   "performance": {
+    "courseProgress": 82,
+    "modulesCompleted": 21,
+    "totalModules": 26,
+    "quizScores": [
+     89,
+     92,
+     94
+    ],
+    "averageScore": 92,
+    "attendanceRate": 72,
+    "lastActivityAt": 1785837600000,
+    "weeklyProgress": [
+     73,
+     78,
+     82
+    ],
+    "skillBreakdown": {
+     "reading": 94,
+     "writing": 89,
+     "listening": 92,
+     "speaking": 90,
+     "grammar": 91,
+     "vocabulary": 94
+    },
+    "areasOfImprovement": [
+     "Keigo honorific expressions"
+    ],
+    "streakDays": 3,
+    "totalPracticeMinutes": 260
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 81,
+     "writing": 76,
+     "pronunciation": 77,
+     "grammar": 78,
+     "kanji": 81,
+     "vocabulary": 81
+    },
+    "week2": {
+     "reading": 88,
+     "writing": 83,
+     "pronunciation": 84,
+     "grammar": 85,
+     "kanji": 88,
+     "vocabulary": 88
+    },
+    "week3": {
+     "reading": 95,
+     "writing": 90,
+     "pronunciation": 91,
+     "grammar": 92,
+     "kanji": 95,
+     "vocabulary": 95
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14",
+     "mod-15",
+     "mod-16",
+     "mod-17",
+     "mod-18",
+     "mod-19",
+     "mod-20",
+     "mod-21"
+    ],
+    "totalModules": 26,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 50
+    },
+    "streakDays": 3,
+    "totalPracticeMinutes": 260,
+    "totalSessionsCompleted": 44
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_018": {
+   "profile": {
+    "fullName": "Harper Del Rosario",
+    "email": "harper.rosario18@unmei-ph.com",
+    "mobileNumber": "+63 918 118 1018",
+    "address": "55 Sakura Street, General Santos City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "HR",
+    "avatarColor": "#27AE60",
+    "createdAt": 1782140400000,
+    "updatedAt": 1786633200000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1782140400000,
+    "instructorId": "prof_006"
+   },
+   "performance": {
+    "courseProgress": 55,
+    "modulesCompleted": 7,
+    "totalModules": 12,
+    "quizScores": [
+     82,
+     85,
+     87
+    ],
+    "averageScore": 85,
+    "attendanceRate": 73,
+    "lastActivityAt": 1785751200000,
+    "weeklyProgress": [
+     46,
+     51,
+     55
+    ],
+    "skillBreakdown": {
+     "reading": 87,
+     "writing": 82,
+     "listening": 85,
+     "speaking": 83,
+     "grammar": 84,
+     "vocabulary": 87
+    },
+    "areasOfImprovement": [
+     "Transitive and intransitive verbs"
+    ],
+    "streakDays": 4,
+    "totalPracticeMinutes": 270
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 75,
+     "writing": 70,
+     "pronunciation": 71,
+     "grammar": 72,
+     "kanji": 71,
+     "vocabulary": 75
+    },
+    "week2": {
+     "reading": 82,
+     "writing": 77,
+     "pronunciation": 78,
+     "grammar": 79,
+     "kanji": 78,
+     "vocabulary": 82
+    },
+    "week3": {
+     "reading": 86,
+     "writing": 81,
+     "pronunciation": 82,
+     "grammar": 83,
+     "kanji": 82,
+     "vocabulary": 86
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7"
+    ],
+    "totalModules": 12,
+    "charactersMastered": {
+     "hiragana": 40,
+     "katakana": 35,
+     "kanji": 26
+    },
+    "streakDays": 4,
+    "totalPracticeMinutes": 270,
+    "totalSessionsCompleted": 17
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_019": {
+   "profile": {
+    "fullName": "Sebastian Ocampo",
+    "email": "sebastian.ocampo19@unmei-ph.com",
+    "mobileNumber": "+63 919 119 1019",
+    "address": "58 Sakura Street, Zamboanga City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "SO",
+    "avatarColor": "#8E44AD",
+    "createdAt": 1782399600000,
+    "updatedAt": 1786546800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n3",
+    "course": "JLPT N3 (Advanced)",
+    "sectionId": "section_03",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1782399600000,
+    "instructorId": "prof_003"
+   },
+   "performance": {
+    "courseProgress": 74,
+    "modulesCompleted": 10,
+    "totalModules": 14,
+    "quizScores": [
+     85,
+     88,
+     90
+    ],
+    "averageScore": 88,
+    "attendanceRate": 74,
+    "lastActivityAt": 1785664800000,
+    "weeklyProgress": [
+     65,
+     70,
+     74
+    ],
+    "skillBreakdown": {
+     "reading": 90,
+     "writing": 85,
+     "listening": 88,
+     "speaking": 86,
+     "grammar": 87,
+     "vocabulary": 90
+    },
+    "areasOfImprovement": [
+     "Particle usage (wa vs ga)"
+    ],
+    "streakDays": 5,
+    "totalPracticeMinutes": 280
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 79,
+     "writing": 74,
+     "pronunciation": 75,
+     "grammar": 76,
+     "kanji": 79,
+     "vocabulary": 79
+    },
+    "week2": {
+     "reading": 83,
+     "writing": 78,
+     "pronunciation": 79,
+     "grammar": 80,
+     "kanji": 83,
+     "vocabulary": 83
+    },
+    "week3": {
+     "reading": 90,
+     "writing": 85,
+     "pronunciation": 86,
+     "grammar": 87,
+     "kanji": 90,
+     "vocabulary": 90
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10"
+    ],
+    "totalModules": 14,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 45
+    },
+    "streakDays": 5,
+    "totalPracticeMinutes": 280,
+    "totalSessionsCompleted": 24
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_020": {
+   "profile": {
+    "fullName": "Victoria Pineda",
+    "email": "victoria.pineda20@unmei-ph.com",
+    "mobileNumber": "+63 910 120 1020",
+    "address": "61 Sakura Street, Las Pinas City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "VP",
+    "avatarColor": "#D35400",
+    "createdAt": 1782658800000,
+    "updatedAt": 1786460400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n2",
+    "course": "JLPT N2 (Expert)",
+    "sectionId": "section_04",
+    "classSetup": "Online",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1782658800000,
+    "instructorId": "prof_004"
+   },
+   "performance": {
+    "courseProgress": 88,
+    "modulesCompleted": 14,
+    "totalModules": 16,
+    "quizScores": [
+     88,
+     91,
+     93
+    ],
+    "averageScore": 91,
+    "attendanceRate": 75,
+    "lastActivityAt": 1786442400000,
+    "weeklyProgress": [
+     79,
+     84,
+     88
+    ],
+    "skillBreakdown": {
+     "reading": 93,
+     "writing": 88,
+     "listening": 91,
+     "speaking": 89,
+     "grammar": 90,
+     "vocabulary": 93
+    },
+    "areasOfImprovement": [
+     "Kanji stroke order accuracy"
+    ],
+    "streakDays": 1,
+    "totalPracticeMinutes": 290
+   },
+   "progressHistory": {
+    "week1": {
+     "reading": 80,
+     "writing": 75,
+     "pronunciation": 76,
+     "grammar": 77,
+     "kanji": 84,
+     "vocabulary": 80
+    },
+    "week2": {
+     "reading": 87,
+     "writing": 82,
+     "pronunciation": 83,
+     "grammar": 84,
+     "kanji": 91,
+     "vocabulary": 87
+    },
+    "week3": {
+     "reading": 94,
+     "writing": 89,
+     "pronunciation": 90,
+     "grammar": 91,
+     "kanji": 98,
+     "vocabulary": 94
+    }
+   },
+   "appSyncData": {
+    "modulesCompleted": [
+     "mod-1",
+     "mod-2",
+     "mod-3",
+     "mod-4",
+     "mod-5",
+     "mod-6",
+     "mod-7",
+     "mod-8",
+     "mod-9",
+     "mod-10",
+     "mod-11",
+     "mod-12",
+     "mod-13",
+     "mod-14"
+    ],
+    "totalModules": 16,
+    "charactersMastered": {
+     "hiragana": 46,
+     "katakana": 46,
+     "kanji": 65
+    },
+    "streakDays": 1,
+    "totalPracticeMinutes": 290,
+    "totalSessionsCompleted": 28
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": true,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": true
+  },
+  "student_021": {
+   "profile": {
+    "fullName": "David Alcantara",
+    "email": "david.alcantara21@unmei-ph.com",
+    "mobileNumber": "+63 911 121 1021",
+    "address": "64 Sakura Street, Paranaque City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "DA",
+    "avatarColor": "#16A085",
+    "createdAt": 1782918000000,
+    "updatedAt": 1786978800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1782918000000,
+    "instructorId": "prof_005"
+   },
+   "performance": {
+    "courseProgress": 44,
+    "modulesCompleted": 5,
+    "totalModules": 12,
+    "quizScores": [
+     68,
+     66
+    ],
+    "averageScore": 67,
+    "attendanceRate": 80,
+    "lastActivityAt": 1786680000000,
+    "weeklyProgress": [
+     25,
+     34,
+     38
+    ],
+    "skillBreakdown": {
+     "reading": 66,
+     "writing": 70,
+     "listening": 60,
+     "speaking": 62,
+     "grammar": 69,
+     "vocabulary": 63
+    },
+    "areasOfImprovement": [
+     "Listening comprehension pace",
+     "Speaking confidence and pacing",
+     "Keigo honorific expressions"
+    ],
+    "streakDays": 2,
+    "totalPracticeMinutes": 78
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_022": {
+   "profile": {
+    "fullName": "Aria Imperial",
+    "email": "aria.imperial22@unmei-ph.com",
+    "mobileNumber": "+63 912 122 1022",
+    "address": "67 Sakura Street, Muntinlupa City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "AI",
+    "avatarColor": "#2C3E50",
+    "createdAt": 1783177200000,
+    "updatedAt": 1786892400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "pending",
+    "enrolledAt": 1783177200000,
+    "instructorId": "prof_007"
+   },
+   "performance": {
+    "courseProgress": 32,
+    "modulesCompleted": 4,
+    "totalModules": 12,
+    "quizScores": [
+     74,
+     70
+    ],
+    "averageScore": 72,
+    "attendanceRate": 88,
+    "lastActivityAt": 1786888800000,
+    "weeklyProgress": [
+     13,
+     20,
+     28,
+     31,
+     34
+    ],
+    "skillBreakdown": {
+     "reading": 69,
+     "writing": 63,
+     "listening": 81,
+     "speaking": 69,
+     "grammar": 64,
+     "vocabulary": 76
+    },
+    "areasOfImprovement": [
+     "Written composition accuracy",
+     "Grammar pattern retention",
+     "Kanji recognition speed"
+    ],
+    "streakDays": 3,
+    "totalPracticeMinutes": 112
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_023": {
+   "profile": {
+    "fullName": "Josephine Salazar",
+    "email": "josephine.salazar23@unmei-ph.com",
+    "mobileNumber": "+63 913 123 1023",
+    "address": "70 Sakura Street, Marikina City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "JS",
+    "avatarColor": "#E67E22",
+    "createdAt": 1783436400000,
+    "updatedAt": 1786806000000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n3",
+    "course": "JLPT N3 (Advanced)",
+    "sectionId": "section_03",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "active",
+    "enrolledAt": 1783436400000,
+    "instructorId": "prof_008"
+   },
+   "performance": {
+    "courseProgress": 46,
+    "modulesCompleted": 6,
+    "totalModules": 14,
+    "quizScores": [
+     71,
+     76,
+     82
+    ],
+    "averageScore": 76,
+    "attendanceRate": 91,
+    "lastActivityAt": 1786932000000,
+    "weeklyProgress": [
+     25,
+     28,
+     35,
+     39,
+     45
+    ],
+    "skillBreakdown": {
+     "reading": 86,
+     "writing": 66,
+     "listening": 68,
+     "speaking": 68,
+     "grammar": 67,
+     "vocabulary": 68
+    },
+    "areasOfImprovement": [
+     "Written composition accuracy",
+     "Grammar pattern retention",
+     "Particle usage accuracy"
+    ],
+    "streakDays": 5,
+    "totalPracticeMinutes": 263
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_024": {
+   "profile": {
+    "fullName": "Samuel Mercado",
+    "email": "samuel.mercado24@unmei-ph.com",
+    "mobileNumber": "+63 914 124 1024",
+    "address": "73 Sakura Street, San Juan City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "SM",
+    "avatarColor": "#C0392B",
+    "createdAt": 1783695600000,
+    "updatedAt": 1786719600000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n4",
+    "course": "Bundle N5 and N4 (Beginner to Intermediate)",
+    "sectionId": "section_05",
+    "classSetup": "Private",
+    "scheduleDays": "Monday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "pending",
+    "enrolledAt": 1783695600000,
+    "instructorId": "prof_007"
+   },
+   "performance": {
+    "courseProgress": 46,
+    "modulesCompleted": 11,
+    "totalModules": 24,
+    "quizScores": [
+     75,
+     77,
+     77,
+     85
+    ],
+    "averageScore": 79,
+    "attendanceRate": 86,
+    "lastActivityAt": 1786719600000,
+    "weeklyProgress": [
+     23,
+     26,
+     34,
+     43,
+     48
+    ],
+    "skillBreakdown": {
+     "reading": 78,
+     "writing": 71,
+     "listening": 90,
+     "speaking": 82,
+     "grammar": 78,
+     "vocabulary": 75
+    },
+    "areasOfImprovement": [
+     "Written composition accuracy",
+     "Vocabulary recall range",
+     "Listening comprehension pace"
+    ],
+    "streakDays": 5,
+    "totalPracticeMinutes": 209
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_025": {
+   "profile": {
+    "fullName": "Scarlett Tolentino",
+    "email": "scarlett.tolentino25@unmei-ph.com",
+    "mobileNumber": "+63 915 125 1025",
+    "address": "76 Sakura Street, Valenzuela City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "ST",
+    "avatarColor": "#2980B9",
+    "createdAt": 1783954800000,
+    "updatedAt": 1786633200000
+   },
+   "enrollment": {
+    "courseId": "bundle_n5_n3",
+    "course": "Bundle N5-N3 (Beginner to Advanced)",
+    "sectionId": "section_06",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Saturday Only",
+    "scheduleTimeSlot": "8am - 5pm (Sat Only)",
+    "status": "active",
+    "enrolledAt": 1783954800000,
+    "instructorId": "prof_010"
+   },
+   "performance": {
+    "courseProgress": 35,
+    "modulesCompleted": 9,
+    "totalModules": 26,
+    "quizScores": [
+     58,
+     54,
+     66
+    ],
+    "averageScore": 59,
+    "attendanceRate": 74,
+    "lastActivityAt": 1786838400000,
+    "weeklyProgress": [
+     12,
+     20,
+     29
+    ],
+    "skillBreakdown": {
+     "reading": 65,
+     "writing": 49,
+     "listening": 64,
+     "speaking": 51,
+     "grammar": 61,
+     "vocabulary": 70
+    },
+    "areasOfImprovement": [
+     "Written composition accuracy",
+     "Speaking confidence and pacing",
+     "Counter word mastery"
+    ],
+    "streakDays": 1,
+    "totalPracticeMinutes": 117
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_026": {
+   "profile": {
+    "fullName": "Gabriel Sison",
+    "email": "gabriel.sison26@unmei-ph.com",
+    "mobileNumber": "+63 916 126 1026",
+    "address": "79 Sakura Street, Malabon City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "GS",
+    "avatarColor": "#27AE60",
+    "createdAt": 1784214000000,
+    "updatedAt": 1786546800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "pending",
+    "enrolledAt": 1784214000000,
+    "instructorId": "prof_001"
+   },
+   "performance": {
+    "courseProgress": 25,
+    "modulesCompleted": 3,
+    "totalModules": 12,
+    "quizScores": [
+     56,
+     52,
+     52
+    ],
+    "averageScore": 53,
+    "attendanceRate": 64,
+    "lastActivityAt": 1786784400000,
+    "weeklyProgress": [
+     14,
+     18,
+     26
+    ],
+    "skillBreakdown": {
+     "reading": 64,
+     "writing": 60,
+     "listening": 45,
+     "speaking": 58,
+     "grammar": 52,
+     "vocabulary": 53
+    },
+    "areasOfImprovement": [
+     "Listening comprehension pace",
+     "Grammar pattern retention",
+     "Sentence-ending particles"
+    ],
+    "streakDays": 1,
+    "totalPracticeMinutes": 56
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_027": {
+   "profile": {
+    "fullName": "Hannah Beltran",
+    "email": "hannah.beltran27@unmei-ph.com",
+    "mobileNumber": "+63 917 127 1027",
+    "address": "82 Sakura Street, Navotas City",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "HB",
+    "avatarColor": "#8E44AD",
+    "createdAt": 1784473200000,
+    "updatedAt": 1786460400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n4",
+    "course": "JLPT N4 (Intermediate)",
+    "sectionId": "section_02",
+    "classSetup": "Online",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1784473200000,
+    "instructorId": "prof_002"
+   },
+   "performance": {
+    "courseProgress": 31,
+    "modulesCompleted": 4,
+    "totalModules": 12,
+    "quizScores": [
+     70,
+     64,
+     69,
+     68
+    ],
+    "averageScore": 68,
+    "attendanceRate": 71,
+    "lastActivityAt": 1786636800000,
+    "weeklyProgress": [
+     20,
+     28,
+     33
+    ],
+    "skillBreakdown": {
+     "reading": 57,
+     "writing": 77,
+     "listening": 57,
+     "speaking": 68,
+     "grammar": 66,
+     "vocabulary": 65
+    },
+    "areasOfImprovement": [
+     "Kana and kanji reading fluency",
+     "Listening comprehension pace",
+     "Kanji recognition speed"
+    ],
+    "streakDays": 6,
+    "totalPracticeMinutes": 293
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_028": {
+   "profile": {
+    "fullName": "Julian Palma",
+    "email": "julian.palma28@unmei-ph.com",
+    "mobileNumber": "+63 918 128 1028",
+    "address": "85 Sakura Street, Imus, Cavite",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "JP",
+    "avatarColor": "#D35400",
+    "createdAt": 1784732400000,
+    "updatedAt": 1786978800000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n3",
+    "course": "JLPT N3 (Advanced)",
+    "sectionId": "section_03",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "pending",
+    "enrolledAt": 1784732400000,
+    "instructorId": "prof_003"
+   },
+   "performance": {
+    "courseProgress": 43,
+    "modulesCompleted": 6,
+    "totalModules": 14,
+    "quizScores": [
+     85,
+     74,
+     76,
+     79
+    ],
+    "averageScore": 79,
+    "attendanceRate": 69,
+    "lastActivityAt": 1786759200000,
+    "weeklyProgress": [
+     22,
+     28,
+     37,
+     43
+    ],
+    "skillBreakdown": {
+     "reading": 76,
+     "writing": 76,
+     "listening": 79,
+     "speaking": 84,
+     "grammar": 74,
+     "vocabulary": 70
+    },
+    "areasOfImprovement": [
+     "Vocabulary recall range",
+     "Grammar pattern retention",
+     "Sentence-ending particles"
+    ],
+    "streakDays": 7,
+    "totalPracticeMinutes": 339
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_029": {
+   "profile": {
+    "fullName": "Zoey Manalo",
+    "email": "zoey.manalo29@unmei-ph.com",
+    "mobileNumber": "+63 919 129 1029",
+    "address": "88 Sakura Street, Bacoor, Cavite",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "ZM",
+    "avatarColor": "#16A085",
+    "createdAt": 1784991600000,
+    "updatedAt": 1786892400000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n2",
+    "course": "JLPT N2 (Expert)",
+    "sectionId": "section_04",
+    "classSetup": "Online",
+    "scheduleDays": "Tuesday & Thursday",
+    "scheduleTimeSlot": "1pm - 5pm",
+    "status": "active",
+    "enrolledAt": 1784991600000,
+    "instructorId": "prof_009"
+   },
+   "performance": {
+    "courseProgress": 36,
+    "modulesCompleted": 6,
+    "totalModules": 16,
+    "quizScores": [
+     74,
+     71
+    ],
+    "averageScore": 73,
+    "attendanceRate": 62,
+    "lastActivityAt": 1786770000000,
+    "weeklyProgress": [
+     25,
+     31,
+     35
+    ],
+    "skillBreakdown": {
+     "reading": 65,
+     "writing": 64,
+     "listening": 69,
+     "speaking": 78,
+     "grammar": 62,
+     "vocabulary": 72
+    },
+    "areasOfImprovement": [
+     "Grammar pattern retention",
+     "Written composition accuracy",
+     "Sentence-ending particles"
+    ],
+    "streakDays": 7,
+    "totalPracticeMinutes": 367
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  },
+  "student_030": {
+   "profile": {
+    "fullName": "Christian Guinto",
+    "email": "christian.guinto30@unmei-ph.com",
+    "mobileNumber": "+63 910 130 1030",
+    "address": "91 Sakura Street, Dasmarias, Cavite",
+    "country": "Philippines",
+    "avatarUrl": "",
+    "avatarInitials": "CG",
+    "avatarColor": "#2C3E50",
+    "createdAt": 1785250800000,
+    "updatedAt": 1786806000000
+   },
+   "enrollment": {
+    "courseId": "jlpt_n5",
+    "course": "JLPT N5 (Beginner)",
+    "sectionId": "section_01",
+    "classSetup": "Face-to-face",
+    "scheduleDays": "Monday - Wednesday - Friday",
+    "scheduleTimeSlot": "8am - 12nn",
+    "status": "pending",
+    "enrolledAt": 1785250800000,
+    "instructorId": "prof_006"
+   },
+   "performance": {
+    "courseProgress": 39,
+    "modulesCompleted": 5,
+    "totalModules": 12,
+    "quizScores": [
+     67,
+     66
+    ],
+    "averageScore": 67,
+    "attendanceRate": 70,
+    "lastActivityAt": 1786802400000,
+    "weeklyProgress": [
+     21,
+     26,
+     29,
+     38
+    ],
+    "skillBreakdown": {
+     "reading": 69,
+     "writing": 76,
+     "listening": 75,
+     "speaking": 57,
+     "grammar": 78,
+     "vocabulary": 72
+    },
+    "areasOfImprovement": [
+     "Speaking confidence and pacing",
+     "Kana and kanji reading fluency",
+     "Kana reading fluency"
+    ],
+    "streakDays": 1,
+    "totalPracticeMinutes": 78
+   },
+   "settings": {
+    "emailNotifications": true,
+    "smsNotifications": false,
+    "lineNotifications": false,
+    "language": "en",
+    "theme": "light",
+    "updatedAt": 1786114800000
+   },
+   "isRevoked": false,
+   "isDeleted": false,
+   "onboardingComplete": false
+  }
+ },
+ "users": {
+  "admin_main": {
+   "email": "admin@unmei-ph.com",
+   "role": "admin",
+   "uid": "admin_main",
+   "createdAt": 1766242800000
+  },
+  "prof_001": {
+   "email": "aiko.tanaka@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_001",
+   "createdAt": 1767106800000
+  },
+  "prof_002": {
+   "email": "kenji.watanabe@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_002",
+   "createdAt": 1767106800000
+  },
+  "prof_003": {
+   "email": "maria.nakamura@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_003",
+   "createdAt": 1767106800000
+  },
+  "prof_004": {
+   "email": "hiroshi.yamamoto@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_004",
+   "createdAt": 1767106800000
+  },
+  "prof_005": {
+   "email": "rico.cruz@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_005",
+   "createdAt": 1767106800000
+  },
+  "prof_006": {
+   "email": "yuka.takahashi@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_006",
+   "createdAt": 1767106800000
+  },
+  "prof_007": {
+   "email": "gabriel.mendoza@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_007",
+   "createdAt": 1767106800000
+  },
+  "prof_008": {
+   "email": "naomi.ogawa@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_008",
+   "createdAt": 1767106800000
+  },
+  "prof_009": {
+   "email": "kazuo.suzuki@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_009",
+   "createdAt": 1767106800000
+  },
+  "prof_010": {
+   "email": "elena.sato@unmei-ph.com",
+   "role": "instructor",
+   "uid": "prof_010",
+   "createdAt": 1767106800000
+  },
+  "student_001": {
+   "email": "liam.reyes1@unmei-ph.com",
+   "role": "student",
+   "uid": "student_001",
+   "name": "Liam Reyes",
+   "createdAt": 1777734000000
+  },
+  "student_002": {
+   "email": "noah.santos2@unmei-ph.com",
+   "role": "student",
+   "uid": "student_002",
+   "name": "Noah Santos",
+   "createdAt": 1777993200000
+  },
+  "student_003": {
+   "email": "ethan.cruz3@unmei-ph.com",
+   "role": "student",
+   "uid": "student_003",
+   "name": "Ethan Cruz",
+   "createdAt": 1778252400000
+  },
+  "student_004": {
+   "email": "chloe.bautista4@unmei-ph.com",
+   "role": "student",
+   "uid": "student_004",
+   "name": "Chloe Bautista",
+   "createdAt": 1778511600000
+  },
+  "student_005": {
+   "email": "lucas.garcia5@unmei-ph.com",
+   "role": "student",
+   "uid": "student_005",
+   "name": "Lucas Garcia",
+   "createdAt": 1778770800000
+  },
+  "student_006": {
+   "email": "sophia.mendoza6@unmei-ph.com",
+   "role": "student",
+   "uid": "student_006",
+   "name": "Sophia Mendoza",
+   "createdAt": 1779030000000
+  },
+  "student_007": {
+   "email": "james.villanueva7@unmei-ph.com",
+   "role": "student",
+   "uid": "student_007",
+   "name": "James Villanueva",
+   "createdAt": 1779289200000
+  },
+  "student_008": {
+   "email": "isabella.ramos8@unmei-ph.com",
+   "role": "student",
+   "uid": "student_008",
+   "name": "Isabella Ramos",
+   "createdAt": 1779548400000
+  },
+  "student_009": {
+   "email": "benjamin.torres9@unmei-ph.com",
+   "role": "student",
+   "uid": "student_009",
+   "name": "Benjamin Torres",
+   "createdAt": 1779807600000
+  },
+  "student_010": {
+   "email": "mia.fernandez10@unmei-ph.com",
+   "role": "student",
+   "uid": "student_010",
+   "name": "Mia Fernandez",
+   "createdAt": 1780066800000
+  },
+  "student_011": {
+   "email": "alexander.aquino11@unmei-ph.com",
+   "role": "student",
+   "uid": "student_011",
+   "name": "Alexander Aquino",
+   "createdAt": 1780326000000
+  },
+  "student_012": {
+   "email": "charlotte.leon12@unmei-ph.com",
+   "role": "student",
+   "uid": "student_012",
+   "name": "Charlotte De Leon",
+   "createdAt": 1780585200000
+  },
+  "student_013": {
+   "email": "daniel.castro13@unmei-ph.com",
+   "role": "student",
+   "uid": "student_013",
+   "name": "Daniel Castro",
+   "createdAt": 1780844400000
+  },
+  "student_014": {
+   "email": "amelia.soriano14@unmei-ph.com",
+   "role": "student",
+   "uid": "student_014",
+   "name": "Amelia Soriano",
+   "createdAt": 1781103600000
+  },
+  "student_015": {
+   "email": "henry.navarro15@unmei-ph.com",
+   "role": "student",
+   "uid": "student_015",
+   "name": "Henry Navarro",
+   "createdAt": 1781362800000
+  },
+  "student_016": {
+   "email": "evelyn.corpuz16@unmei-ph.com",
+   "role": "student",
+   "uid": "student_016",
+   "name": "Evelyn Corpuz",
+   "createdAt": 1781622000000
+  },
+  "student_017": {
+   "email": "matthew.valenzuela17@unmei-ph.com",
+   "role": "student",
+   "uid": "student_017",
+   "name": "Matthew Valenzuela",
+   "createdAt": 1781881200000
+  },
+  "student_018": {
+   "email": "harper.rosario18@unmei-ph.com",
+   "role": "student",
+   "uid": "student_018",
+   "name": "Harper Del Rosario",
+   "createdAt": 1782140400000
+  },
+  "student_019": {
+   "email": "sebastian.ocampo19@unmei-ph.com",
+   "role": "student",
+   "uid": "student_019",
+   "name": "Sebastian Ocampo",
+   "createdAt": 1782399600000
+  },
+  "student_020": {
+   "email": "victoria.pineda20@unmei-ph.com",
+   "role": "student",
+   "uid": "student_020",
+   "name": "Victoria Pineda",
+   "createdAt": 1782658800000
+  },
+  "student_021": {
+   "email": "david.alcantara21@unmei-ph.com",
+   "role": "student",
+   "uid": "student_021",
+   "name": "David Alcantara",
+   "createdAt": 1782918000000
+  },
+  "student_022": {
+   "email": "aria.imperial22@unmei-ph.com",
+   "role": "student",
+   "uid": "student_022",
+   "name": "Aria Imperial",
+   "createdAt": 1783177200000
+  },
+  "student_023": {
+   "email": "josephine.salazar23@unmei-ph.com",
+   "role": "student",
+   "uid": "student_023",
+   "name": "Josephine Salazar",
+   "createdAt": 1783436400000
+  },
+  "student_024": {
+   "email": "samuel.mercado24@unmei-ph.com",
+   "role": "student",
+   "uid": "student_024",
+   "name": "Samuel Mercado",
+   "createdAt": 1783695600000
+  },
+  "student_025": {
+   "email": "scarlett.tolentino25@unmei-ph.com",
+   "role": "student",
+   "uid": "student_025",
+   "name": "Scarlett Tolentino",
+   "createdAt": 1783954800000
+  },
+  "student_026": {
+   "email": "gabriel.sison26@unmei-ph.com",
+   "role": "student",
+   "uid": "student_026",
+   "name": "Gabriel Sison",
+   "createdAt": 1784214000000
+  },
+  "student_027": {
+   "email": "hannah.beltran27@unmei-ph.com",
+   "role": "student",
+   "uid": "student_027",
+   "name": "Hannah Beltran",
+   "createdAt": 1784473200000
+  },
+  "student_028": {
+   "email": "julian.palma28@unmei-ph.com",
+   "role": "student",
+   "uid": "student_028",
+   "name": "Julian Palma",
+   "createdAt": 1784732400000
+  },
+  "student_029": {
+   "email": "zoey.manalo29@unmei-ph.com",
+   "role": "student",
+   "uid": "student_029",
+   "name": "Zoey Manalo",
+   "createdAt": 1784991600000
+  },
+  "student_030": {
+   "email": "christian.guinto30@unmei-ph.com",
+   "role": "student",
+   "uid": "student_030",
+   "name": "Christian Guinto",
+   "createdAt": 1785250800000
+  }
+ }
+}

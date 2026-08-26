@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Admin-Interface" id="unmei-admin-fdd-01">
+    <mxGraphModel dx="1422" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" parent="1" style="text;html=1;align=center;fontFamily=Arial;fontSize=16;fontStyle=1;" value="Admin Portal Interface" vertex="1">
+          <mxGeometry height="30" width="300" x="275" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="root" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;fontStyle=1;" value="ADMIN PORTAL" vertex="1">
+          <mxGeometry height="40" width="160" x="345" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_login" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Admin log in and access control" vertex="1">
+          <mxGeometry height="40" width="160" x="345" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="a_login_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="a_login_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="a_hub" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Administrative dashboard and overview" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="a_hub_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_hub_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_pay" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Verify and approve tuition payments" vertex="1">
+          <mxGeometry height="50" width="160" x="60" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="a_pay_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="68" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_pay_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="152" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_records" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Manage class list and student records" vertex="1">
+          <mxGeometry height="50" width="160" x="630" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="a_records_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="638" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_records_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="722" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="a_notices" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Post announcements and portal notices" vertex="1">
+          <mxGeometry height="50" width="160" x="630" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="a_notices_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="638" y="418" as="geometry" />
+        </mxCell>
+        <mxCell id="a_notices_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="722" y="418" as="geometry" />
+        </mxCell>
+        <mxCell id="a_apk" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Manage APK release and version info" vertex="1">
+          <mxGeometry height="50" width="160" x="630" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="a_apk_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="638" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="a_apk_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="722" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="a_content" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Manage course content and curriculum" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="a_content_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="a_content_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="a_build" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Build courses and class schedules" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="a_build_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="a_build_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="a_reports" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Generate student performance reports" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="a_reports_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="a_reports_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="a_instructors" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Manage instructor accounts and credentials" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="a_instructors_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="a_instructors_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="e_root_a_login" edge="1" parent="1" source="root" target="a_login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_login_a_hub" edge="1" parent="1" source="a_login" target="a_hub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_hub_a_pay" edge="1" parent="1" source="a_hub" target="a_pay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_hub_a_records" edge="1" parent="1" source="a_hub" target="a_records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_hub_a_content" edge="1" parent="1" source="a_hub" target="a_content" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_content_a_build" edge="1" parent="1" source="a_content" target="a_build" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_build_a_reports" edge="1" parent="1" source="a_build" target="a_reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_reports_a_instructors" edge="1" parent="1" source="a_reports" target="a_instructors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_records_a_notices" edge="1" parent="1" source="a_records" target="a_notices" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_notices_a_apk" edge="1" parent="1" source="a_notices" target="a_apk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

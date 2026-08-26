@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Instructor-Interface" id="unmei-instructor-fdd-01">
+    <mxGraphModel dx="1422" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" parent="1" style="text;html=1;align=center;fontFamily=Arial;fontSize=16;fontStyle=1;" value="Instructor Portal Interface" vertex="1">
+          <mxGeometry height="30" width="300" x="275" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="root" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;fontStyle=1;" value="INSTRUCTOR PORTAL" vertex="1">
+          <mxGeometry height="40" width="160" x="345" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="i_login" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Instructor login and authentication" vertex="1">
+          <mxGeometry height="40" width="160" x="345" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="i_login_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="i_login_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="i_hub" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Dashboard with assigned courses overview" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="i_hub_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_hub_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_ratings" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="View instructor ratings and feedback" vertex="1">
+          <mxGeometry height="50" width="160" x="60" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="i_ratings_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="68" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_ratings_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="152" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_settings" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="Manage instructor profile and settings" vertex="1">
+          <mxGeometry height="50" width="160" x="630" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="i_settings_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="638" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_settings_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="722" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="i_students" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="View enrolled students per course" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="i_students_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="i_students_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="i_perf" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="View individual student performance analytics" vertex="1">
+          <mxGeometry height="50" width="160" x="345" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="i_perf_acc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Backend" vertex="1">
+          <mxGeometry height="16" width="60" x="353" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="i_perf_dec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2E86AB;strokeColor=#1B5E7F;fontColor=#ffffff;fontFamily=Arial;fontSize=8;" value="Frontend" vertex="1">
+          <mxGeometry height="16" width="60" x="437" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="e_root_i_login" edge="1" parent="1" source="root" target="i_login" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_login_i_hub" edge="1" parent="1" source="i_login" target="i_hub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_hub_i_ratings" edge="1" parent="1" source="i_hub" target="i_ratings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_hub_i_settings" edge="1" parent="1" source="i_hub" target="i_settings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_hub_i_students" edge="1" parent="1" source="i_hub" target="i_students" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_students_i_perf" edge="1" parent="1" source="i_students" target="i_perf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

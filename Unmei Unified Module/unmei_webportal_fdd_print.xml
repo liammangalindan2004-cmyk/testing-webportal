@@ -1,0 +1,257 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36">
+  <diagram name="Page-1" id="Na88mcGqwbk7DXqVTP91">
+    <mxGraphModel dx="1422" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ========================================== -->
+        <!-- ROOT NODE (LEVEL 0 - WEB PORTAL SYSTEM) -->
+        <!-- ========================================== -->
+        <mxCell id="root_title" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=13;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Unmei Nihongo Center&#xa;Web Portal System" vertex="1">
+          <mxGeometry height="70" width="220" x="-110" y="20" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- CONNECTORS FROM ROOT TO COLUMNS -->
+        <!-- ========================================== -->
+        <mxCell id="edge_root_student" edge="1" parent="1" source="root_title" target="col_student" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="0" y="125" />
+              <mxPoint x="-240" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_root_instructor" edge="1" parent="1" source="root_title" target="col_instructor" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="0" y="125" />
+              <mxPoint x="0" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_root_admin" edge="1" parent="1" source="root_title" target="col_admin" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.5;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="0" y="125" />
+              <mxPoint x="240" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- COLUMN 1: STUDENT PORTAL -->
+        <!-- ========================================== -->
+        <mxCell id="col_student" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=12;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Student Portal" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="155" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="User log in and authentication" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="230" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Dashboard and enrolled class overview" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="305" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="View course syllabus and lesson modules" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="380" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Submit tuition payment and view receipt status" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="455" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="View class schedules and branch notices" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="530" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="App download page with payment verification restriction" vertex="1">
+          <mxGeometry height="55" width="160" x="-320" y="605" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage student profile and account settings" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="685" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Classes tab shows student performance" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="760" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Students can evaluate the professor" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="835" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s_node_10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Score tab shows performance analytics" vertex="1">
+          <mxGeometry height="50" width="160" x="-320" y="910" as="geometry" />
+        </mxCell>
+
+        <!-- CONNECTORS FOR COLUMN 1 -->
+        <mxCell id="e_s_0_1" edge="1" parent="1" source="col_student" target="s_node_1" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_1_2" edge="1" parent="1" source="s_node_1" target="s_node_2" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_2_3" edge="1" parent="1" source="s_node_2" target="s_node_3" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_3_4" edge="1" parent="1" source="s_node_3" target="s_node_4" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_4_5" edge="1" parent="1" source="s_node_4" target="s_node_5" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_5_6" edge="1" parent="1" source="s_node_5" target="s_node_6" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_6_7" edge="1" parent="1" source="s_node_6" target="s_node_7" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_7_8" edge="1" parent="1" source="s_node_7" target="s_node_8" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_8_9" edge="1" parent="1" source="s_node_8" target="s_node_9" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_9_10" edge="1" parent="1" source="s_node_9" target="s_node_10" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- COLUMN 2: INSTRUCTOR PORTAL (NEW) -->
+        <!-- ========================================== -->
+        <mxCell id="col_instructor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=12;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Instructor Portal" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="155" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Instructor login and authentication" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="230" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Dashboard with assigned courses overview" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="305" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="View enrolled students per course" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="380" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="View individual student performance analytics" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="455" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="View instructor ratings and feedback" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="530" as="geometry" />
+        </mxCell>
+
+        <mxCell id="inst_node_6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage instructor profile and settings" vertex="1">
+          <mxGeometry height="50" width="160" x="-80" y="605" as="geometry" />
+        </mxCell>
+
+        <!-- CONNECTORS FOR COLUMN 2 -->
+        <mxCell id="e_inst_0_1" edge="1" parent="1" source="col_instructor" target="inst_node_1" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inst_1_2" edge="1" parent="1" source="inst_node_1" target="inst_node_2" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inst_2_3" edge="1" parent="1" source="inst_node_2" target="inst_node_3" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inst_3_4" edge="1" parent="1" source="inst_node_3" target="inst_node_4" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inst_4_5" edge="1" parent="1" source="inst_node_4" target="inst_node_5" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inst_5_6" edge="1" parent="1" source="inst_node_5" target="inst_node_6" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- COLUMN 3: ADMIN PORTAL -->
+        <!-- ========================================== -->
+        <mxCell id="col_admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=12;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Admin Portal" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="155" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Admin log in and access control" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="230" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Administrative dashboard and overview" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="305" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage course content and curriculum" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="380" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage class list and student records" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="455" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Build courses and class schedules" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="530" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Verify and approve tuition payments" vertex="1">
+          <mxGeometry height="55" width="160" x="160" y="605" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Post announcements and portal notices" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="685" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage APK release and version info" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="760" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Generate student performance reports" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="835" as="geometry" />
+        </mxCell>
+
+        <mxCell id="adm_node_10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=11;fontStyle=0;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000" value="Manage instructor accounts and credentials" vertex="1">
+          <mxGeometry height="50" width="160" x="160" y="910" as="geometry" />
+        </mxCell>
+
+        <!-- CONNECTORS FOR COLUMN 3 -->
+        <mxCell id="e_adm_0_1" edge="1" parent="1" source="col_admin" target="adm_node_1" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_1_2" edge="1" parent="1" source="adm_node_1" target="adm_node_2" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_2_3" edge="1" parent="1" source="adm_node_2" target="adm_node_3" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_3_4" edge="1" parent="1" source="adm_node_3" target="adm_node_4" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_4_5" edge="1" parent="1" source="adm_node_4" target="adm_node_5" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_5_6" edge="1" parent="1" source="adm_node_5" target="adm_node_6" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_6_7" edge="1" parent="1" source="adm_node_6" target="adm_node_7" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_7_8" edge="1" parent="1" source="adm_node_7" target="adm_node_8" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_8_9" edge="1" parent="1" source="adm_node_8" target="adm_node_9" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_adm_9_10" edge="1" parent="1" source="adm_node_9" target="adm_node_10" style="rounded=0;whiteSpace=wrap;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

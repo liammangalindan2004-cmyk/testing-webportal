@@ -1,0 +1,26 @@
+rules_version = '2';
+// UNMEI production rules (Phase 8 post-migration lockdown).
+// Whitelist approach: only the 19 migrated application collections are
+// readable/writable by the web clients; every other path is denied.
+// NOTE: portals authenticate partially client-side (admin has no Auth
+// session), so per-user auth checks are intentionally not enforced here yet.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{coll}/{docId} {
+      allow read, write: if coll in [
+        'admins', 'announcements', 'app_download', 'config', 'contact_leads',
+        'courses', 'enrollments', 'instructors', 'instructorRatings', 'logs',
+        'messages', 'notifications', 'payments', 'portal_config', 'schedules',
+        'sections', 'settings', 'students', 'users'
+      ];
+      match /{subPath=**} {
+        allow read, write: if coll in [
+          'admins', 'announcements', 'app_download', 'config', 'contact_leads',
+          'courses', 'enrollments', 'instructors', 'instructorRatings', 'logs',
+          'messages', 'notifications', 'payments', 'portal_config', 'schedules',
+          'sections', 'settings', 'students', 'users'
+        ];
+      }
+    }
+  }
+}

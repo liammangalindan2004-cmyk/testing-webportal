@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unmei Nihongo Center - Local Demo Access</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/cropped-fav-32x32.png" />
+  <link rel="stylesheet" href="studentportal.css" />
+  <script src="assets/iconify-icon.min.js"></script>
+  <script src="assets/unmei-icons.js"></script>
+</head>
+<body class="page-login">
+
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-brand">
+        <img src="assets/cropped-logo-updated-size-1.png" alt="Unmei Nihongo Center" class="login-logo">
+        <span class="login-portal-label">Local Demo Access</span>
+      </div>
+
+      <h1 class="login-title">Presentation Accounts</h1>
+      <p class="login-subtitle">Seeded demo records for local system demonstration only.</p>
+
+      <div class="login-form" id="demoGate" style="display:none;">
+        <div class="login-alert" id="loginAlert" style="opacity:1;visibility:visible;background:var(--yellow-soft,#FEF3C7);border-color:#FDE68A;color:#92400E;">
+          <span style="font-size:0.8rem;font-weight:500;line-height:1.4;display:block;">
+            Demo accounts are restricted to the local presentation environment. Enrolled students must use the official login page.
+          </span>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px;">
+          <button type="button" class="demo-account-btn" onclick="loginDemo('student_001', 'liam.reyes1@unmei-ph.com')">
+            <span class="demo-account-avatar" style="background:#C0392B;">LR</span>
+            <span class="demo-account-info">
+              <span class="demo-account-name">Liam Reyes</span>
+              <span class="demo-account-email">liam.reyes1@unmei-ph.com</span>
+            </span>
+            <span class="demo-account-action">Enter<iconify-icon icon="mdi:arrow-right" style="font-size:16px;"></iconify-icon></span>
+          </button>
+          <button type="button" class="demo-account-btn" onclick="loginDemo('student_002', 'noah.santos2@unmei-ph.com')">
+            <span class="demo-account-avatar" style="background:#2980B9;">NS</span>
+            <span class="demo-account-info">
+              <span class="demo-account-name">Noah Santos</span>
+              <span class="demo-account-email">noah.santos2@unmei-ph.com</span>
+            </span>
+            <span class="demo-account-action">Enter<iconify-icon icon="mdi:arrow-right" style="font-size:16px;"></iconify-icon></span>
+          </button>
+          <button type="button" class="demo-account-btn" onclick="loginDemo('student_003', 'ethan.cruz3@unmei-ph.com')">
+            <span class="demo-account-avatar" style="background:#27AE60;">EC</span>
+            <span class="demo-account-info">
+              <span class="demo-account-name">Ethan Cruz</span>
+              <span class="demo-account-email">ethan.cruz3@unmei-ph.com</span>
+            </span>
+            <span class="demo-account-action">Enter<iconify-icon icon="mdi:arrow-right" style="font-size:16px;"></iconify-icon></span>
+          </button>
+        </div>
+
+        <a href="login.html" class="demo-back-link">
+          <iconify-icon icon="mdi:arrow-left" style="font-size:16px;"></iconify-icon>
+          Back to Official Login
+        </a>
+      </div>
+
+      <div class="login-form" id="demoBlocked" style="display:none;">
+        <div class="login-alert" style="opacity:1;visibility:visible;background:#FDECEA;border-color:#F5C6C0;color:#9B1C1C;">
+          <span style="font-size:0.8rem;font-weight:500;line-height:1.4;display:block;">
+            Demo access is disabled on this environment. It is only available when the portal is served locally for presentation purposes.
+          </span>
+        </div>
+        <a href="login.html" class="demo-back-link" style="margin-top:16px;">
+          <iconify-icon icon="mdi:arrow-left" style="font-size:16px;"></iconify-icon>
+          Go to Official Login
+        </a>
+      </div>
+
+      <div class="login-footer">
+        <span>&copy; 2026 UNMEI Nihongo Center. Local demo build.</span>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .demo-account-btn{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border:1.5px solid var(--gray-200,#E5E7EB);border-radius:12px;background:var(--gray-50,#F9FAFB);cursor:pointer;transition:border-color .2s,background .2s,transform .1s;font-family:inherit;text-align:left;}
+    .demo-account-btn:hover{border-color:var(--red,#C0392B);background:var(--red-soft,#FDF0EF);}
+    .demo-account-btn:active{transform:scale(0.99);}
+    .demo-account-avatar{width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.82rem;flex-shrink:0;}
+    .demo-account-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+    .demo-account-name{font-size:0.88rem;font-weight:700;color:var(--gray-900,#111827);}
+    .demo-account-email{font-size:0.72rem;color:var(--gray-500,#6B7280);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .demo-account-action{display:inline-flex;align-items:center;gap:4px;font-size:0.74rem;font-weight:700;color:var(--red,#C0392B);}
+    .demo-back-link{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:16px;font-size:0.82rem;font-weight:600;color:var(--red,#C0392B);text-decoration:none;}
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firestore-shim.js"></script>
+  <script>
+    (function () {
+      // Demo access gate: local presentation environments only (localhost /
+      // 127.0.0.1 / LAN test hosts). Blocked on any deployed domain.
+      var host = window.location.hostname || '';
+      var isLocal = host === 'localhost' || host === '127.0.0.1' || host === '[::1]' || host.indexOf('192.168.') === 0 || host.indexOf('10.') === 0;
+      document.getElementById(isLocal ? 'demoGate' : 'demoBlocked').style.display = 'block';
+      if (!isLocal) return;
+
+      var SESSION_TIMEOUT = 30 * 60 * 1000;
+      var uid = localStorage.getItem('studentUid');
+      var lastActivity = parseInt(localStorage.getItem('lastActivity'), 10);
+      if (uid && lastActivity && (Date.now() - lastActivity <= SESSION_TIMEOUT)) {
+        localStorage.setItem('lastActivity', Date.now().toString());
+        window.location.replace('dashboard.html');
+      }
+    })();
+
+    function loginDemo(studentUid, email) {
+      localStorage.setItem('studentUid', studentUid);
+      localStorage.setItem('studentAuthUid', studentUid);
+      localStorage.setItem('studentEmail', email);
+      localStorage.setItem('lastActivity', Date.now().toString());
+
+      // Mirror the official login: arm the Get Started onboarding when the
+      // account has not completed it yet (Firebase truth).
+      var proceed = function () { window.location.href = 'dashboard.html'; };
+      try {
+        firebase.database().ref('students/' + studentUid + '/onboardingComplete').once('value').then(function (snap) {
+          if (snap.val() === false) localStorage.setItem('firstDashboardVisit', 'true');
+          proceed();
+        }).catch(proceed);
+      } catch (e) {
+        proceed();
+      }
+    }
+  </script>
+
+</body>
+</html>
