@@ -23,8 +23,8 @@
 
       <div class="login-form">
         <div class="form-group">
-          <label class="form-label" for="email">Email Address</label>
-          <input type="email" id="email" class="form-control" placeholder="your@email.com" autocomplete="email" />
+          <label class="form-label" for="username">Username</label>
+          <input type="text" id="username" class="form-control" placeholder="student_001" autocomplete="username" autocapitalize="off" spellcheck="false" />
         </div>
         <div class="form-group">
           <label class="form-label" for="password">Password</label>
@@ -73,7 +73,7 @@
         window.location.replace('dashboard.html');
       }
     })();
-    var auth = firebase.auth();
+    var STUDENT_UID_PATTERN = /^student_\d+$/;
     var isSigningIn = false;
 
     function showLoginAlert(msg) {
@@ -94,39 +94,8 @@
       }
     }
 
-    function resolveStudentUid(authUid, email) {
-      var normalizedEmail = String(email || '').trim().toLowerCase();
-      var database = firebase.database();
-      return database.ref('students/' + authUid).once('value').then(function(snapshot) {
-        if (snapshot.exists()) {
-          return authUid;
-        }
-        if (!normalizedEmail) {
-          return '';
-        }
-        return database.ref('students').once('value').then(function(studentsSnapshot) {
-          if (!studentsSnapshot.exists()) {
-            return '';
-          }
-          var resolvedUid = '';
-          studentsSnapshot.forEach(function(child) {
-            if (resolvedUid) {
-              return;
-            }
-            var data = child.val() || {};
-            var profile = data.profile || {};
-            var candidate = String(profile.email || data.email || '').trim().toLowerCase();
-            if (candidate && candidate === normalizedEmail) {
-              resolvedUid = child.key;
-            }
-          });
-          return resolvedUid;
-        });
-      });
-    }
-
     function handleSignIn() {
-      var email = document.getElementById('email').value.trim().toLowerCase();
+      var username = document.getElementById('username').value.trim().toLowerCase();
       var password = document.getElementById('password').value;
       var alertBox = document.getElementById('loginAlert');
       var signInBtn = document.querySelector('.btn-signin');
@@ -137,63 +106,54 @@
 
       alertBox.classList.remove('active');
 
-      if (!email || !password) {
-        showLoginAlert('Please enter both email and password.');
+      if (!username || !password) {
+        showLoginAlert('Please enter both username and password.');
+        return;
+      }
+
+      if (!STUDENT_UID_PATTERN.test(username)) {
+        showLoginAlert('Username must look like student_001.');
+        return;
+      }
+
+      if (password !== username) {
+        showLoginAlert('Incorrect password. Please try again.');
         return;
       }
 
       isSigningIn = true;
       signInBtn.disabled = true;
 
-      auth.signInWithEmailAndPassword(email, password)
-        .then(function(userCredential) {
-          var authUid = userCredential.user.uid;
-          var userEmail = String(userCredential.user.email || email).trim().toLowerCase();
-          return resolveStudentUid(authUid, userEmail).then(function(resolvedUid) {
-            if (!resolvedUid) {
-              return auth.signOut().then(function() {
-                showLoginAlert('Your account record is no longer active in the student database. Please contact the registrar.');
-                return Promise.reject({ code: 'auth/student-record-missing' });
-              });
-            }
+      firebase.database().ref('students/' + username).once('value')
+        .then(function(studentSnapshot) {
+          if (!studentSnapshot.exists()) {
+            showLoginAlert('No account found with this username.');
+            return;
+          }
 
-            return firebase.database().ref('students/' + resolvedUid).once('value').then(function(studentSnapshot) {
-              if (!studentSnapshot.exists()) {
-                return auth.signOut().then(function() {
-                  showLoginAlert('Your student record was removed. Please contact the registrar for assistance.');
-                  return Promise.reject({ code: 'auth/student-record-removed' });
-                });
-              }
+          var studentData = studentSnapshot.val() || {};
+          if (studentData.isDeleted === true || studentData.isRevoked === true) {
+            showLoginAlert('Your account has been suspended. Please contact the registrar for assistance.');
+            return;
+          }
 
-              var studentData = studentSnapshot.val() || {};
-              if (studentData.isDeleted === true || studentData.isRevoked === true) {
-                return auth.signOut().then(function() {
-                  showLoginAlert('Your account has been suspended. Please contact the registrar for assistance.');
-                  return Promise.reject({ code: 'auth/account-revoked' });
-                });
-              }
+          var profile = studentData.profile || {};
+          var studentEmail = String(profile.email || studentData.email || '').trim().toLowerCase();
 
-              // First sign-in after registration: arm the Get Started onboarding
-              // exactly once (Firebase truth, not a session flag).
-              if (studentData.onboardingComplete === false) {
-                localStorage.setItem('firstDashboardVisit', 'true');
-              }
+          // First sign-in after registration: arm the Get Started onboarding
+          // exactly once (Firebase truth, not a session flag).
+          if (studentData.onboardingComplete === false) {
+            localStorage.setItem('firstDashboardVisit', 'true');
+          }
 
-              localStorage.setItem('studentUid', resolvedUid);
-              localStorage.setItem('studentAuthUid', authUid);
-              localStorage.setItem('studentEmail', userEmail);
-              localStorage.setItem('lastActivity', Date.now().toString());
-              window.location.href = 'dashboard.html';
-            });
-          });
+          localStorage.setItem('studentUid', username);
+          localStorage.setItem('studentAuthUid', username);
+          localStorage.setItem('studentEmail', studentEmail);
+          localStorage.setItem('lastActivity', Date.now().toString());
+          window.location.href = 'dashboard.html';
         })
-        .catch(function(error) {
-          var msg = 'Invalid email or password. Please try again.';
-          if (error.code === 'auth/user-not-found') msg = 'No account found with this email.';
-          else if (error.code === 'auth/wrong-password') msg = 'Incorrect password. Please try again.';
-          else if (error.code === 'auth/invalid-email') msg = 'Please enter a valid email address.';
-          else if (error.code === 'auth/too-many-requests') msg = 'Too many failed attempts. Please try again later.';
-          showLoginAlert(msg);
+        .catch(function() {
+          showLoginAlert('Unable to sign in right now. Please try again later.');
         })
         .finally(function() {
           isSigningIn = false;
