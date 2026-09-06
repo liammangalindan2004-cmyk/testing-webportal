@@ -3657,7 +3657,7 @@
         },
         "listening": 63,
         "reading": 56,
-        "speaking": 60,
+        "speaking": 0,
         "studentUid": "student_001",
         "updatedAt": 1776096655080,
         "updatedBy": "system",
@@ -39573,6 +39573,65 @@
     "enrollment_open": true,
     "max_students_per_class": 15
   },
+  "speakingHistory": {
+    "student_001": {
+      "-P0qpQWcs1kJB0iJfUMs": {
+        "character": "一",
+        "confidence": 0,
+        "exactMatch": false,
+        "expectedReading": "ひと",
+        "jlptLevel": "jlpt_n5",
+        "percent": 0,
+        "recognizedText": "",
+        "studentUid": "student_001",
+        "timestampUnix": 1788700113
+      },
+      "-P0qpUB-OHFdd18yq7X_": {
+        "character": "七",
+        "confidence": 0,
+        "exactMatch": false,
+        "expectedReading": "なな",
+        "jlptLevel": "jlpt_n5",
+        "percent": 0,
+        "recognizedText": "",
+        "studentUid": "student_001",
+        "timestampUnix": 1788700128
+      },
+      "-P0qpVtNaQa0kUew0PH9": {
+        "character": "万",
+        "confidence": 0,
+        "exactMatch": false,
+        "expectedReading": "よろず",
+        "jlptLevel": "jlpt_n5",
+        "percent": 0,
+        "recognizedText": "",
+        "studentUid": "student_001",
+        "timestampUnix": 1788700135
+      },
+      "-P0qpXak6P66O8daHzxG": {
+        "character": "三",
+        "confidence": 0,
+        "exactMatch": false,
+        "expectedReading": "み",
+        "jlptLevel": "jlpt_n5",
+        "percent": 0,
+        "recognizedText": "",
+        "studentUid": "student_001",
+        "timestampUnix": 1788700142
+      },
+      "-P0qpZYkn46chqX6-vWL": {
+        "character": "上",
+        "confidence": 0,
+        "exactMatch": false,
+        "expectedReading": "うえ",
+        "jlptLevel": "jlpt_n5",
+        "percent": 0,
+        "recognizedText": "",
+        "studentUid": "student_001",
+        "timestampUnix": 1788700150
+      }
+    }
+  },
   "srs": {
     "student_001": {
       "jlpt_n5": {
@@ -39615,6 +39674,100 @@
           "nextReviewUnix": 1788784490,
           "totalAttempts": 1,
           "totalCorrect": 1
+        },
+        "下": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786363,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        },
+        "中": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786368,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        },
+        "九": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786373,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        },
+        "二": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786380,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        },
+        "五": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786389,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        },
+        "人": {
+          "correctStreak": 1,
+          "easeFactor": 2.5999999046325684,
+          "interval": 1,
+          "nextReviewUnix": 1788786395,
+          "totalAttempts": 1,
+          "totalCorrect": 1
+        }
+      }
+    }
+  },
+  "srsSpeaking": {
+    "student_001": {
+      "jlpt_n5": {
+        "一": {
+          "correctStreak": 0,
+          "easeFactor": 2.299999952316284,
+          "interval": 1,
+          "nextReviewUnix": 1788786513,
+          "totalAttempts": 1,
+          "totalCorrect": 0
+        },
+        "七": {
+          "correctStreak": 0,
+          "easeFactor": 2.299999952316284,
+          "interval": 1,
+          "nextReviewUnix": 1788786528,
+          "totalAttempts": 1,
+          "totalCorrect": 0
+        },
+        "万": {
+          "correctStreak": 0,
+          "easeFactor": 2.299999952316284,
+          "interval": 1,
+          "nextReviewUnix": 1788786535,
+          "totalAttempts": 1,
+          "totalCorrect": 0
+        },
+        "三": {
+          "correctStreak": 0,
+          "easeFactor": 2.299999952316284,
+          "interval": 1,
+          "nextReviewUnix": 1788786542,
+          "totalAttempts": 1,
+          "totalCorrect": 0
+        },
+        "上": {
+          "correctStreak": 0,
+          "easeFactor": 2.299999952316284,
+          "interval": 1,
+          "nextReviewUnix": 1788786550,
+          "totalAttempts": 1,
+          "totalCorrect": 0
         }
       }
     }
@@ -40086,7 +40239,7 @@
         "vocabulary": 64
       },
       "session": {
-        "lastActivity": 1788698633412,
+        "lastActivity": 1788700075426,
         "timeoutMinutes": 30,
         "token": ""
       },
