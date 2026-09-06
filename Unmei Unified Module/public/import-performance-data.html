@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Import Performance Data to Firebase</title>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <h1>Import Performance Data to Firebase</h1>
+    <button onclick="importData()">Import Performance Data</button>
+    <div id="status"></div>
+
+    <script>
+        const database = firebase.database();
+
+        async function importData() {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = '<p>Loading performance data...</p>';
+
+            try {
+                const response = await fetch('performance-data-all-students.json');
+                const data = await response.json();
+                
+                let successCount = 0;
+                let errorCount = 0;
+                const errors = [];
+
+                for (const [studentId, studentData] of Object.entries(data.students)) {
+                    if (studentData.performance) {
+                        try {
+                            await database.ref(`students/${studentId}/performance`).set(studentData.performance);
+                            successCount++;
+                            statusDiv.innerHTML = `<p>Imported: ${successCount}/30 students...</p>`;
+                        } catch (error) {
+                            errorCount++;
+                            errors.push(`${studentId}: ${error.message}`);
+                        }
+                    }
+                }
+
+                statusDiv.innerHTML = `
+                    <h2>Import Complete!</h2>
+                    <p>Successfully imported: ${successCount} students</p>
+                    <p>Failed: ${errorCount} students</p>
+                    ${errors.length > 0 ? `<p>Errors: ${errors.join(', ')}</p>` : ''}
+                `;
+            } catch (error) {
+                statusDiv.innerHTML = `<p>Error loading data: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

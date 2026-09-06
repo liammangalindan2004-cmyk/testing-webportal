@@ -36,7 +36,7 @@
     applyIdentity();
     var instructorId = sessionStorage.getItem(ID_KEY);
     if (!instructorId || typeof firebase === 'undefined' || !firebase.database) return;
-    firebase.database().ref('instructors/' + instructorId).on('value', function (snapshot) {
+    firebase.database().ref('professors/' + instructorId).on('value', function (snapshot) {
       var data = snapshot.val() || {};
       var name = data.fullName || sessionStorage.getItem(DISPLAY_NAME_KEY) || 'Instructor';
       applyIdentity(name);

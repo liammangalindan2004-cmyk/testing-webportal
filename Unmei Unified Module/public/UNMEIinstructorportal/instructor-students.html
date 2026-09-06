@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Students – UNMEI Instructor Portal</title>
+  <title>My Students � UNMEI Instructor Portal</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/cropped-fav-32x32.png" />
   <link rel="stylesheet" href="instructorportal.css" />
   <script src="assets/iconify-icon.min.js"></script>
@@ -167,9 +167,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script src="instructor-header-sync.js"></script>
   <script>
     const database = firebase.database();
@@ -206,7 +205,7 @@
       const emailEl = document.getElementById('menuEmail');
       if (emailEl) emailEl.textContent = instructorEmail;
     }
-    database.ref('instructors/' + instructorId).once('value').then(function (snapshot) {
+    database.ref('professors/' + instructorId).once('value').then(function (snapshot) {
       applyMenuIdentity((snapshot.val() || {}).fullName || sessionStorage.getItem('instructorDisplayName'));
     });
 
@@ -225,7 +224,7 @@
     Promise.all([
       database.ref('courses').once('value'),
       database.ref('students').once('value'),
-      database.ref('instructors/' + instructorId).once('value')
+      database.ref('professors/' + instructorId).once('value')
     ]).then(function (results) {
       const coursesSnap = results[0];
       const studentsSnap = results[1];
@@ -362,6 +361,7 @@
           ? '<img src="' + escapeHtml(s.avatarUrl) + '" alt="" class="student-avatar" style="object-fit:cover;">'
           : '<div class="student-avatar" style="background:' + s.color + ';">' + escapeHtml(initialsOf(s.name)) + '</div>';
         const progress = Math.round(s.courseProgress);
+        console.log('Rendering student row with uid:', s.uid);
         return (
           '<tr>' +
             '<td><div class="student-cell">' + avatar + '<div><p class="student-name">' + escapeHtml(s.name) + '</p><p class="student-email">' + escapeHtml(s.email) + '</p></div></div></td>' +
@@ -382,9 +382,26 @@
     }
 
     function viewStudent(uid) {
-      window.location.href = 'instructor-student-view.html?id=' + encodeURIComponent(uid);
+      console.log('viewStudent called with uid:', uid);
+      const url = 'instructor-student-view.html?id=' + uid;
+      console.log('Navigating to:', url);
+      console.log('Current window.location:', window.location.href);
+      console.log('Base URL:', window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1));
+      const fullUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) + url;
+      console.log('Full URL will be:', fullUrl);
+
+      // Also store in sessionStorage as fallback
+      sessionStorage.setItem('selectedStudentUid', uid);
+
+      try {
+        window.location.assign(fullUrl);
+        console.log('Navigation executed');
+      } catch (error) {
+        console.error('Navigation error:', error);
+      }
     }
   </script>
 <script src="assets/global-search.js"></script>
 </body>
 </html>
+

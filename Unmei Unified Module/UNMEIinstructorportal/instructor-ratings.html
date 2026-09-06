@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ratings and Feedback – UNMEI Instructor Portal</title>
+  <title>Ratings and Feedback � UNMEI Instructor Portal</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/cropped-fav-32x32.png" />
   <link rel="stylesheet" href="instructorportal.css" />
   <script src="assets/iconify-icon.min.js"></script>
@@ -188,9 +188,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script src="instructor-header-sync.js"></script>
   <script src="assets/d3.v7.min.js"></script>
   <script src="assets/unmei-charts.js"></script>
@@ -238,7 +237,7 @@
       const emailEl = document.getElementById('menuEmail');
       if (emailEl) emailEl.textContent = instructorEmail;
     }
-    database.ref('instructors/' + instructorId).once('value').then(function (snapshot) {
+    database.ref('professors/' + instructorId).once('value').then(function (snapshot) {
       applyMenuIdentity((snapshot.val() || {}).fullName || sessionStorage.getItem('instructorDisplayName'));
     });
 
@@ -399,3 +398,4 @@
 <script src="assets/global-search.js"></script>
 </body>
 </html>
+

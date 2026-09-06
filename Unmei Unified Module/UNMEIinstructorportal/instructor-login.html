@@ -51,9 +51,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script>
     const AUTH_KEY = 'instructorAuth';
     const EMAIL_KEY = 'instructorEmail';
@@ -70,60 +69,7 @@
       return String(value || '').trim().toLowerCase();
     }
 
-    // SHA-256 (self-contained, no dependencies) - used to verify portal
-    // credentials without storing plaintext passwords in the database.
-    function sha256Hex(ascii) {
-      function rightRotate(v, a) { return (v >>> a) | (v << (32 - a)); }
-      const mathPow = Math.pow, maxWord = mathPow(2, 32);
-      let result = '';
-      const words = [], asciiBitLength = ascii.length * 8;
-      let hash = [];
-      let k = [], primeCounter = 0;
-      const isComposite = {};
-      for (let candidate = 2; primeCounter < 64; candidate++) {
-        if (!isComposite[candidate]) {
-          for (let i = 0; i < 313; i += candidate) isComposite[i] = candidate;
-          hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
-          k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
-        }
-      }
-      ascii += '\x80';
-      while (ascii.length % 64 - 56) ascii += '\x00';
-      for (let i = 0; i < ascii.length; i++) {
-        const j = ascii.charCodeAt(i);
-        if (j >> 8) return ''; // ASCII only
-        words[i >> 2] |= j << ((3 - i) % 4) * 8;
-      }
-      words[words.length] = ((asciiBitLength / maxWord) | 0);
-      words[words.length] = (asciiBitLength);
-      for (let j = 0; j < words.length;) {
-        const w = words.slice(j, j += 16);
-        const oldHash = hash.slice(0);
-        for (let i = 0; i < 64; i++) {
-          const w15 = w[i - 15], w2 = w[i - 2];
-          const a = hash[0], e = hash[4];
-          const temp1 = hash[7]
-            + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25))
-            + ((e & hash[5]) ^ ((~e) & hash[6])) + k[i]
-            + (w[i] = (i < 16) ? w[i] : (w[i - 16]
-              + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 >>> 3)) + w[i - 7]
-              + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 >>> 10))) | 0);
-          const temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22))
-            + ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
-          hash = [(temp1 + temp2) | 0].concat(hash);
-          hash[4] = (hash[4] + temp1) | 0;
-          hash.pop();
-        }
-        for (let i = 0; i < 8; i++) hash[i] = (hash[i] + oldHash[i]) | 0;
-      }
-      for (let i = 0; i < 8; i++) {
-        for (let j = 3; j + 1; j--) {
-          const b = (hash[i] >> (j * 8)) & 255;
-          result += ((b < 16) ? 0 : '') + b.toString(16);
-        }
-      }
-      return result;
-    }
+
 
 
     function togglePasswordVisibility() {
@@ -148,9 +94,9 @@
       sessionStorage.removeItem(ACTIVITY_KEY);
     }
 
-    // Resolve the instructor record by email from instructors/.
+    // Resolve the instructor record by email from professors/.
     function resolveInstructorRecordByEmail(database, emailLower) {
-      return database.ref('instructors').once('value').then(function (snapshot) {
+      return database.ref('professors').once('value').then(function (snapshot) {
         let found = null;
         if (snapshot.exists()) {
           snapshot.forEach(function (child) {
@@ -244,7 +190,7 @@
       // Keep the linking field and last-login stamp current.
       const updates = { lastLogin: Date.now() };
       if (user && user.uid && record.authUid !== user.uid) updates.authUid = user.uid;
-      database.ref('instructors/' + record.id).update(updates).catch(function () {});
+      database.ref('professors/' + record.id).update(updates).catch(function () {});
 
       window.location.href = 'instructor-dashboard.html';
     }
@@ -292,57 +238,20 @@
           return null;
         }
 
-        // Preferred path: Firebase Auth when the account exists there.
-        const tryFirebaseAuth = firebase.auth && firebase.auth().signInWithEmailAndPassword(email, password)
-          .then(function (userCredential) {
-            finishSignIn(record, userCredential.user);
-            return true;
-          })
-          .catch(function (authError) {
-            const code = String((authError && authError.code) || '');
-            // Account not provisioned in Firebase Auth yet, or Auth is unreachable:
-            // fall through to portal credential verification below.
-            if (code === 'auth/user-not-found' || code === 'auth/network-request-failed' || code === 'auth/operation-not-allowed' || code === 'auth/api-key-not-valid.-please-pass-a-valid-api-key.') {
-              return false;
-            }
-            if (code === 'auth/wrong-password' || code === 'auth/invalid-credential' || code === 'auth/invalid-email' || code === 'auth/too-many-requests') {
-              // Auth account exists but the password did not match: do not
-              // silently fall back to a different password source.
-              throw new Error('AUTH_BAD_PASSWORD');
-            }
-            return false;
-          });
-
-        return tryFirebaseAuth.then(function (signedIn) {
-          if (signedIn === true) return null;
-
-          // Portal credential verification against instructors/{id}/loginPassword.
-          // PHASE 18 hardening: stored values are SHA-256 hex digests; the raw
-          // equality branch remains only as a transitional fallback for legacy
-          // live-DB rows that have not been re-imported yet.
-          var stored = String(record.loginPassword || '');
-          var portalOk = false;
-          if (/^[a-f0-9]{64}$/.test(stored)) {
-            portalOk = stored === sha256Hex(password);
-          } else {
-            portalOk = stored !== '' && stored === password;
-          }
-          if (!portalOk) {
-            showLoginAlert('Incorrect email or password. Please verify your instructor credentials.');
-            isSigningIn = false;
-            signInButton.disabled = false;
-            return null;
-          }
-
-          finishSignIn(record, null);
-          return null;
-        });
-      }).catch(function (error) {
-        if (String((error && error.message) || '').indexOf('AUTH_BAD_PASSWORD') !== -1) {
+        // Portal credential verification against professors/{id}/loginPassword.
+        var stored = String(record.loginPassword || '');
+        var portalOk = stored !== '' && stored === password;
+        if (!portalOk) {
           showLoginAlert('Incorrect email or password. Please verify your instructor credentials.');
-        } else {
-          showLoginAlert('Unable to sign in right now. Please try again.');
+          isSigningIn = false;
+          signInButton.disabled = false;
+          return null;
         }
+
+        finishSignIn(record, null);
+        return null;
+      }).catch(function (error) {
+        showLoginAlert('Unable to sign in right now. Please try again.');
         isSigningIn = false;
         signInButton.disabled = false;
       });
@@ -357,3 +266,4 @@
 
 </body>
 </html>
+

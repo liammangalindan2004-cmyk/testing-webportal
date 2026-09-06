@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instructor Dashboard – UNMEI Instructor Portal</title>
+  <title>Instructor Dashboard � UNMEI Instructor Portal</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/cropped-fav-32x32.png" />
   <link rel="stylesheet" href="instructorportal.css" />
   <script src="assets/iconify-icon.min.js"></script>
@@ -236,9 +236,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script src="instructor-header-sync.js"></script>
   <script src="assets/d3.v7.min.js"></script>
   <script src="assets/unmei-charts.js"></script>
@@ -246,6 +245,18 @@
     const database = firebase.database();
     const instructorId = sessionStorage.getItem('instructorId') || '';
     const instructorEmail = sessionStorage.getItem('instructorEmail') || '';
+
+    // Debug: Log session data
+    console.log('Instructor Dashboard Session Data:', {
+      instructorId: instructorId,
+      instructorEmail: instructorEmail,
+      hasSession: !!sessionStorage.getItem('instructorAuth')
+    });
+
+    if (!instructorId) {
+      console.error('No instructorId found in sessionStorage');
+      window.location.href = 'instructor-login.html';
+    }
 
     // ---------- avatar menu ----------
     function toggleAvatarMenu(event) {
@@ -274,13 +285,13 @@
       if (emailEl) emailEl.textContent = instructorEmail;
     }
 
-    database.ref('instructors/' + instructorId).on('value', function (snapshot) {
+    database.ref('professors/' + instructorId).on('value', function (snapshot) {
       const data = snapshot.val() || {};
       applyMenuIdentity(data.fullName || sessionStorage.getItem('instructorDisplayName'));
     });
 
     window.addEventListener('beforeunload', function () {
-      database.ref('instructors/' + instructorId).off('value');
+      database.ref('professors/' + instructorId).off('value');
     });
 
     // ---------- helpers ----------
@@ -320,19 +331,28 @@
     let myStudents = [];
     let myRatings = [];
 
+    console.log('Starting database queries for instructor:', instructorId);
+
     Promise.all([
       database.ref('courses').once('value'),
       database.ref('students').once('value'),
-      database.ref('instructorRatings').once('value'),
-      database.ref('instructors/' + instructorId).once('value')
+      database.ref('professors/' + instructorId).once('value')
     ]).then(function (results) {
+      console.log('Database queries completed successfully');
       const coursesSnap = results[0];
       const studentsSnap = results[1];
-      const ratingsSnap = results[2];
-      const instructorSnap = results[3];
+      const instructorSnap = results[2];
+
+      console.log('Courses snapshot exists:', coursesSnap.exists());
+      console.log('Students snapshot exists:', studentsSnap.exists());
+      console.log('Instructor snapshot exists:', instructorSnap.exists());
 
       const instructorData = instructorSnap.val() || {};
+      console.log('Instructor data:', instructorData);
       applyMenuIdentity(instructorData.fullName || sessionStorage.getItem('instructorDisplayName'));
+
+      // Ratings data (skip instructorRatings for now due to permission issues)
+      myRatings = [];
 
       // Courses assigned to this instructor
       const courseLookup = {};
@@ -358,7 +378,7 @@
         });
       }
 
-      // Assigned set also honors instructors/{id}/coursesAssigned
+      // Assigned set also honors professors/{id}/coursesAssigned
       const assignedExtra = [];
       const assignedRaw = instructorData.coursesAssigned;
       if (Array.isArray(assignedRaw)) {
@@ -373,6 +393,9 @@
       myCourses = Object.values(courseLookup).filter(function (c) { return c.assigned; });
       const myCourseIds = myCourses.map(function (c) { return c.id; });
 
+      console.log('Courses assigned to instructor:', myCourses);
+      console.log('Assigned course IDs:', myCourseIds);
+
       // Students enrolled in the instructor's courses
       if (studentsSnap.exists()) {
         studentsSnap.forEach(function (child) {
@@ -380,7 +403,7 @@
           const profile = data.profile || {};
           const enrollment = data.enrollment || {};
           const performance = data.performance || {};
-          const courseId = normalizeCourseId(enrollment.courseId || '');
+          const courseId = normalizeCourseId(enrollment.courseId || data.courseId || '');
           if (myCourseIds.indexOf(courseId) === -1) return;
           const name = profile.fullName || data.fullName || data.name || 'Unknown';
           myStudents.push({
@@ -388,7 +411,7 @@
             name: name,
             email: String(profile.email || data.email || ''),
             courseId: courseId,
-            courseName: (courseLookup[courseId] && courseLookup[courseId].name) || enrollment.course || 'N/A',
+            courseName: (courseLookup[courseId] && courseLookup[courseId].name) || enrollment.course || data.course || 'N/A',
             courseProgress: Number(performance.courseProgress || 0),
             averageScore: Number(performance.averageScore || 0),
             attendanceRate: Number(performance.attendanceRate || 0),
@@ -399,17 +422,19 @@
         });
       }
 
+      console.log('Students found for instructor courses:', myStudents.length);
+
       myCourses.forEach(function (course) {
         course.studentCount = myStudents.filter(function (s) { return s.courseId === course.id; }).length;
       });
 
-      // Ratings submitted for this instructor
-      if (ratingsSnap.exists()) {
-        ratingsSnap.forEach(function (child) {
-          const rating = child.val() || {};
-          if (String(rating.instructorId || '') === instructorId) myRatings.push(rating);
-        });
-      }
+      // Ratings submitted for this instructor (disabled due to permission issues)
+      // if (ratingsSnap && ratingsSnap.exists()) {
+      //   ratingsSnap.forEach(function (child) {
+      //     const rating = child.val() || {};
+      //     if (String(rating.instructorId || '') === instructorId) myRatings.push(rating);
+      //   });
+      // }
 
       renderStats(instructorData);
       renderCourses();
@@ -418,8 +443,9 @@
       renderPerfTrend();
       renderScoreDistribution();
       renderRatingRadar();
-    }).catch(function () {
-      showToast('Unable to load dashboard data.');
+    }).catch(function (error) {
+      console.error('Error loading dashboard data:', error);
+      showToast('Unable to load dashboard data: ' + (error.message || error));
       document.getElementById('coursesList').innerHTML = '<p class="panel-empty">Unable to load courses.</p>';
       document.getElementById('activityList').innerHTML = '<p class="panel-empty">Unable to load activity.</p>';
     });
@@ -518,7 +544,7 @@
         return;
       }
 
-      meta.textContent = myRatings.length + ' evaluation' + (myRatings.length === 1 ? '' : 's') + ' · scale 1 to 5';
+      meta.textContent = myRatings.length + ' evaluation' + (myRatings.length === 1 ? '' : 's') + ' � scale 1 to 5';
       container.innerHTML = '<div id="feedbackChart"></div>';
       UnmeiCharts.groupedBar('feedbackChart', {
         labels: RATING_CATEGORIES.map(function (c) { return c.label; }),
@@ -651,3 +677,4 @@
 <script src="assets/global-search.js"></script>
 </body>
 </html>
+

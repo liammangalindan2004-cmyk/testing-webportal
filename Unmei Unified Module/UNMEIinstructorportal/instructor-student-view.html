@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Student View – UNMEI Instructor Portal</title>
+  <title>Student View � UNMEI Instructor Portal</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/cropped-fav-32x32.png" />
   <link rel="stylesheet" href="instructorportal.css" />
   <script src="assets/iconify-icon.min.js"></script>
@@ -135,9 +135,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script src="instructor-header-sync.js"></script>
   <script src="assets/d3.v7.min.js"></script>
   <script src="assets/unmei-charts.js"></script>
@@ -145,7 +144,18 @@
     const database = firebase.database();
     const instructorId = sessionStorage.getItem('instructorId') || '';
     const instructorEmail = sessionStorage.getItem('instructorEmail') || '';
-    const studentUid = new URLSearchParams(window.location.search).get('id') || '';
+
+    // Debug: Log URL parameters
+    console.log('Full URL:', window.location.href);
+    console.log('Search string:', window.location.search);
+    console.log('URLSearchParams object:', new URLSearchParams(window.location.search));
+    console.log('URLSearchParams.get("id"):', new URLSearchParams(window.location.search).get('id'));
+
+    const studentUid = new URLSearchParams(window.location.search).get('id') || sessionStorage.getItem('selectedStudentUid') || '';
+
+    console.log('Extracted studentUid:', studentUid);
+    console.log('Instructor ID:', instructorId);
+    console.log('SessionStorage selectedStudentUid:', sessionStorage.getItem('selectedStudentUid'));
 
     // Session safety: if this page was opened without an instructor session
     // (fresh tab / expired session), the ownership check below would always
@@ -178,7 +188,7 @@
       const emailEl = document.getElementById('menuEmail');
       if (emailEl) emailEl.textContent = instructorEmail;
     }
-    database.ref('instructors/' + instructorId).once('value').then(function (snapshot) {
+    database.ref('professors/' + instructorId).once('value').then(function (snapshot) {
       applyMenuIdentity((snapshot.val() || {}).fullName || sessionStorage.getItem('instructorDisplayName'));
     });
 
@@ -209,11 +219,23 @@
       Promise.all([
         database.ref('students/' + studentUid).once('value'),
         database.ref('courses').once('value'),
-        database.ref('instructors/' + instructorId).once('value')
+        database.ref('professors/' + instructorId).once('value'),
+        database.ref('activityCalendar/' + studentUid).once('value'),
+        database.ref('grades').once('value'),
+        database.ref('srs/' + studentUid).once('value'),
+        database.ref('srsWriting/' + studentUid).once('value'),
+        database.ref('srsSpeaking/' + studentUid).once('value'),
+        database.ref('speakingHistory/' + studentUid).once('value')
       ]).then(function (results) {
         const snap = results[0];
         const coursesSnap = results[1];
         const instructorSnap = results[2];
+        const activitySnap = results[3];
+        const gradesSnap = results[4];
+        const srsSnap = results[5];
+        const srsWritingSnap = results[6];
+        const srsSpeakingSnap = results[7];
+        const speakingHistorySnap = results[8];
 
         if (!snap.exists()) {
           document.getElementById('viewContent').innerHTML = '<div class="table-empty"><iconify-icon icon="mdi:account-off-outline" style="font-size:40px;opacity:0.4;"></iconify-icon><p>Student record not found.</p></div>';
@@ -250,19 +272,33 @@
           return;
         }
 
-        renderView(profile, enrollment, performance, courseLabel);
+        // Extract activity calendar data
+        const activityData = activitySnap.exists() ? activitySnap.val() : {};
+
+        // Extract grades data for this student
+        const studentGrades = {};
+        if (gradesSnap.exists()) {
+          gradesSnap.forEach(function (courseGradeSnap) {
+            const courseGrades = courseGradeSnap.val() || {};
+            if (courseGrades.studentUid === studentUid) {
+              studentGrades[courseGradeSnap.key] = courseGrades;
+            }
+          });
+        }
+
+        renderView(profile, enrollment, performance, courseLabel, activityData, studentGrades, srsSnap, srsWritingSnap, srsSpeakingSnap, speakingHistorySnap);
       }).catch(function () {
         showToast('Unable to load student record.');
       });
     }
 
-    function renderView(profile, enrollment, performance, courseLabel) {
+    function renderView(profile, enrollment, performance, courseLabel, activityData, studentGrades, srsSnap, srsWritingSnap, srsSpeakingSnap, speakingHistorySnap) {
       const name = profile.fullName || 'Unknown Student';
       const email = profile.email || '';
       const phone = profile.phone || profile.contactNumber || '';
       const initials = String(name).trim().split(/\s+/).map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase() || '??';
       document.getElementById('breadcrumbStudent').textContent = name;
-      document.title = name + ' – UNMEI Instructor Portal';
+      document.title = name + ' � UNMEI Instructor Portal';
 
       const courseProgress = Number(performance.courseProgress || 0);
       const modulesCompleted = Number(performance.modulesCompleted || 0);
@@ -339,7 +375,7 @@
         // Skill values + areas of improvement
         '<section class="two-col">' +
           '<div class="panel">' +
-            '<div class="panel__header"><h3 class="panel__title"><iconify-icon icon="mdi:format-list-numbered"></iconify-icon> Skill Scores</h3><span class="panel__meta">out of 100</span></div>' +
+            '<div class="panel__header"><h3 class="panel__title"><iconify-icon icon="mdi:format-list-numbered"></iconify-icon> Skill Scores</h3><span class="panel__meta">Recent quiz sessions</span></div>' +
             '<div class="panel__body" id="skillList"></div>' +
           '</div>' +
           '<div class="panel">' +
@@ -350,6 +386,18 @@
                 : '<p class="panel-empty">No areas flagged yet. Flags appear as the student practices.</p>') +
             '</div>' +
           '</div>' +
+        '</section>' +
+
+        // Activity Calendar
+        '<section class="panel">' +
+          '<div class="panel__header"><h3 class="panel__title"><iconify-icon icon="mdi:calendar-check"></iconify-icon> Study Activity Calendar</h3><span class="panel__meta">Daily study tracking</span></div>' +
+          '<div class="panel__body" id="activityCalendarPanel"></div>' +
+        '</section>' +
+
+        // Grades & Performance
+        '<section class="panel">' +
+          '<div class="panel__header"><h3 class="panel__title"><iconify-icon icon="mdi:grade"></iconify-icon> Course Grades & Performance</h3><span class="panel__meta">Detailed assessment scores</span></div>' +
+          '<div class="panel__body" id="gradesPanel"></div>' +
         '</section>'
       );
 
@@ -389,7 +437,7 @@
         { key: 'grammar', label: 'Grammar', color: '#8B5CF6' },
         { key: 'vocabulary', label: 'Vocabulary', color: '#EC4899' }
       ];
-      document.getElementById('skillList').innerHTML = hasSkills
+      const traditionalSkillsHtml = hasSkills
         ? skillMeta.map(function (s) {
             const v = Number(skill[s.key] || 0);
             return (
@@ -400,7 +448,400 @@
               '</div>'
             );
           }).join('')
-        : '<p class="panel-empty">No skill data recorded yet</p>';
+        : '<p class="panel-empty">No traditional skill scores recorded yet</p>';
+      
+      // Initialize skill list with traditional skills first
+      document.getElementById('skillList').innerHTML = traditionalSkillsHtml;
+
+      // Render Activity Calendar
+      renderActivityCalendar(activityData);
+
+      // Render Grades
+      renderGrades(studentGrades);
+
+      // Render Quiz Scores from SRS data
+      renderQuizScores(srsSnap, srsWritingSnap, srsSpeakingSnap, speakingHistorySnap, skill);
+    }
+
+    function renderActivityCalendar(activityData) {
+      const panel = document.getElementById('activityCalendarPanel');
+      const dates = Object.keys(activityData).sort();
+      
+      if (dates.length === 0) {
+        panel.innerHTML = '<div class="table-empty"><iconify-icon icon="mdi:calendar-check" style="font-size:40px;opacity:0.4;"></iconify-icon><p>No activity calendar data recorded yet</p></div>';
+        return;
+      }
+
+      // Calculate stats
+      let totalStudied = 0;
+      let totalMinutes = 0;
+      let totalKanji = 0;
+      let totalSessions = 0;
+      let maxStreak = 0;
+      let currentStreak = 0;
+
+      dates.forEach(function (date) {
+        const day = activityData[date];
+        if (day.studied) {
+          totalStudied++;
+          totalMinutes += Number(day.minutesStudied || 0);
+          totalKanji += Number(day.kanjiReviewed || 0);
+          totalSessions += Number(day.sessionsCompleted || 0);
+          currentStreak++;
+          if (currentStreak > maxStreak) maxStreak = currentStreak;
+        } else {
+          currentStreak = 0;
+        }
+      });
+
+      // Get last 30 days for calendar view
+      const last30Days = dates.slice(-30);
+      const calendarHtml = last30Days.map(function (date) {
+        const day = activityData[date];
+        const studied = day.studied;
+        const bgClass = studied ? 'activity-day--studied' : 'activity-day--empty';
+        const minutes = studied ? (day.minutesStudied || 0) + ' min' : '';
+        return '<div class="activity-day ' + bgClass + '" title="' + escapeHtml(date) + ': ' + (studied ? 'Studied ' + minutes : 'No study') + '">' +
+               '<span class="activity-day__date">' + escapeHtml(date.slice(5)) + '</span>' +
+               (studied ? '<span class="activity-day__badge"><iconify-icon icon="mdi:check"></iconify-icon></span>' : '') +
+               '</div>';
+      }).join('');
+
+      panel.innerHTML = (
+        '<div class="activity-stats">' +
+          '<div class="activity-stat"><span class="activity-stat__label">Days Studied</span><span class="activity-stat__value">' + totalStudied + '</span></div>' +
+          '<div class="activity-stat"><span class="activity-stat__label">Total Minutes</span><span class="activity-stat__value">' + totalMinutes + '</span></div>' +
+          '<div class="activity-stat"><span class="activity-stat__label">Kanji Reviewed</span><span class="activity-stat__value">' + totalKanji + '</span></div>' +
+          '<div class="activity-stat"><span class="activity-stat__label">Sessions</span><span class="activity-stat__value">' + totalSessions + '</span></div>' +
+          '<div class="activity-stat"><span class="activity-stat__label">Longest Streak</span><span class="activity-stat__value">' + maxStreak + ' days</span></div>' +
+        '</div>' +
+        '<div class="activity-calendar">' + calendarHtml + '</div>' +
+        '<p class="panel-meta" style="margin-top:12px;font-size:0.75rem;color:var(--gray-500);">Showing last 30 days of activity</p>'
+      );
+    }
+
+    function renderGrades(studentGrades) {
+      const panel = document.getElementById('gradesPanel');
+      const courseIds = Object.keys(studentGrades);
+
+      if (courseIds.length === 0) {
+        panel.innerHTML = '<div class="table-empty"><iconify-icon icon="mdi:grade" style="font-size:40px;opacity:0.4;"></iconify-icon><p>No grade data recorded yet</p></div>';
+        return;
+      }
+
+      const gradesHtml = courseIds.map(function (courseId) {
+        const gradeData = studentGrades[courseId];
+        const scores = gradeData.scores || {};
+        const history = gradeData.history || [];
+        
+        const avgScore = Number(gradeData.average || 0);
+        const reading = Number(scores.reading || 0);
+        const writing = Number(scores.writing || 0);
+        const listening = Number(scores.listening || 0);
+        const speaking = Number(scores.speaking || 0);
+
+        const recentHistory = history.slice(-5).reverse();
+        const historyHtml = recentHistory.length > 0
+          ? '<div class="grade-history">' +
+              recentHistory.map(function (h) {
+                const date = h.updatedAt ? formatTimestamp(h.updatedAt) : 'Unknown';
+                const score = h.average ? Math.round(h.average) + '%' : 'N/A';
+                return '<span class="history-chip">' + escapeHtml(date) + ': ' + score + '</span>';
+              }).join('') +
+            '</div>'
+          : '<p class="panel-empty" style="font-size:0.8rem;">No history recorded</p>';
+
+        return (
+          '<div class="grade-card">' +
+            '<div class="grade-card__header">' +
+              '<h4 class="grade-card__course">' + escapeHtml(courseId.toUpperCase()) + '</h4>' +
+              '<span class="grade-card__average">Avg: ' + (avgScore ? Math.round(avgScore) + '%' : 'N/A') + '</span>' +
+            '</div>' +
+            '<div class="grade-card__scores">' +
+              '<div class="grade-score-item">' +
+                '<span class="grade-score__label">Reading</span>' +
+                '<div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:' + Math.min(100, reading) + '%;background:#C0392B;"></div></div>' +
+                '<span class="progress-label">' + (reading ? Math.round(reading) + '%' : 'N/A') + '</span>' +
+              '</div>' +
+              '<div class="grade-score-item">' +
+                '<span class="grade-score__label">Writing</span>' +
+                '<div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:' + Math.min(100, writing) + '%;background:#2563EB;"></div></div>' +
+                '<span class="progress-label">' + (writing ? Math.round(writing) + '%' : 'N/A') + '</span>' +
+              '</div>' +
+              '<div class="grade-score-item">' +
+                '<span class="grade-score__label">Listening</span>' +
+                '<div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:' + Math.min(100, listening) + '%;background:#16A34A;"></div></div>' +
+                '<span class="progress-label">' + (listening ? Math.round(listening) + '%' : 'N/A') + '</span>' +
+              '</div>' +
+              '<div class="grade-score-item">' +
+                '<span class="grade-score__label">Speaking</span>' +
+                '<div class="progress-track" style="flex:1;"><div class="progress-fill" style="width:' + Math.min(100, speaking) + '%;background:#F59E0B;"></div></div>' +
+                '<span class="progress-label">' + (speaking ? Math.round(speaking) + '%' : 'N/A') + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="grade-card__history">' +
+              '<h5 class="grade-history__title">Recent History</h5>' +
+              historyHtml +
+            '</div>' +
+          '</div>'
+        );
+      }).join('');
+
+      panel.innerHTML = '<div class="grades-grid">' + gradesHtml + '</div>';
+    }
+
+    function renderQuizScores(srsSnap, srsWritingSnap, srsSpeakingSnap, speakingHistorySnap, skill) {
+      const panel = document.getElementById('skillList');
+      
+      // Function to group activities into sessions based on timestamps
+      function groupIntoSessions(items, timestampField) {
+        const sessions = [];
+        if (!items || !items.exists()) return sessions;
+        
+        const itemList = [];
+        items.forEach(function (jlptLevel) {
+          jlptLevel.forEach(function (item) {
+            const itemData = item.val() || {};
+            if (itemData[timestampField]) {
+              const ts = Number(itemData[timestampField]);
+              const adjustedTimestamp = ts < 10000000000 ? ts * 1000 : ts; // Convert seconds to milliseconds if needed
+              itemList.push({
+                data: itemData,
+                timestamp: adjustedTimestamp
+              });
+            }
+          });
+        });
+        
+        // Sort by timestamp
+        itemList.sort(function (a, b) { return a.timestamp - b.timestamp; });
+        
+        // Group into sessions (activities within 5 minutes are considered same session)
+        const SESSION_THRESHOLD = 5 * 60 * 1000; // 5 minutes in milliseconds
+        
+        if (itemList.length === 0) return sessions;
+        
+        let currentSession = [itemList[0]];
+        
+        for (let i = 1; i < itemList.length; i++) {
+          const timeDiff = itemList[i].timestamp - itemList[i-1].timestamp;
+          if (timeDiff <= SESSION_THRESHOLD) {
+            currentSession.push(itemList[i]);
+          } else {
+            sessions.push(currentSession);
+            currentSession = [itemList[i]];
+          }
+        }
+        sessions.push(currentSession);
+        
+        return sessions;
+      }
+      
+      // Function to format session date
+      function formatSessionDate(timestamp) {
+        // Handle both seconds and milliseconds timestamps
+        const ts = Number(timestamp);
+        const adjustedTimestamp = ts < 10000000000 ? ts * 1000 : ts; // Convert seconds to milliseconds if needed
+        const date = new Date(adjustedTimestamp);
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+      
+      // Calculate multiple choice quiz sessions (correct/total format)
+      function calculateMultipleChoiceSessions(srsData) {
+        const sessions = groupIntoSessions(srsData, 'nextReviewUnix');
+        return sessions.map(function (session) {
+          let total = session.length;
+          let correct = 0;
+          session.forEach(function (item) {
+            if (item.data.totalCorrect > 0) correct++;
+          });
+          return {
+            date: formatSessionDate(session[0].timestamp),
+            score: correct + '/' + total,
+            percentage: total > 0 ? (correct / total) * 100 : 0,
+            timestamp: session[0].timestamp
+          };
+        });
+      }
+      
+      // Calculate writing quiz sessions (percentage format)
+      function calculateWritingSessions(srsWritingData) {
+        const sessions = groupIntoSessions(srsWritingData, 'nextReviewUnix');
+        return sessions.map(function (session) {
+          let total = session.length;
+          let correct = 0;
+          session.forEach(function (item) {
+            if (item.data.totalCorrect > 0) correct++;
+          });
+          return {
+            date: formatSessionDate(session[0].timestamp),
+            score: Math.round((correct / total) * 100) + '%',
+            percentage: total > 0 ? (correct / total) * 100 : 0,
+            timestamp: session[0].timestamp
+          };
+        });
+      }
+      
+      // Calculate speaking quiz sessions (correct/total format)
+      function calculateSpeakingSessions(srsSpeakingData, speakingHistoryData) {
+        // Use speakingHistory if available for more detailed data
+        if (speakingHistoryData && speakingHistoryData.exists()) {
+          const sessions = [];
+          const historyList = [];
+          speakingHistoryData.forEach(function (item) {
+            const itemData = item.val() || {};
+            if (itemData.timestampUnix) {
+              const ts = Number(itemData.timestampUnix);
+              const adjustedTimestamp = ts < 10000000000 ? ts * 1000 : ts; // Convert seconds to milliseconds if needed
+              historyList.push({
+                data: itemData,
+                timestamp: adjustedTimestamp
+              });
+            }
+          });
+          
+          // Sort by timestamp
+          historyList.sort(function (a, b) { return a.timestamp - b.timestamp; });
+          
+          // Group into sessions
+          const SESSION_THRESHOLD = 5 * 60 * 1000; // 5 minutes
+          
+          if (historyList.length === 0) return sessions;
+          
+          let currentSession = [historyList[0]];
+          
+          for (let i = 1; i < historyList.length; i++) {
+            const timeDiff = historyList[i].timestamp - historyList[i-1].timestamp;
+            if (timeDiff <= SESSION_THRESHOLD) {
+              currentSession.push(historyList[i]);
+            } else {
+              sessions.push(currentSession);
+              currentSession = [historyList[i]];
+            }
+          }
+          sessions.push(currentSession);
+          
+          return sessions.map(function (session) {
+            let total = session.length;
+            let correct = 0;
+            session.forEach(function (item) {
+              if (item.data.exactMatch === true) correct++;
+            });
+            return {
+              date: formatSessionDate(session[0].timestamp),
+              score: correct + '/' + total,
+              percentage: total > 0 ? (correct / total) * 100 : 0,
+              timestamp: session[0].timestamp
+            };
+          });
+        }
+        
+        // Fallback to srsSpeaking data
+        const sessions = groupIntoSessions(srsSpeakingData, 'nextReviewUnix');
+        return sessions.map(function (session) {
+          let total = session.length;
+          let correct = 0;
+          session.forEach(function (item) {
+            if (item.data.totalCorrect > 0) correct++;
+          });
+          return {
+            date: formatSessionDate(session[0].timestamp),
+            score: correct + '/' + total,
+            percentage: total > 0 ? (correct / total) * 100 : 0,
+            timestamp: session[0].timestamp
+          };
+        });
+      }
+      
+      const mcSessions = calculateMultipleChoiceSessions(srsSnap);
+      const writingSessions = calculateWritingSessions(srsWritingSnap);
+      const speakingSessions = calculateSpeakingSessions(srsSpeakingSnap, speakingHistorySnap);
+      
+      // Get all sessions and sort by date (newest first)
+      const allSessions = [];
+      
+      mcSessions.forEach(function (session) {
+        allSessions.push({
+          type: 'Multiple Choice',
+          score: session.score,
+          percentage: session.percentage,
+          date: session.date,
+          timestamp: session.timestamp
+        });
+      });
+      
+      writingSessions.forEach(function (session) {
+        allSessions.push({
+          type: 'Writing',
+          score: session.score,
+          percentage: session.percentage,
+          date: session.date,
+          timestamp: session.timestamp
+        });
+      });
+      
+      speakingSessions.forEach(function (session) {
+        allSessions.push({
+          type: 'Speaking',
+          score: session.score,
+          percentage: session.percentage,
+          date: session.date,
+          timestamp: session.timestamp
+        });
+      });
+      
+      // Sort all sessions by timestamp (newest first)
+      allSessions.sort(function (a, b) {
+        return b.timestamp - a.timestamp;
+      });
+      
+      // Get existing skill list content
+      const existingContent = panel.innerHTML;
+      
+      // Build quiz scores HTML with horizontal scrolling
+      let quizScoresHtml = '';
+      
+      if (allSessions.length > 0) {
+        quizScoresHtml = '<div class="quiz-sessions-container">';
+        
+        allSessions.forEach(function (session) {
+          if (session.type === 'Writing') {
+            const scoreValue = session.score.replace('%', '');
+            quizScoresHtml += (
+              '<div class="quiz-score-panel">' +
+                '<div class="quiz-score-panel__label">writing</div>' +
+                '<div class="quiz-score-panel__score">' +
+                  '<span class="numerator">' + scoreValue + '</span>' +
+                  '<span class="divider">%</span>' +
+                '</div>' +
+                '<div class="quiz-score-panel__date">' + session.date + '</div>' +
+              '</div>'
+            );
+          } else {
+            const scoreParts = session.score.split('/');
+            quizScoresHtml += (
+              '<div class="quiz-score-panel">' +
+                '<div class="quiz-score-panel__label">' + session.type.toLowerCase() + '</div>' +
+                '<div class="quiz-score-panel__score">' +
+                  '<span class="numerator">' + scoreParts[0] + '</span>' +
+                  '<span class="divider">/</span>' +
+                  '<span class="denominator">' + scoreParts[1] + '</span>' +
+                '</div>' +
+                '<div class="quiz-score-panel__date">' + session.date + '</div>' +
+              '</div>'
+            );
+          }
+        });
+        
+        quizScoresHtml += '</div>';
+      } else {
+        quizScoresHtml = '<p class="panel-empty">No quiz sessions recorded yet</p>';
+      }
+      
+      quizScoresHtml += '<div style="border-top:1px solid #e5e7eb;margin:12px 0;"></div>';
+      
+      // Prepend quiz scores to the existing skill list
+      panel.innerHTML = quizScoresHtml + existingContent;
     }
 
     function statCard(icon, label, value, meta, tone) {
@@ -419,3 +860,4 @@
 <script src="assets/global-search.js"></script>
 </body>
 </html>
+

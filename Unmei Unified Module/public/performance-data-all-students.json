@@ -1,0 +1,2032 @@
+{
+  "students": {
+    "student_001": {
+      "performance": {
+        "averageScore": 85,
+        "attendanceRate": 91,
+        "courseProgress": 50,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 82,
+          "kanji": 78,
+          "listening": 88,
+          "reading": 86,
+          "speaking": 80,
+          "vocabulary": 84
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["particle usage", "sentence structure"],
+            "weaknesses": ["complex conjugations", "passive forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 78,
+            "strengths": ["basic kanji recognition", "stroke order"],
+            "weaknesses": ["compound kanji", "kanji readings"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["conversation comprehension", "pronunciation"],
+            "weaknesses": ["fast speech", "dialects"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 86,
+            "strengths": ["hiragana/katakana", "basic sentences"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["basic conversation", "pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 84,
+            "strengths": ["daily vocabulary", "greetings"],
+            "weaknesses": ["business terms", "academic words"]
+          }
+        },
+        "streakDays": 18,
+        "weeklyProgress": [
+          {"week": 1, "score": 75, "modulesCompleted": 2, "practiceMinutes": 120},
+          {"week": 2, "score": 78, "modulesCompleted": 3, "practiceMinutes": 135},
+          {"week": 3, "score": 82, "modulesCompleted": 2, "practiceMinutes": 140},
+          {"week": 4, "score": 85, "modulesCompleted": 3, "practiceMinutes": 150},
+          {"week": 5, "score": 83, "modulesCompleted": 2, "practiceMinutes": 145},
+          {"week": 6, "score": 87, "modulesCompleted": 3, "practiceMinutes": 160}
+        ],
+        "areasOfImprovement": [
+          "Focus on complex grammar conjugations",
+          "Practice compound kanji characters",
+          "Improve speaking fluency through conversation practice",
+          "Expand business vocabulary repertoire"
+        ]
+      }
+    },
+    "student_002": {
+      "performance": {
+        "averageScore": 79,
+        "attendanceRate": 88,
+        "courseProgress": 45,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 76,
+          "kanji": 72,
+          "listening": 82,
+          "reading": 80,
+          "speaking": 75,
+          "vocabulary": 78
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 76,
+            "strengths": ["intermediate grammar", "te form"],
+            "weaknesses": ["keigo", "causative forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["n4 kanji recognition", "readings"],
+            "weaknesses": ["complex compounds", "name kanji"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 82,
+            "strengths": ["formal speech", "news comprehension"],
+            "weaknesses": ["rapid conversation", "multiple speakers"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["n4 level texts", "news articles"],
+            "weaknesses": ["literary japanese", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 75,
+            "strengths": ["formal conversation", "presentations"],
+            "weaknesses": ["natural flow", "colloquialisms"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "formal expressions"]
+          }
+        },
+        "streakDays": 12,
+        "weeklyProgress": [
+          {"week": 1, "score": 70, "modulesCompleted": 2, "practiceMinutes": 110},
+          {"week": 2, "score": 74, "modulesCompleted": 2, "practiceMinutes": 125},
+          {"week": 3, "score": 76, "modulesCompleted": 3, "practiceMinutes": 130},
+          {"week": 4, "score": 79, "modulesCompleted": 2, "practiceMinutes": 140},
+          {"week": 5, "score": 81, "modulesCompleted": 3, "practiceMinutes": 145}
+        ],
+        "areasOfImprovement": [
+          "Master keigo (honorific language)",
+          "Practice causative and passive forms",
+          "Improve speaking fluency in formal settings",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_003": {
+      "performance": {
+        "averageScore": 87,
+        "attendanceRate": 93,
+        "courseProgress": 60,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 88,
+          "kanji": 85,
+          "listening": 90,
+          "reading": 89,
+          "speaking": 85,
+          "vocabulary": 87
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["complex grammar", "advanced sentence structures"],
+            "weaknesses": ["keigo nuances", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 85,
+            "strengths": ["n3 kanji mastery", "complex compounds"],
+            "weaknesses": ["advanced readings", "name kanji"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 90,
+            "strengths": ["native-level comprehension", "rapid speech"],
+            "weaknesses": ["regional dialects", "formal lectures"]
+          },
+          "reading": {
+            "level": "advanced",
+            "progress": 89,
+            "strengths": ["literary texts", "academic papers"],
+            "weaknesses": ["archaic forms", "specialized terminology"]
+          },
+          "speaking": {
+            "level": "advanced",
+            "progress": 85,
+            "strengths": ["natural conversation", "business presentations"],
+            "weaknesses": ["formal speeches", "debate skills"]
+          },
+          "vocabulary": {
+            "level": "advanced",
+            "progress": 87,
+            "strengths": ["academic vocabulary", "technical terms"],
+            "weaknesses": ["idiomatic expressions", "slang"]
+          }
+        },
+        "streakDays": 22,
+        "weeklyProgress": [
+          {"week": 1, "score": 80, "modulesCompleted": 3, "practiceMinutes": 140},
+          {"week": 2, "score": 83, "modulesCompleted": 3, "practiceMinutes": 155},
+          {"week": 3, "score": 85, "modulesCompleted": 4, "practiceMinutes": 160},
+          {"week": 4, "score": 87, "modulesCompleted": 3, "practiceMinutes": 165},
+          {"week": 5, "score": 88, "modulesCompleted": 4, "practiceMinutes": 170},
+          {"week": 6, "score": 90, "modulesCompleted": 3, "practiceMinutes": 175}
+        ],
+        "areasOfImprovement": [
+          "Master keigo nuances in formal contexts",
+          "Practice advanced kanji readings",
+          "Improve formal speaking skills",
+          "Expand academic vocabulary repertoire"
+        ]
+      }
+    },
+    "student_004": {
+      "performance": {
+        "averageScore": 72,
+        "attendanceRate": 82,
+        "courseProgress": 35,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 70,
+          "kanji": 68,
+          "listening": 75,
+          "reading": 73,
+          "speaking": 70,
+          "vocabulary": 74
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic sentence patterns", "simple conjugations"],
+            "weaknesses": ["complex structures", "advanced grammar"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["basic kanji recognition", "stroke order"],
+            "weaknesses": ["compound kanji", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 75,
+            "strengths": ["slow speech comprehension", "clear pronunciation"],
+            "weaknesses": ["fast conversations", "native speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["hiragana/katakana", "basic texts"],
+            "weaknesses": ["kanji-heavy texts", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic phrases", "clear pronunciation"],
+            "weaknesses": ["conversation flow", "vocabulary range"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["daily vocabulary", "basic greetings"],
+            "weaknesses": ["compound words", "formal terms"]
+          }
+        },
+        "streakDays": 8,
+        "weeklyProgress": [
+          {"week": 1, "score": 65, "modulesCompleted": 1, "practiceMinutes": 90},
+          {"week": 2, "score": 68, "modulesCompleted": 2, "practiceMinutes": 100},
+          {"week": 3, "score": 70, "modulesCompleted": 2, "practiceMinutes": 110},
+          {"week": 4, "score": 72, "modulesCompleted": 1, "practiceMinutes": 115}
+        ],
+        "areasOfImprovement": [
+          "Focus on basic grammar structures",
+          "Practice kanji stroke order daily",
+          "Build confidence in speaking",
+          "Expand vocabulary beyond basics"
+        ]
+      }
+    },
+    "student_005": {
+      "performance": {
+        "averageScore": 81,
+        "attendanceRate": 86,
+        "courseProgress": 48,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 79,
+          "kanji": 75,
+          "listening": 84,
+          "reading": 82,
+          "speaking": 78,
+          "vocabulary": 80
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 75,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["complex readings", "advanced compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 84,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 15,
+        "weeklyProgress": [
+          {"week": 1, "score": 73, "modulesCompleted": 2, "practiceMinutes": 115},
+          {"week": 2, "score": 76, "modulesCompleted": 2, "practiceMinutes": 125},
+          {"week": 3, "score": 79, "modulesCompleted": 3, "practiceMinutes": 135},
+          {"week": 4, "score": 81, "modulesCompleted": 2, "practiceMinutes": 140},
+          {"week": 5, "score": 83, "modulesCompleted": 3, "practiceMinutes": 150}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_006": {
+      "performance": {
+        "averageScore": 68,
+        "attendanceRate": 75,
+        "courseProgress": 30,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 65,
+          "kanji": 62,
+          "listening": 72,
+          "reading": 70,
+          "speaking": 66,
+          "vocabulary": 69
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 65,
+            "strengths": ["basic grammar patterns", "simple sentences"],
+            "weaknesses": ["complex structures", "verb conjugations"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 62,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["hiragana/katakana", "simple texts"],
+            "weaknesses": ["kanji", "complex sentences"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 66,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 69,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compound words", "formal terms"]
+          }
+        },
+        "streakDays": 5,
+        "weeklyProgress": [
+          {"week": 1, "score": 60, "modulesCompleted": 1, "practiceMinutes": 80},
+          {"week": 2, "score": 64, "modulesCompleted": 2, "practiceMinutes": 95},
+          {"week": 3, "score": 66, "modulesCompleted": 1, "practiceMinutes": 100},
+          {"week": 4, "score": 68, "modulesCompleted": 2, "practiceMinutes": 105}
+        ],
+        "areasOfImprovement": [
+          "Practice basic grammar daily",
+          "Focus on kanji stroke order",
+          "Build speaking confidence",
+          "Expand vocabulary gradually"
+        ]
+      }
+    },
+    "student_007": {
+      "performance": {
+        "averageScore": 90,
+        "attendanceRate": 95,
+        "courseProgress": 70,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 92,
+          "kanji": 88,
+          "listening": 93,
+          "reading": 91,
+          "speaking": 88,
+          "vocabulary": 90
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "advanced",
+            "progress": 92,
+            "strengths": ["native-level grammar", "complex structures"],
+            "weaknesses": ["literary forms", "archaic grammar"]
+          },
+          "kanji": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["advanced kanji", "all readings"],
+            "weaknesses": ["name kanji", "specialized characters"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 93,
+            "strengths": ["native comprehension", "all speeds"],
+            "weaknesses": ["regional dialects", "very fast speech"]
+          },
+          "reading": {
+            "level": "advanced",
+            "progress": 91,
+            "strengths": ["all text types", "academic papers"],
+            "weaknesses": ["archaic texts", "highly specialized"]
+          },
+          "speaking": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["natural conversation", "formal speeches"],
+            "weaknesses": ["debate skills", "rare dialects"]
+          },
+          "vocabulary": {
+            "level": "advanced",
+            "progress": 90,
+            "strengths": ["all vocabulary types", "technical terms"],
+            "weaknesses": ["slang", "highly specialized"]
+          }
+        },
+        "streakDays": 25,
+        "weeklyProgress": [
+          {"week": 1, "score": 85, "modulesCompleted": 4, "practiceMinutes": 160},
+          {"week": 2, "score": 87, "modulesCompleted": 4, "practiceMinutes": 170},
+          {"week": 3, "score": 89, "modulesCompleted": 3, "practiceMinutes": 175},
+          {"week": 4, "score": 90, "modulesCompleted": 4, "practiceMinutes": 180},
+          {"week": 5, "score": 91, "modulesCompleted": 3, "practiceMinutes": 185},
+          {"week": 6, "score": 93, "modulesCompleted": 4, "practiceMinutes": 190}
+        ],
+        "areasOfImprovement": [
+          "Master literary Japanese forms",
+          "Practice advanced kanji usage",
+          "Improve debate and formal speaking",
+          "Expand specialized vocabulary"
+        ]
+      }
+    },
+    "student_008": {
+      "performance": {
+        "averageScore": 74,
+        "attendanceRate": 80,
+        "courseProgress": 38,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 72,
+          "kanji": 70,
+          "listening": 78,
+          "reading": 75,
+          "speaking": 72,
+          "vocabulary": 73
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["basic grammar", "simple sentences"],
+            "weaknesses": ["complex forms", "advanced patterns"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["hiragana/katakana", "basic texts"],
+            "weaknesses": ["kanji-heavy", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 10,
+        "weeklyProgress": [
+          {"week": 1, "score": 68, "modulesCompleted": 2, "practiceMinutes": 105},
+          {"week": 2, "score": 71, "modulesCompleted": 2, "practiceMinutes": 115},
+          {"week": 3, "score": 73, "modulesCompleted": 1, "practiceMinutes": 120},
+          {"week": 4, "score": 74, "modulesCompleted": 2, "practiceMinutes": 125}
+        ],
+        "areasOfImprovement": [
+          "Focus on basic grammar patterns",
+          "Practice kanji daily",
+          "Build speaking confidence",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_009": {
+      "performance": {
+        "averageScore": 83,
+        "attendanceRate": 89,
+        "courseProgress": 52,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 81,
+          "kanji": 77,
+          "listening": 86,
+          "reading": 84,
+          "speaking": 80,
+          "vocabulary": 82
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 77,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 86,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 84,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 16,
+        "weeklyProgress": [
+          {"week": 1, "score": 75, "modulesCompleted": 2, "practiceMinutes": 120},
+          {"week": 2, "score": 78, "modulesCompleted": 3, "practiceMinutes": 130},
+          {"week": 3, "score": 81, "modulesCompleted": 2, "practiceMinutes": 140},
+          {"week": 4, "score": 83, "modulesCompleted": 3, "practiceMinutes": 145},
+          {"week": 5, "score": 85, "modulesCompleted": 2, "practiceMinutes": 150}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_010": {
+      "performance": {
+        "averageScore": 76,
+        "attendanceRate": 83,
+        "courseProgress": 42,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 74,
+          "kanji": 71,
+          "listening": 80,
+          "reading": 77,
+          "speaking": 73,
+          "vocabulary": 75
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["basic grammar", "intermediate patterns"],
+            "weaknesses": ["complex structures", "advanced forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 77,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 11,
+        "weeklyProgress": [
+          {"week": 1, "score": 70, "modulesCompleted": 2, "practiceMinutes": 110},
+          {"week": 2, "score": 73, "modulesCompleted": 2, "practiceMinutes": 120},
+          {"week": 3, "score": 75, "modulesCompleted": 1, "practiceMinutes": 125},
+          {"week": 4, "score": 76, "modulesCompleted": 2, "practiceMinutes": 130}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_011": {
+      "performance": {
+        "averageScore": 88,
+        "attendanceRate": 92,
+        "courseProgress": 65,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 90,
+          "kanji": 86,
+          "listening": 91,
+          "reading": 89,
+          "speaking": 86,
+          "vocabulary": 88
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "advanced",
+            "progress": 90,
+            "strengths": ["advanced grammar", "complex structures"],
+            "weaknesses": ["literary forms", "archaic patterns"]
+          },
+          "kanji": {
+            "level": "advanced",
+            "progress": 86,
+            "strengths": ["advanced kanji", "all readings"],
+            "weaknesses": ["name kanji", "specialized characters"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 91,
+            "strengths": ["native comprehension", "all speeds"],
+            "weaknesses": ["regional dialects", "very fast speech"]
+          },
+          "reading": {
+            "level": "advanced",
+            "progress": 89,
+            "strengths": ["all text types", "academic papers"],
+            "weaknesses": ["archaic texts", "highly specialized"]
+          },
+          "speaking": {
+            "level": "advanced",
+            "progress": 86,
+            "strengths": ["natural conversation", "formal speeches"],
+            "weaknesses": ["debate skills", "rare dialects"]
+          },
+          "vocabulary": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["all vocabulary types", "technical terms"],
+            "weaknesses": ["slang", "highly specialized"]
+          }
+        },
+        "streakDays": 20,
+        "weeklyProgress": [
+          {"week": 1, "score": 82, "modulesCompleted": 3, "practiceMinutes": 150},
+          {"week": 2, "score": 85, "modulesCompleted": 4, "practiceMinutes": 160},
+          {"week": 3, "score": 87, "modulesCompleted": 3, "practiceMinutes": 165},
+          {"week": 4, "score": 88, "modulesCompleted": 4, "practiceMinutes": 170},
+          {"week": 5, "score": 90, "modulesCompleted": 3, "practiceMinutes": 175}
+        ],
+        "areasOfImprovement": [
+          "Master literary Japanese forms",
+          "Practice advanced kanji usage",
+          "Improve debate and formal speaking",
+          "Expand specialized vocabulary"
+        ]
+      }
+    },
+    "student_012": {
+      "performance": {
+        "averageScore": 71,
+        "attendanceRate": 78,
+        "courseProgress": 33,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 69,
+          "kanji": 66,
+          "listening": 75,
+          "reading": 72,
+          "speaking": 68,
+          "vocabulary": 70
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 69,
+            "strengths": ["basic grammar", "simple sentences"],
+            "weaknesses": ["complex structures", "advanced patterns"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 66,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["hiragana/katakana", "simple texts"],
+            "weaknesses": ["kanji", "complex sentences"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 7,
+        "weeklyProgress": [
+          {"week": 1, "score": 63, "modulesCompleted": 1, "practiceMinutes": 85},
+          {"week": 2, "score": 67, "modulesCompleted": 2, "practiceMinutes": 95},
+          {"week": 3, "score": 69, "modulesCompleted": 1, "practiceMinutes": 100},
+          {"week": 4, "score": 71, "modulesCompleted": 2, "practiceMinutes": 105}
+        ],
+        "areasOfImprovement": [
+          "Practice basic grammar daily",
+          "Focus on kanji stroke order",
+          "Build speaking confidence",
+          "Expand vocabulary gradually"
+        ]
+      }
+    },
+    "student_013": {
+      "performance": {
+        "averageScore": 84,
+        "attendanceRate": 90,
+        "courseProgress": 55,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 83,
+          "kanji": 79,
+          "listening": 87,
+          "reading": 85,
+          "speaking": 81,
+          "vocabulary": 83
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 83,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 87,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 85,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 83,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 17,
+        "weeklyProgress": [
+          {"week": 1, "score": 76, "modulesCompleted": 2, "practiceMinutes": 125},
+          {"week": 2, "score": 79, "modulesCompleted": 3, "practiceMinutes": 135},
+          {"week": 3, "score": 82, "modulesCompleted": 2, "practiceMinutes": 145},
+          {"week": 4, "score": 84, "modulesCompleted": 3, "practiceMinutes": 150},
+          {"week": 5, "score": 86, "modulesCompleted": 2, "practiceMinutes": 155}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_014": {
+      "performance": {
+        "averageScore": 77,
+        "attendanceRate": 84,
+        "courseProgress": 40,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 75,
+          "kanji": 72,
+          "listening": 81,
+          "reading": 78,
+          "speaking": 74,
+          "vocabulary": 76
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["basic to intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 78,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 76,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 12,
+        "weeklyProgress": [
+          {"week": 1, "score": 70, "modulesCompleted": 2, "practiceMinutes": 115},
+          {"week": 2, "score": 73, "modulesCompleted": 2, "practiceMinutes": 125},
+          {"week": 3, "score": 75, "modulesCompleted": 1, "practiceMinutes": 130},
+          {"week": 4, "score": 77, "modulesCompleted": 2, "practiceMinutes": 135}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_015": {
+      "performance": {
+        "averageScore": 80,
+        "attendanceRate": 87,
+        "courseProgress": 47,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 78,
+          "kanji": 74,
+          "listening": 83,
+          "reading": 81,
+          "speaking": 77,
+          "vocabulary": 79
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 74,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 83,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 77,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 14,
+        "weeklyProgress": [
+          {"week": 1, "score": 72, "modulesCompleted": 2, "practiceMinutes": 118},
+          {"week": 2, "score": 75, "modulesCompleted": 3, "practiceMinutes": 128},
+          {"week": 3, "score": 78, "modulesCompleted": 2, "practiceMinutes": 138},
+          {"week": 4, "score": 80, "modulesCompleted": 3, "practiceMinutes": 143},
+          {"week": 5, "score": 82, "modulesCompleted": 2, "practiceMinutes": 148}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_016": {
+      "performance": {
+        "averageScore": 73,
+        "attendanceRate": 81,
+        "courseProgress": 36,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 71,
+          "kanji": 68,
+          "listening": 77,
+          "reading": 74,
+          "speaking": 70,
+          "vocabulary": 72
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["basic grammar", "intermediate patterns"],
+            "weaknesses": ["complex structures", "advanced forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 77,
+            "strengths": ["slow speech", "clear comprehension"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 9,
+        "weeklyProgress": [
+          {"week": 1, "score": 65, "modulesCompleted": 1, "practiceMinutes": 95},
+          {"week": 2, "score": 69, "modulesCompleted": 2, "practiceMinutes": 105},
+          {"week": 3, "score": 71, "modulesCompleted": 1, "practiceMinutes": 110},
+          {"week": 4, "score": 73, "modulesCompleted": 2, "practiceMinutes": 115}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_017": {
+      "performance": {
+        "averageScore": 86,
+        "attendanceRate": 91,
+        "courseProgress": 58,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 85,
+          "kanji": 81,
+          "listening": 89,
+          "reading": 87,
+          "speaking": 83,
+          "vocabulary": 85
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "advanced",
+            "progress": 85,
+            "strengths": ["advanced grammar", "complex structures"],
+            "weaknesses": ["literary forms", "archaic patterns"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["advanced kanji", "all readings"],
+            "weaknesses": ["name kanji", "specialized characters"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 89,
+            "strengths": ["native comprehension", "all speeds"],
+            "weaknesses": ["regional dialects", "very fast speech"]
+          },
+          "reading": {
+            "level": "advanced",
+            "progress": 87,
+            "strengths": ["all text types", "academic papers"],
+            "weaknesses": ["archaic texts", "highly specialized"]
+          },
+          "speaking": {
+            "level": "advanced",
+            "progress": 83,
+            "strengths": ["natural conversation", "formal speeches"],
+            "weaknesses": ["debate skills", "rare dialects"]
+          },
+          "vocabulary": {
+            "level": "advanced",
+            "progress": 85,
+            "strengths": ["all vocabulary types", "technical terms"],
+            "weaknesses": ["slang", "highly specialized"]
+          }
+        },
+        "streakDays": 19,
+        "weeklyProgress": [
+          {"week": 1, "score": 79, "modulesCompleted": 3, "practiceMinutes": 145},
+          {"week": 2, "score": 82, "modulesCompleted": 4, "practiceMinutes": 155},
+          {"week": 3, "score": 84, "modulesCompleted": 3, "practiceMinutes": 160},
+          {"week": 4, "score": 86, "modulesCompleted": 4, "practiceMinutes": 165},
+          {"week": 5, "score": 88, "modulesCompleted": 3, "practiceMinutes": 170}
+        ],
+        "areasOfImprovement": [
+          "Master literary Japanese forms",
+          "Practice advanced kanji usage",
+          "Improve debate and formal speaking",
+          "Expand specialized vocabulary"
+        ]
+      }
+    },
+    "student_018": {
+      "performance": {
+        "averageScore": 69,
+        "attendanceRate": 76,
+        "courseProgress": 28,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 67,
+          "kanji": 64,
+          "listening": 73,
+          "reading": 70,
+          "speaking": 66,
+          "vocabulary": 68
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 67,
+            "strengths": ["basic grammar", "simple sentences"],
+            "weaknesses": ["complex structures", "advanced patterns"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 64,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["hiragana/katakana", "simple texts"],
+            "weaknesses": ["kanji", "complex sentences"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 66,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 6,
+        "weeklyProgress": [
+          {"week": 1, "score": 62, "modulesCompleted": 1, "practiceMinutes": 80},
+          {"week": 2, "score": 65, "modulesCompleted": 2, "practiceMinutes": 90},
+          {"week": 3, "score": 67, "modulesCompleted": 1, "practiceMinutes": 95},
+          {"week": 4, "score": 69, "modulesCompleted": 2, "practiceMinutes": 100}
+        ],
+        "areasOfImprovement": [
+          "Practice basic grammar daily",
+          "Focus on kanji stroke order",
+          "Build speaking confidence",
+          "Expand vocabulary gradually"
+        ]
+      }
+    },
+    "student_019": {
+      "performance": {
+        "averageScore": 82,
+        "attendanceRate": 88,
+        "courseProgress": 51,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 80,
+          "kanji": 76,
+          "listening": 85,
+          "reading": 83,
+          "speaking": 79,
+          "vocabulary": 81
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 76,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 85,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 83,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 15,
+        "weeklyProgress": [
+          {"week": 1, "score": 74, "modulesCompleted": 2, "practiceMinutes": 118},
+          {"week": 2, "score": 77, "modulesCompleted": 3, "practiceMinutes": 128},
+          {"week": 3, "score": 80, "modulesCompleted": 2, "practiceMinutes": 138},
+          {"week": 4, "score": 82, "modulesCompleted": 3, "practiceMinutes": 143},
+          {"week": 5, "score": 84, "modulesCompleted": 2, "practiceMinutes": 148}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_020": {
+      "performance": {
+        "averageScore": 75,
+        "attendanceRate": 82,
+        "courseProgress": 39,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 73,
+          "kanji": 70,
+          "listening": 79,
+          "reading": 76,
+          "speaking": 72,
+          "vocabulary": 74
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["basic to intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 76,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 10,
+        "weeklyProgress": [
+          {"week": 1, "score": 68, "modulesCompleted": 2, "practiceMinutes": 112},
+          {"week": 2, "score": 71, "modulesCompleted": 2, "practiceMinutes": 122},
+          {"week": 3, "score": 73, "modulesCompleted": 1, "practiceMinutes": 127},
+          {"week": 4, "score": 75, "modulesCompleted": 2, "practiceMinutes": 132}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_021": {
+      "performance": {
+        "averageScore": 78,
+        "attendanceRate": 85,
+        "courseProgress": 43,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 76,
+          "kanji": 73,
+          "listening": 82,
+          "reading": 79,
+          "speaking": 75,
+          "vocabulary": 77
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 76,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 77,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 13,
+        "weeklyProgress": [
+          {"week": 1, "score": 70, "modulesCompleted": 2, "practiceMinutes": 116},
+          {"week": 2, "score": 73, "modulesCompleted": 2, "practiceMinutes": 126},
+          {"week": 3, "score": 76, "modulesCompleted": 1, "practiceMinutes": 131},
+          {"week": 4, "score": 78, "modulesCompleted": 2, "practiceMinutes": 136}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_022": {
+      "performance": {
+        "averageScore": 70,
+        "attendanceRate": 77,
+        "courseProgress": 31,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 68,
+          "kanji": 65,
+          "listening": 74,
+          "reading": 71,
+          "speaking": 67,
+          "vocabulary": 69
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["basic grammar", "simple sentences"],
+            "weaknesses": ["complex structures", "advanced patterns"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 65,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["hiragana/katakana", "simple texts"],
+            "weaknesses": ["kanji", "complex sentences"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 67,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 69,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 7,
+        "weeklyProgress": [
+          {"week": 1, "score": 63, "modulesCompleted": 1, "practiceMinutes": 82},
+          {"week": 2, "score": 66, "modulesCompleted": 2, "practiceMinutes": 92},
+          {"week": 3, "score": 68, "modulesCompleted": 1, "practiceMinutes": 97},
+          {"week": 4, "score": 70, "modulesCompleted": 2, "practiceMinutes": 102}
+        ],
+        "areasOfImprovement": [
+          "Practice basic grammar daily",
+          "Focus on kanji stroke order",
+          "Build speaking confidence",
+          "Expand vocabulary gradually"
+        ]
+      }
+    },
+    "student_023": {
+      "performance": {
+        "averageScore": 81,
+        "attendanceRate": 86,
+        "courseProgress": 46,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 79,
+          "kanji": 75,
+          "listening": 84,
+          "reading": 82,
+          "speaking": 78,
+          "vocabulary": 80
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 75,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 84,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 14,
+        "weeklyProgress": [
+          {"week": 1, "score": 73, "modulesCompleted": 2, "practiceMinutes": 117},
+          {"week": 2, "score": 76, "modulesCompleted": 3, "practiceMinutes": 127},
+          {"week": 3, "score": 79, "modulesCompleted": 2, "practiceMinutes": 137},
+          {"week": 4, "score": 81, "modulesCompleted": 3, "practiceMinutes": 142},
+          {"week": 5, "score": 83, "modulesCompleted": 2, "practiceMinutes": 147}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_024": {
+      "performance": {
+        "averageScore": 67,
+        "attendanceRate": 74,
+        "courseProgress": 27,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 65,
+          "kanji": 62,
+          "listening": 71,
+          "reading": 68,
+          "speaking": 64,
+          "vocabulary": 66
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 65,
+            "strengths": ["basic grammar", "simple sentences"],
+            "weaknesses": ["complex structures", "advanced patterns"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 62,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["slow speech", "clear audio"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 68,
+            "strengths": ["hiragana/katakana", "simple texts"],
+            "weaknesses": ["kanji", "complex sentences"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 64,
+            "strengths": ["basic phrases", "pronunciation"],
+            "weaknesses": ["conversation", "fluency"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 66,
+            "strengths": ["daily words", "greetings"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 5,
+        "weeklyProgress": [
+          {"week": 1, "score": 60, "modulesCompleted": 1, "practiceMinutes": 78},
+          {"week": 2, "score": 63, "modulesCompleted": 2, "practiceMinutes": 88},
+          {"week": 3, "score": 65, "modulesCompleted": 1, "practiceMinutes": 93},
+          {"week": 4, "score": 67, "modulesCompleted": 2, "practiceMinutes": 98}
+        ],
+        "areasOfImprovement": [
+          "Practice basic grammar daily",
+          "Focus on kanji stroke order",
+          "Build speaking confidence",
+          "Expand vocabulary gradually"
+        ]
+      }
+    },
+    "student_025": {
+      "performance": {
+        "averageScore": 83,
+        "attendanceRate": 89,
+        "courseProgress": 53,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 82,
+          "kanji": 78,
+          "listening": 86,
+          "reading": 84,
+          "speaking": 80,
+          "vocabulary": 82
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 86,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 84,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 82,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 16,
+        "weeklyProgress": [
+          {"week": 1, "score": 75, "modulesCompleted": 2, "practiceMinutes": 122},
+          {"week": 2, "score": 78, "modulesCompleted": 3, "practiceMinutes": 132},
+          {"week": 3, "score": 81, "modulesCompleted": 2, "practiceMinutes": 142},
+          {"week": 4, "score": 83, "modulesCompleted": 3, "practiceMinutes": 147},
+          {"week": 5, "score": 85, "modulesCompleted": 2, "practiceMinutes": 152}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_026": {
+      "performance": {
+        "averageScore": 72,
+        "attendanceRate": 79,
+        "courseProgress": 34,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 70,
+          "kanji": 67,
+          "listening": 76,
+          "reading": 73,
+          "speaking": 69,
+          "vocabulary": 71
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 70,
+            "strengths": ["basic grammar", "intermediate patterns"],
+            "weaknesses": ["complex structures", "advanced forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 67,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "beginner",
+            "progress": 76,
+            "strengths": ["slow speech", "clear comprehension"],
+            "weaknesses": ["native speed", "background noise"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 69,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 8,
+        "weeklyProgress": [
+          {"week": 1, "score": 64, "modulesCompleted": 1, "practiceMinutes": 92},
+          {"week": 2, "score": 68, "modulesCompleted": 2, "practiceMinutes": 102},
+          {"week": 3, "score": 70, "modulesCompleted": 1, "practiceMinutes": 107},
+          {"week": 4, "score": 72, "modulesCompleted": 2, "practiceMinutes": 112}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_027": {
+      "performance": {
+        "averageScore": 85,
+        "attendanceRate": 90,
+        "courseProgress": 56,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 84,
+          "kanji": 80,
+          "listening": 88,
+          "reading": 86,
+          "speaking": 82,
+          "vocabulary": 84
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "advanced",
+            "progress": 84,
+            "strengths": ["advanced grammar", "complex structures"],
+            "weaknesses": ["literary forms", "archaic patterns"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["advanced kanji", "all readings"],
+            "weaknesses": ["name kanji", "specialized characters"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 88,
+            "strengths": ["native comprehension", "all speeds"],
+            "weaknesses": ["regional dialects", "very fast speech"]
+          },
+          "reading": {
+            "level": "advanced",
+            "progress": 86,
+            "strengths": ["all text types", "academic papers"],
+            "weaknesses": ["archaic texts", "highly specialized"]
+          },
+          "speaking": {
+            "level": "advanced",
+            "progress": 82,
+            "strengths": ["natural conversation", "formal speeches"],
+            "weaknesses": ["debate skills", "rare dialects"]
+          },
+          "vocabulary": {
+            "level": "advanced",
+            "progress": 84,
+            "strengths": ["all vocabulary types", "technical terms"],
+            "weaknesses": ["slang", "highly specialized"]
+          }
+        },
+        "streakDays": 18,
+        "weeklyProgress": [
+          {"week": 1, "score": 78, "modulesCompleted": 3, "practiceMinutes": 148},
+          {"week": 2, "score": 81, "modulesCompleted": 4, "practiceMinutes": 158},
+          {"week": 3, "score": 83, "modulesCompleted": 3, "practiceMinutes": 163},
+          {"week": 4, "score": 85, "modulesCompleted": 4, "practiceMinutes": 168},
+          {"week": 5, "score": 87, "modulesCompleted": 3, "practiceMinutes": 173}
+        ],
+        "areasOfImprovement": [
+          "Master literary Japanese forms",
+          "Practice advanced kanji usage",
+          "Improve debate and formal speaking",
+          "Expand specialized vocabulary"
+        ]
+      }
+    },
+    "student_028": {
+      "performance": {
+        "averageScore": 74,
+        "attendanceRate": 81,
+        "courseProgress": 37,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 72,
+          "kanji": 69,
+          "listening": 78,
+          "reading": 75,
+          "speaking": 71,
+          "vocabulary": 73
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 72,
+            "strengths": ["basic to intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 69,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 9,
+        "weeklyProgress": [
+          {"week": 1, "score": 66, "modulesCompleted": 1, "practiceMinutes": 96},
+          {"week": 2, "score": 69, "modulesCompleted": 2, "practiceMinutes": 106},
+          {"week": 3, "score": 72, "modulesCompleted": 1, "practiceMinutes": 111},
+          {"week": 4, "score": 74, "modulesCompleted": 2, "practiceMinutes": 116}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    },
+    "student_029": {
+      "performance": {
+        "averageScore": 80,
+        "attendanceRate": 86,
+        "courseProgress": 45,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 78,
+          "kanji": 74,
+          "listening": 83,
+          "reading": 81,
+          "speaking": 77,
+          "vocabulary": 79
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "intermediate",
+            "progress": 78,
+            "strengths": ["intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "intermediate",
+            "progress": 74,
+            "strengths": ["n4 kanji", "compound recognition"],
+            "weaknesses": ["advanced readings", "complex compounds"]
+          },
+          "listening": {
+            "level": "advanced",
+            "progress": 83,
+            "strengths": ["conversation comprehension", "various speeds"],
+            "weaknesses": ["regional accents", "technical lectures"]
+          },
+          "reading": {
+            "level": "intermediate",
+            "progress": 81,
+            "strengths": ["n4 texts", "news articles"],
+            "weaknesses": ["literary works", "formal documents"]
+          },
+          "speaking": {
+            "level": "intermediate",
+            "progress": 77,
+            "strengths": ["formal conversation", "presentation skills"],
+            "weaknesses": ["natural flow", "colloquial speech"]
+          },
+          "vocabulary": {
+            "level": "intermediate",
+            "progress": 79,
+            "strengths": ["n4 vocabulary", "compound words"],
+            "weaknesses": ["idioms", "business terms"]
+          }
+        },
+        "streakDays": 13,
+        "weeklyProgress": [
+          {"week": 1, "score": 72, "modulesCompleted": 2, "practiceMinutes": 114},
+          {"week": 2, "score": 75, "modulesCompleted": 3, "practiceMinutes": 124},
+          {"week": 3, "score": 78, "modulesCompleted": 2, "practiceMinutes": 134},
+          {"week": 4, "score": 80, "modulesCompleted": 3, "practiceMinutes": 139},
+          {"week": 5, "score": 82, "modulesCompleted": 2, "practiceMinutes": 144}
+        ],
+        "areasOfImprovement": [
+          "Master keigo for formal situations",
+          "Practice advanced kanji compounds",
+          "Improve natural conversation flow",
+          "Learn business Japanese vocabulary"
+        ]
+      }
+    },
+    "student_030": {
+      "performance": {
+        "averageScore": 76,
+        "attendanceRate": 83,
+        "courseProgress": 41,
+        "lastActivityAt": 1785770580991,
+        "skillScores": {
+          "grammar": 74,
+          "kanji": 71,
+          "listening": 80,
+          "reading": 77,
+          "speaking": 73,
+          "vocabulary": 75
+        },
+        "skillBreakdown": {
+          "grammar": {
+            "level": "beginner",
+            "progress": 74,
+            "strengths": ["basic to intermediate grammar", "complex sentences"],
+            "weaknesses": ["keigo", "literary forms"]
+          },
+          "kanji": {
+            "level": "beginner",
+            "progress": 71,
+            "strengths": ["basic kanji", "stroke order"],
+            "weaknesses": ["compounds", "readings"]
+          },
+          "listening": {
+            "level": "intermediate",
+            "progress": 80,
+            "strengths": ["slow to medium speech", "clear comprehension"],
+            "weaknesses": ["native speed", "multiple speakers"]
+          },
+          "reading": {
+            "level": "beginner",
+            "progress": 77,
+            "strengths": ["hiragana/katakana", "basic to intermediate texts"],
+            "weaknesses": ["kanji density", "formal writing"]
+          },
+          "speaking": {
+            "level": "beginner",
+            "progress": 73,
+            "strengths": ["basic conversation", "clear pronunciation"],
+            "weaknesses": ["fluency", "advanced vocabulary"]
+          },
+          "vocabulary": {
+            "level": "beginner",
+            "progress": 75,
+            "strengths": ["daily vocabulary", "intermediate words"],
+            "weaknesses": ["compounds", "formal terms"]
+          }
+        },
+        "streakDays": 11,
+        "weeklyProgress": [
+          {"week": 1, "score": 68, "modulesCompleted": 2, "practiceMinutes": 108},
+          {"week": 2, "score": 71, "modulesCompleted": 2, "practiceMinutes": 118},
+          {"week": 3, "score": 74, "modulesCompleted": 1, "practiceMinutes": 123},
+          {"week": 4, "score": 76, "modulesCompleted": 2, "practiceMinutes": 128}
+        ],
+        "areasOfImprovement": [
+          "Focus on intermediate grammar",
+          "Practice kanji compounds",
+          "Build speaking fluency",
+          "Expand vocabulary systematically"
+        ]
+      }
+    }
+  }
+}

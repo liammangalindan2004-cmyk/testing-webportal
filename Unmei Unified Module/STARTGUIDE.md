@@ -73,7 +73,7 @@ Quick troubleshooting (if login page still rejects correct credentials):
 1. Hard refresh browser (`Ctrl+F5`)
 2. Clear admin session cache in console: `sessionStorage.clear(); location.reload();`
 
-## 3.5 Student Demo Credentials
+## 3.5 Student Login Credentials
 
 ### Demo Login Page (For Presenters Only)
 - **Demo Login URL**: `http://localhost:5000/UNMEIstudentsportal/demo-login.html`
@@ -106,27 +106,21 @@ Quick troubleshooting (if login page still rejects correct credentials):
 Two sign-in paths are supported on `instructor-login.html`:
 
 1. **Firebase Auth** — for instructors with a linked `authUid` (production path).
-2. **Portal credential fallback** — email + password checked against the SHA-256 hash stored in `instructors/{id}/loginPassword` (works even if Firebase Auth has no account for that instructor).
+2. **Portal credential fallback** — email + password checked against the SHA-256 hash stored in `professors/{id}/loginPassword` (works even if Firebase Auth has no account for that instructor).
 
 ### Seeded instructor accounts (portal fallback)
-Password pattern: `Unmei@Prof01` … `Unmei@Prof10` — last two digits match the professor number.
+Password pattern: Use the professor ID as the password (e.g., `prof_001` for Aiko Tanaka).
 
 | ID | Name | Email | Password |
 |----|------|-------|----------|
-| prof_001 | Aiko Tanaka | aiko.tanaka@unmei-ph.com | Unmei@Prof01 |
-| prof_002 | Kenji Watanabe | kenji.watanabe@unmei-ph.com | Unmei@Prof02 |
-| prof_003 | Maria Santos-Nakamura | maria.nakamura@unmei-ph.com | Unmei@Prof03 |
-| prof_004 | Hiroshi Yamamoto | hiroshi.yamamoto@unmei-ph.com | Unmei@Prof04 |
-| prof_005 | Rico Dela Cruz | rico.cruz@unmei-ph.com | Unmei@Prof05 |
-| prof_006 | Yuka Takahashi | yuka.takahashi@unmei-ph.com | Unmei@Prof06 |
-| prof_007 | Gabriel Mendoza | gabriel.mendoza@unmei-ph.com | Unmei@Prof07 |
-| prof_008 | Naomi Ogawa | naomi.ogawa@unmei-ph.com | Unmei@Prof08 |
-| prof_009 | Kazuo Suzuki | kazuo.suzuki@unmei-ph.com | Unmei@Prof09 |
-| prof_010 | Elena Gomez-Sato | elena.sato@unmei-ph.com | Unmei@Prof10 |
+| prof_001 | Aiko Tanaka | aiko.tanaka@unmei-ph.com | prof_001 |
+| prof_002 | Kenji Watanabe | kenji.watanabe@unmei-ph.com | prof_002 |
+| prof_003 | Maria Santos-Nakamura | maria.nakamura@unmei-ph.com | prof_003 |
+| prof_004 | Hiroshi Yamamoto | hiroshi.yamamoto@unmei-ph.com | prof_004 |
+| prof_005 | Rico Dela Cruz | rico.cruz@unmei-ph.com | prof_005 |
+| prof_006 | Yuka Takahashi | yuka.takahashi@unmei-ph.com | prof_006 |
 
-> **Security note**: only the SHA-256 digests of these passwords are stored in `firebase-database-structure.json` / live RTDB (`instructors/{id}/loginPassword`). The plaintext list above exists ONLY in this guide for demo purposes.
-
-> **Important**: the SHA-256 hashes are now LIVE in the database (reimport completed 2026-08-25, 10/10 verified). Sign-in uses hash comparison only — no plaintext fallback needed.
+> **Security note**: Passwords are stored as plaintext in the database for development purposes. For production, consider implementing proper password hashing.
 
 ## 4. Student Portal Features (Thesis-Aligned)
 | Feature | Route | Thesis Ref |
@@ -335,4 +329,7 @@ Verified portability facts:
   (PORTABILITY_PATH_PASS).
 - Live data comes from Cloud Firestore over the internet using the embedded
   web config - identical on every machine.
+
+
+
 

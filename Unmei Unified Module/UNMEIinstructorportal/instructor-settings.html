@@ -197,9 +197,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="firestore-shim.js"></script>
   <script src="instructor-header-sync.js"></script>
   <script>
     const database = firebase.database();
@@ -242,7 +241,7 @@
     }
 
     Promise.all([
-      database.ref('instructors/' + instructorId).once('value'),
+      database.ref('professors/' + instructorId).once('value'),
       database.ref('courses').once('value')
     ]).then(function (results) {
       const data = results[0].val() || {};
@@ -351,3 +350,4 @@
 <script src="assets/global-search.js"></script>
 </body>
 </html>
+
